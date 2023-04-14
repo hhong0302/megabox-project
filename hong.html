@@ -64,31 +64,41 @@
                             <img src="images/hong-hamburger.png" alt="hamburger">
                             <img class="hong-btn-close" src="images/hong-header-layer-close.png" alt="close">
                         </button>
-                        <button class="hong-btn hong-btn-hs">
-                            <img src="images/hong-search.png" alt="search">
+                        <button class="hong-btn hong-btn-hs" onclick="hong_search_onout()">
+                            <img class="hong-search-btn-img" src="images/hong-search.png" alt="search">
                             <img class="hong-btn-close" src="images/hong-header-layer-close.png" alt="close">
                         </button>
                     </li>
                     <li class="hong-movie">
-                        <a href="javascript:void(0)">영화</a>
+                        <a href="javascript:void(0)" class="hong-nav-list">영화<div></div></a>
+                        <div class="hong-movie-navbar">
+                            <div class="hong-movie-navbar-box">
+                                <div class="hong-movie-navbar-box-list">
+                                    <a href="javascript:void(0)">전체영화</a>
+                                    <a href="javascript:void(0)">큐레이션</a>
+                                    <a href="javascript:void(0)">무비포스트</a>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </li>
                     <li class="hong-ticket">
-                        <a href="javascript:void(0)">예매</a>
+                        <a href="javascript:void(0)" class="hong-nav-list">예매<div></div></a>
                     </li>
                     <li class="hong-theater">
-                        <a href="javascript:void(0)">극장</a>
+                        <a href="javascript:void(0)" class="hong-nav-list">극장<div></div></a>
                     </li>
                     <li class="hong-logo">
                         <a href="javascript:void(0)"><img src="images/hong-mb-logo.png" alt="logo"></a>
                     </li>
                     <li class="hong-event">
-                        <a href="javascript:void(0)">이벤트</a>
+                        <a href="javascript:void(0)" class="hong-nav-list">이벤트<div></div></a>
                     </li>
                     <li class="hong-store">
                         <a href="javascript:void(0)">스토어</a>
                     </li>
                     <li class="hong-present">
-                        <a href="javascript:void(0)">혜택</a>
+                        <a href="javascript:void(0)" class="hong-nav-list">혜택<div></div></a>
                     </li>
                     <li class="hong-calender-member">
                         <button class="hong-btn hong-btn-cm"><img src="images/hong-calender.png" alt="calender"></button>
@@ -238,24 +248,43 @@
             <div class="hong-search-left">
                 <div class="hong-search-map-left-top">
                     <div id="hong-ticket-rank" class="hong-rank">
-                        예매율 순
+                        <button id="hong-btn-ticket-rank" class="hong-btn hong-btn-rank" onclick="hong_map_ticket()">예매율 순</button>
+                        <div class="hong-ticket-rank-underline"></div>
                     </div>
                     <div id="hong-client-rank" class="hong-rank">
-                        메가박스 관객순
+                        <button class="hong-btn hong-btn-rank" onclick="hong_map_client()">메가박스 관객순</button>
+                        <div class="hong-client-rank-underline"></div>
                     </div>
                 </div>
-                <div class="hong-search-map-left-bottom">
-                    <div class="hong-search-map-img">
-                        <img src="images/hong-map-johnwick.jpg" alt="mapimg">
+                <div class="hong-search-map-left-bottom-ticket">
+                    <div class="hong-search-map-left-bottom">
+                        <div class="hong-search-map-img">
+                            <img class="hong_map_image" src="images/hong-map-johnwick.jpg" alt="mapimg">
+                        </div>
+                        <ul class="hong-search-map-list">
+                            <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="johnwick">존 윅4</a></li>
+                            <li><span>2</span><a href="javascript:void(0)" class="hong_map_link" value="suzume">스즈메의 문단속</a></li>
+                            <li><span>3</span><a href="javascript:void(0)" class="hong_map_link" value="slamdunk">더 퍼스트 슬램덩크</a></li>
+                            <li><span>4</span><a href="javascript:void(0)" class="hong_map_link" value="killrom">킬링 로맨스</a></li>
+                            <li><span>5</span><a href="javascript:void(0)" class="hong_map_link" value="dream">드림</a></li>
+                        </ul>
                     </div>
-                    <ul class="hong-search-map-list">
-                        <li><span>1</span>존 윅4</li>
-                        <li><span>2</span>스즈메의 문단속</li>
-                        <li><span>3</span>스즈메의문단속</li>
-                        <li><span>4</span>스즈메의문단속</li>
-                        <li><span>5</span>스즈메의문단속</li>
-                    </ul>
                 </div>
+                <div class="hong-search-map-left-bottom-client">
+                    <div class="hong-search-map-left-bottom">
+                        <div class="hong-search-map-img">
+                            <img class="hong_map_image" src="images/hong-map-johnwick.jpg" alt="mapimg">
+                        </div>
+                        <ul class="hong-search-map-list">
+                            <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="avata">아바타:물의 길</a></li>
+                            <li><span>2</span><a href="javascript:void(0)" class="hong_map_link" value="lesmiserable">레미제라블</a></li>
+                            <li><span>3</span><a href="javascript:void(0)" class="hong_map_link" value="slamdunk">더 퍼스트 슬램덩크</a></li>
+                            <li><span>4</span><a href="javascript:void(0)" class="hong_map_link" value="suzume">스즈메의 문단속</a></li>
+                            <li><span>5</span><a href="javascript:void(0)" class="hong_map_link" value="hero">영웅</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
             <div class="hong-search-right">
                 <form name="hong_search_movie">

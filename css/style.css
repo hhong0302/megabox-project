@@ -180,13 +180,20 @@ body
     padding-bottom: 14px;
 }
 
-.hong-nav-list div
+.hong-nav-list::after
 {
+    content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     width: 100%;
     height: 3px;
     background-color: #fff;
+    display: none;
+}
+
+.hong-nav-list:hover::after
+{
+    display: block;
 }
 
 .hong-movie-navbar
@@ -206,7 +213,7 @@ body
     margin: auto;
 }
 
-.hong-movie-navbar-box-list>a
+.hong-movie-navbar-box>a
 {
     font-size: 13px;
     font-weight: 400;
@@ -215,7 +222,7 @@ body
     margin: 10px;
 }
 
-.hong-movie-navbar-box-list a:hover
+.hong-movie-navbar-box a:hover
 {
     text-decoration: underline;
 }

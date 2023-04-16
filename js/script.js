@@ -53,6 +53,41 @@ function hong_search_onout()
     }
 }
 
+//네비게이션 메뉴에 갖다대면 바뀌는 그거
+const hong_list = document.getElementsByClassName('hong-navbar');
+const hong_navbar_list = document.getElementsByClassName('hong-navbar-list');
+const hong_nav_list = document.getElementsByClassName('hong-nav-list');
+
+for(let i=0;i<hong_list.length;i++)
+{
+    hong_list[i].onmouseover = ()=>
+    {
+        for(let j=0;j<hong_navbar_list.length;j++)
+        {
+            hong_navbar_list[j].style.display='none';
+            hong_nav_list[j].classList.remove('hong-nav-after');
+        }
+        hong_navbar_list[i].style.display='block';
+        hong_nav_list[i].classList.add('hong-nav-after');
+    }
+}
+document.querySelector('.hong-header').onmouseleave = ()=>
+{
+    for(let i=0;i<hong_navbar_list.length;i++)
+    {
+    hong_navbar_list[i].style.display='none';
+    hong_nav_list[i].classList.remove('hong-nav-after');
+    }
+}
+hong_nav_store[0].onmouseover =()=>
+{
+    for(let i=0;i<hong_navbar_list.length;i++)
+    {
+    hong_navbar_list[i].style.display='none';
+    hong_nav_list[i].classList.remove('hong-nav-after');
+    }
+}
+
 //이미지에 마우스 갖다대면 바뀌는 그거
 
 const hong_map_link = document.getElementsByClassName('hong_map_link');

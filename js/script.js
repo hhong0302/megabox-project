@@ -57,6 +57,7 @@ function hong_search_onout()
 const hong_list = document.getElementsByClassName('hong-navbar');
 const hong_navbar_list = document.getElementsByClassName('hong-navbar-list');
 const hong_nav_list = document.getElementsByClassName('hong-nav-list');
+const hong_nav_store = document.getElementsByClassName('hong-nav-store')[0];
 
 for(let i=0;i<hong_list.length;i++)
 {
@@ -79,7 +80,7 @@ document.querySelector('.hong-header').onmouseleave = ()=>
     hong_nav_list[i].classList.remove('hong-nav-after');
     }
 }
-hong_nav_store[0].onmouseover =()=>
+hong_nav_store.onmouseover =()=>
 {
     for(let i=0;i<hong_navbar_list.length;i++)
     {

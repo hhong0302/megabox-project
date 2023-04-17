@@ -72,7 +72,7 @@ for(let i=0;i<hong_list.length;i++)
         hong_nav_list[i].classList.add('hong-nav-after');
     }
 }
-document.querySelector('.hong-header').onmouseleave = ()=>
+document.querySelector('.hong-header-all').onmouseleave = ()=>
 {
     for(let i=0;i<hong_navbar_list.length;i++)
     {
@@ -92,57 +92,84 @@ hong_nav_store.onmouseover =()=>
 //이미지에 마우스 갖다대면 바뀌는 그거
 
 const hong_map_link = document.getElementsByClassName('hong_map_link');
-
+/* 
 for(let i = 0 ; i<hong_map_link.length ; i++)
 {
     hong_map_link[i].addEventListener('mouseenter',function()
-    {
-        document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "images/hong-map-"+hong_map_link[i].getAttribute('value')+".jpg");
-        document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "images/hong-map-"+hong_map_link[i].getAttribute('value')+".jpg");
-    });
+    { */
+function hong_map_mouseenter(hong_attr)
+{
+    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "images/hong-map-"+hong_attr+".jpg");
+    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "images/hong-map-"+hong_attr+".jpg");
 }
+/*     });
+} */
 
 //search-map ticket과 client 누르면 바뀌기
 
 const hong_ticket = document.getElementsByClassName('hong-search-map-left-bottom-ticket')[0];
 const hong_client = document.getElementsByClassName('hong-search-map-left-bottom-client')[0];
-const hong_ticket_underline = document.getElementsByClassName("hong-ticket-rank-underline")[0];
-const hong_client_underline = document.getElementsByClassName("hong-client-rank-underline")[0];
+const hong_ticket_underline = document.getElementById("hong-ticket-rank");
+const hong_client_underline = document.getElementById("hong-client-rank");
 function hong_map_ticket()
 {
     hong_ticket.style.display="block";
-    hong_ticket_underline.style.display="block";
+    hong_ticket_underline.classList.add("hong-btn-underline");
     hong_client.style.display="none";
-    hong_client_underline.style.display="none";
+    hong_client_underline.classList.remove("hong-btn-underline");
     document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "images/hong-map-"+hong_map_link[0].getAttribute('value')+".jpg");
 }
 
 function hong_map_client()
 {
     hong_ticket.style.display="none";
-    hong_ticket_underline.style.display="none";
+    hong_ticket_underline.classList.remove("hong-btn-underline");
     hong_client.style.display="block";
-    hong_client_underline.style.display="block";
+    hong_client_underline.classList.add("hong-btn-underline");
     document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "images/hong-map-"+hong_map_link[5].getAttribute('value')+".jpg");
 }
 
-/* //search-map 다른 공간 클릭하면 창 닫기
-const hong_body = document.querySelector("body");
-hong_body.addEventListener('click',hong_click_search_event);
-
-function hong_click_search_event(event)
+//search-map 다른 공간 클릭하면 창 닫기 개씹노가다
+/* const hong_body = document.querySelector("body");
+hong_body.addEventListener('click',(event)=>
 {
     let hong_target = event.target;
-
-    if(hong_target == event.currentTarget.querySelectorAll(".hong-search-map-box"))
-    {
-        return;
-    }
     
-    if(hong_search.style.display=="block")
+
+    if(hong_target != event.currentTarget.querySelector(".hong-search-map-box")
+       && hong_target != event.currentTarget.querySelector('.hong-search-map-box> *')
+       && hong_target != event.currentTarget.querySelector('.hong-btn-rank')
+       && hong_target != event.currentTarget.querySelector('.hong-btn-hs')
+       && hong_target != event.currentTarget.querySelector('.hong-search-btn-img')
+       && hong_target != event.currentTarget.querySelector('#hong-btn-client-rank')
+       && hong_target != event.currentTarget.querySelector('#hong-search-movie')
+       && hong_target != event.currentTarget.querySelector('.hong-btn-hs')
+       && hong_target != event.currentTarget.querySelector('.hong_map_image')
+       && hong_target != event.currentTarget.querySelector('#hong_map_image2')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link0')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link1')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link2')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link3')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link4')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link5')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link6')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link7')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link8')
+       && hong_target != event.currentTarget.querySelector('#hong_map_link9')
+       && hong_target != event.currentTarget.querySelector('.hong-search-map-left-top')
+       && hong_target != event.currentTarget.querySelector('.hong-search-map-list')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists0')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists1')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists2')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists3')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists4')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists5')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists6')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists7')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists8')
+       && hong_target != event.currentTarget.querySelector('#hong-map-lists9'))
     {
-        console.log(hong_target);
         hong_search.style.display="none";
         hong_xbtn2.style.display="none";
     }
-} */
+}); */

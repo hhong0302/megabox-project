@@ -20,6 +20,7 @@ body
 {
     display: flex;
     width: 100%;
+    min-width: 1100px;
     justify-content: center;
     background-color: #e8e8e8;
     position: relative;
@@ -60,6 +61,7 @@ body
 .hong-header
 {
     width: 100%;
+    min-width: 1100px;
     height: 83px;
     background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid rgba(255,255,255,.2);
@@ -70,8 +72,8 @@ body
 {
     position: absolute;
     width: 100%;
-    height: 100%;
     min-width: 1100px;
+    height: 100%;
     margin: auto;
     overflow: hidden;
 }
@@ -85,6 +87,7 @@ body
     top: 0;
     z-index: 2;
     width: 100%;
+    min-width: 1100px;
     height: 100%;
     background: -moz-linear-gradient(left, rgba(85,63,5,1) 0%, rgba(23,17,1,0) 50%, rgba(85,63,5,1) 100%);
     background: -webkit-linear-gradient(left, rgba(85,63,5,1) 0%, rgba(23,17,1,0) 50%, rgba(85,63,5,1) 100%);
@@ -100,6 +103,7 @@ body
     top: 0;
     z-index: 3;
     width: 100%;
+    min-width: 1100px;
     height: 100%;
     background: url(../images/hong-bg-dot.png) repeat 0 0;
 }
@@ -108,6 +112,7 @@ body
 {
     display: block;
     width: 100%;
+    min-width: 1100px;
     -webkit-filter: blur(20px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
@@ -177,6 +182,7 @@ body
 .hong-content-main
 {
     width: 100%;
+    min-width: 1100px;
     display: flex;
     z-index: 5;
 }
@@ -184,6 +190,7 @@ body
 .hong-content-main-menu
 {
     width: 100%;
+    min-width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -270,6 +277,7 @@ body
     color: #fff;
     background-color: rgba(0,0,0,0.7);
     width: 100%;
+    min-width: 1100px;
     height: 40px;
     top: 83px;
     left: 0;
@@ -317,10 +325,107 @@ body
 }
 /* hong-header */
 
+/* hong-login */
+/* .hong-login
+{
+    position: fixed;
+    width: 850px;
+    height: 484px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    z-index: 99;
+}
+
+.hong-login-header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #351f67;
+}
+
+.hong-login-text
+{
+    color: #fff;
+    font-size: 16px;
+}
+
+.hong-login-body
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.hong-login-form
+{
+    width: 44%;
+}
+
+.hong-login-input
+{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 15px;
+    color: #444;
+    border: 1px solid #d8d9db;
+    border-radius: 0;
+}
+
+.hong-login-input:hover
+{
+    outline: 1px solid #333;
+}
+
+.hong-login-input:focus
+{
+    outline: 1px solid #333;
+}
+
+.hong-login-checkbox
+{
+    display: flex;
+}
+
+.hong-login-checkbox input
+{
+    zoom: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+.hong-login-checkbox span
+{
+    font-size: 14px;
+    margin: 1px;
+}
+
+.hong-login-button
+{
+    width: 100%;
+    height: 45px;
+    border: 0;
+    border-radius: 4px;
+}
+
+.hong-login-image
+{
+    width: 44%;
+}
+
+.hong-login-image a img
+{
+    width: 100%;
+} */
+/* hong-login */
+
 /* hong-sitemap */
 .hong-sitemap
 {
     width: 100%;
+    min-width: 1100px;
     position: absolute;
     background-color: #333;
     display: none;
@@ -407,6 +512,7 @@ body
 .hong-search-map
 {
     width: 100%;
+    min-width: 1100px;
     height: 380px;
     position: absolute;
     background: #351f67;
@@ -448,14 +554,17 @@ body
     color: #fff;
     font-size: 14px;
     font-weight: 400;
+    position: relative;
 }
 
-.hong-ticket-rank-underline
+.hong-btn-underline::after
 {
+    content: '';
     width: 100%;
-    height: 1px;
+    height: 2px;
     position: absolute;
     bottom: -8px;
+    left: 0;
     background-color: #fff;
 }
 

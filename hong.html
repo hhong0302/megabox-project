@@ -23,6 +23,7 @@
     <!-- 광고 부분 -->
 
     <!-- header -->
+<div class="hong-header-all">
     <header class="hong-header">
         <div class="hong-header-bg">
             <div class="hong-bg-pattern"></div>
@@ -150,6 +151,37 @@
 
     </header>
     <!-- header -->
+
+    <!-- login 메뉴 -->
+
+    <!-- <div class="hong-login">
+        <header class="hong-login-header">
+            <div class="hong-login-text">
+                로그인
+            </div>
+            <button class="hong-btn hong-login-close-btn">
+                <img src="images/hong-btn-login-close.png" alt="">
+            </button>
+        </header>
+        <div class="hong-login-body">
+            <form method="get" class="hong-login-form">
+                <input type="text" class="hong-login-input hong-login-id" placeholder="아이디">
+                <input type="password" class="hong-login-input hong-login-password" placeholder="비밀번호">
+                <label class="hong-login-checkbox">
+                    <input type="checkbox" name="아이디 저장">
+                    <span>아이디 저장</span>
+                </label>
+                <button type="submit" class="hong-login-button">로그인</button>
+            </form>
+            <div class="hong-login-image">
+                <a href="javascript:void(0)">
+                    <img src="images/hong-login-bannerimg.jpg" alt="loginimg">
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- login 메뉴 -->
     
     <!-- header 햄버거버튼 누르면 나오는 메뉴 -->
     <div class="hong-sitemap">
@@ -286,11 +318,9 @@
                 <div class="hong-search-map-left-top">
                     <div id="hong-ticket-rank" class="hong-rank">
                         <button id="hong-btn-ticket-rank" class="hong-btn hong-btn-rank" onclick="hong_map_ticket()">예매율 순</button>
-                        <div class="hong-ticket-rank-underline"></div>
                     </div>
                     <div id="hong-client-rank" class="hong-rank">
-                        <button class="hong-btn hong-btn-rank" onclick="hong_map_client()">메가박스 관객순</button>
-                        <div class="hong-client-rank-underline"></div>
+                        <button id="hong-btn-client-rank" class="hong-btn hong-btn-rank" onclick="hong_map_client()">메가박스 관객순</button>
                     </div>
                 </div>
                 <div class="hong-search-map-left-bottom-ticket">
@@ -299,25 +329,19 @@
                             <img class="hong_map_image" src="images/hong-map-johnwick.jpg" alt="mapimg">
                         </div>
                         <ul class="hong-search-map-list">
-                            <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="johnwick">존 윅4</a></li>
-                            <li><span>2</span><a href="javascript:void(0)" class="hong_map_link" value="suzume">스즈메의 문단속</a></li>
-                            <li><span>3</span><a href="javascript:void(0)" class="hong_map_link" value="slamdunk">더 퍼스트 슬램덩크</a></li>
-                            <li><span>4</span><a href="javascript:void(0)" class="hong_map_link" value="killrom">킬링 로맨스</a></li>
-                            <li><span>5</span><a href="javascript:void(0)" class="hong_map_link" value="dream">드림</a></li>
+                            <!-- data=>hong-header:json -->
+                            <!-- <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="johnwick">존 윅4</a></li> -->
                         </ul>
                     </div>
                 </div>
                 <div class="hong-search-map-left-bottom-client">
                     <div class="hong-search-map-left-bottom">
                         <div class="hong-search-map-img">
-                            <img class="hong_map_image" src="images/hong-map-johnwick.jpg" alt="mapimg">
+                            <img id="hong_map_image2" class="hong_map_image" src="images/hong-map-johnwick.jpg" alt="mapimg">
                         </div>
                         <ul class="hong-search-map-list">
-                            <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="avata">아바타:물의 길</a></li>
-                            <li><span>2</span><a href="javascript:void(0)" class="hong_map_link" value="lesmiserable">레미제라블</a></li>
-                            <li><span>3</span><a href="javascript:void(0)" class="hong_map_link" value="slamdunk">더 퍼스트 슬램덩크</a></li>
-                            <li><span>4</span><a href="javascript:void(0)" class="hong_map_link" value="suzume">스즈메의 문단속</a></li>
-                            <li><span>5</span><a href="javascript:void(0)" class="hong_map_link" value="hero">영웅</a></li>
+                            <!-- data=>hong-header:json -->
+                            <!-- <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="avata">아바타:물의 길</a></li> -->
                         </ul>
                     </div>
                 </div>
@@ -335,8 +359,10 @@
             </div>
         </div>
     </div>
+</div>
     <!-- header search -->
 
+    <script src="js/hong-header.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

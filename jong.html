@@ -3,10 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>MEET PLAY SHARE, 메가박스</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
-    
+    <div class="jmain-movie">
+        <div class="jbg">
+            <div class="jbg-pattern"></div>
+            <img src="images/bg-pattern.jpg" alt="존윅4 포스터1">
+        </div>
+        <div class="jcont-area">
+            <div class="jtab-sorting">
+                <button class="jbox-office">박스오피스</button>
+            </div>
+            <a href="#" class="jmore-movie" title="더 많은 영화보기"><p>더 많은 영화보기<i class="iconset jcross"></i></p></a>
+            <div class="jmain-movie-list">
+                <ol class="jlist">
+                    <li class="jfirst">
+                        <a href="#" class="jmovieinfo" title="영화상세 보기">
+                            <p class="jrank">1</p>
+                            <div class="jdolby">
+                                <p>
+                                    <img src="images/mov_top_tag_db.png" alt="돌비">
+                                </p>
+                                <p>
+                                    <img src="images/mov_top_tag_mx.png" alt="메박">
+                                </p>
+                            </div>
+                            <img src="images/mainmovie1.jpg" alt="존윅4" class="jposter">
+                        </a>
+                        <div class="jtwobutton">
+                            <button type="button" class="jlike">
+                                <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                                1.3K
+                            </button>
+                            <div class="jresv">
+                                <a href="#" title="영화 예매하기">예매</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="jmovieinfo" title="영화상세 보기">
+                            <p class="jrank">2</p>
+                            <img src="images/mainmovie2.jpg" alt="드림" class="jposter">
+                        </a>
+                        <div class="jtwobutton">
+                            <button type="button" class="jlike">
+                                <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                                606
+                            </button>
+                            <div class="jresv">
+                                <a href="#" title="영화 예매하기">예매</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="jmovieinfo" title="영화상세 보기">
+                            <p class="jrank">3</p>
+                            <div class="jdolby">
+                                <p>
+                                    <img src="images/mov_top_tag_db.png" alt="돌비">
+                                </p>
+                                <p>
+                                    <img src="images/mov_top_tag_mx.png" alt="메박">
+                                </p>
+                            </div>
+                            <img src="images/mainmovie3.jpg" alt="스즈메" class="jposter">
+                        </a>
+                        <div class="jtwobutton">
+                            <button type="button" class="jlike">
+                                <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                                5.3k
+                            </button>
+                            <div class="jresv">
+                                <a href="#" title="영화 예매하기">예매</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="jmovieinfo" title="영화상세 보기">
+                            <p class="jrank">4</p>
+                            <img src="images/mainmovie4.jpg" alt="마리오" class="jposter">
+                        </a>
+                        <div class="jtwobutton">
+                            <button type="button" class="jlike">
+                                <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                                1.1K
+                            </button>
+                            <div class="jresv">
+                                <a href="#" title="영화 예매하기">예매</a>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="jsearch-line">
+                <div class="jsquare">
+                    <div class="jsear">
+                        <input type="text" placeholder="영화명을 입력해 주세요" title="영화 검색" class="jmname">
+                        <button type="button" class="jbtn"><i class="iconset jiser"></i>버튼</button>
+                    </div>
+                </div>
+                <div class="jsquare">
+                    <a href="#"><i class="iconset jical"></i>상영시간표</a>
+                </div>
+                <div class="jsquare">
+                    <a href="#"><i class="iconset jiboxoff"></i>박스오피스</a>
+                </div>
+                <div class="jsquare">
+                    <a href="#"><i class="iconset jitic"></i>빠른예매</a>
+                </div>
+            </div>
+            <div class="jmouse">
+                <img src="images/ico-mouse.png" class="iconset" alt="mouse">
+            </div>
+        </div>
+    </div>
+    <div class="jpopup">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="#"><img src="images/popup1.jpg" alt="popup1"></a></div>
+              <div class="swiper-slide"><a href="#"><img src="images/popup2.jpg" alt="popup2"></a></div>
+              <div class="swiper-slide"><a href="#"><img src="images/popup3.png" alt="popup3"></a></div>
+              <div class="swiper-slide"><a href="#"><img src="images/popup4.jpg" alt="popup4"></a></div>
+              <div class="swiper-slide"><a href="#"><img src="images/popup5.jpg" alt="popup5"></a></div>
+            </div>
+            <div class="jss">
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="jnoshow">
+            <input type="checkbox" class="jno-see">
+            <label for="jno-see">하루동안 보지 않기</label>
+        </div>
+        <button type="button" class="jpuclose"></button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

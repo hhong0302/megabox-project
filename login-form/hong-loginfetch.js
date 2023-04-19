@@ -11,7 +11,7 @@ fetch('login-form/template.html')
   console.error(error);
 });
 
-fetch('data/hong-map-list.json')
+fetch('login-form/hong-map-list.json')
 .then((res)=> res.json())
 .then((res)=>{
     let rs1 = res.map1;

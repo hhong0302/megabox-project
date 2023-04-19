@@ -9,6 +9,7 @@
 css에 밑의 태그 추가
 <link rel="stylesheet" href="login-form/hong-style.css">
 
+header 넣을 위치에 밑의 태그 3개 추가
 <div class="hong-header-all"></div>
 <script src="login-form/hong-loginfetch.js"></script>
 <script src="login-form/hong-script.js"></script>

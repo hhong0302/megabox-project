@@ -1,3 +1,4 @@
+
 /* hong */
 
 /* hong-advertisement */
@@ -686,6 +687,13 @@
     margin: 0 auto;
 }
 .jbg::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(85,63,5,1) 0%, rgba(23,17,1,0) 50%, rgba(85,63,5,1) 100%);
 }
@@ -701,6 +709,11 @@
     background-color: rgba(3,1,21,0.7);
 }
 .jbg-pattern{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
     height: 100%;
     background: url(../images/bg-movie-detail-pattern.png);
 }
@@ -1063,6 +1076,8 @@
     overflow: hidden;
     text-indent: -9999px;
     border: 0;
+
 }
 
 /* jonghyeon */
+

@@ -225,17 +225,3 @@ hong_body.addEventListener('click',(event)=>
         hong_xbtn2.style.display="none";
     }
 }); */
-
-//login form by jy
-
-
-//login form by jy
-$(function(){
-    $('.hong-login-link').click(function(e){
-        e.preventDefault();
-        $('.cinemalogin-fade').show();
-    });
-    $('.cinemalogin-close').click(function(){
-        $('.cinemalogin-fade').hide();
-    });
-});

@@ -1,3 +1,23 @@
+
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
+
+$(function(){
+    $('.jpuclose').click(function(){
+        $('.jpopup').fadeOut(500);
+    });
+});
+
 //광고 x 버튼 누르면 광고 닫히기
 function hong_delete()
 {

@@ -1,9 +1,15 @@
 
 
-hong-loginfetch의 경로를 한번씩 확인해주세요
-스타일 시트는 style.css 입니다. 스타일시트 파일 넣어주세요
-스크립트 파일은 script.js 입니다. 스크립트 파일도 넣어주세요
-*밑의 태그를 header의 위치에 넣으세요*
 
+밑에 태그를 header의 위치에 넣으세요
+경로를 한번씩 확인하세요
+스타일 시트는 hong-style.css 입니다. 파일 넣어주세요
+스크립트 파일은 hong-script.js 입니다. 스크립트 파일도 넣어주세요
+
+css에 밑의 태그 추가
+<link rel="stylesheet" href="login-form/hong-style.css">
+
+header 넣을 위치에 밑의 태그 3개 추가
 <div class="hong-header-all"></div>
 <script src="login-form/hong-loginfetch.js"></script>
+<script src="login-form/hong-script.js"></script>

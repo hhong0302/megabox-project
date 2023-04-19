@@ -4,18 +4,17 @@ function hong_delete()
     document.getElementsByClassName("hong-advertisement")[0].classList.add('hong-ad-none');
 }
 
-//버튼들
-const hong_st = document.getElementsByClassName("hong-sitemap")[0];
-const hong_xbtn1 = document.getElementsByClassName("hong-btn-close")[0];
-const hong_search = document.getElementsByClassName('hong-search-map')[0];
-const hong_xbtn2 = document.getElementsByClassName("hong-btn-close")[1];
-const hong_member = document.getElementsByClassName('hong-member-map')[0];
-const hong_xbtn3 = document.getElementsByClassName("hong-btn-close")[2];
 
 //hamburger 버튼 클릭 시 사이트맵 나왔다 들어갔다
 
 function hong_sitemap_onout()
 {
+    const hong_st = document.getElementsByClassName("hong-sitemap")[0];
+    const hong_xbtn1 = document.getElementsByClassName("hong-btn-close")[0];
+    const hong_search = document.getElementsByClassName('hong-search-map')[0];
+    const hong_xbtn2 = document.getElementsByClassName("hong-btn-close")[1];
+    const hong_member = document.getElementsByClassName('hong-member-map')[0];
+    const hong_xbtn3 = document.getElementsByClassName("hong-btn-close")[2];
     if(hong_st.style.display=="block")
     {
         hong_st.style.display="none";
@@ -42,6 +41,12 @@ function hong_sitemap_onout()
 
 function hong_search_onout()
 {
+    const hong_st = document.getElementsByClassName("hong-sitemap")[0];
+    const hong_xbtn1 = document.getElementsByClassName("hong-btn-close")[0];
+    const hong_search = document.getElementsByClassName('hong-search-map')[0];
+    const hong_xbtn2 = document.getElementsByClassName("hong-btn-close")[1];
+    const hong_member = document.getElementsByClassName('hong-member-map')[0];
+    const hong_xbtn3 = document.getElementsByClassName("hong-btn-close")[2];
     if(hong_search.style.display=="block")
     {
         hong_search.style.display="none";
@@ -68,6 +73,13 @@ function hong_search_onout()
 //member 버튼 클릭 시 member맵 나왔다 들어갔다
 function hong_member_onout()
 {
+    const hong_st = document.getElementsByClassName("hong-sitemap")[0];
+    const hong_xbtn1 = document.getElementsByClassName("hong-btn-close")[0];
+    const hong_search = document.getElementsByClassName('hong-search-map')[0];
+    const hong_xbtn2 = document.getElementsByClassName("hong-btn-close")[1];
+    const hong_member = document.getElementsByClassName('hong-member-map')[0];
+    const hong_xbtn3 = document.getElementsByClassName("hong-btn-close")[2];
+
     if(hong_member.style.display=="block")
     {
         hong_member.style.display="none";
@@ -92,38 +104,41 @@ function hong_member_onout()
 
 //네비게이션 메뉴에 갖다대면 바뀌는 그거
 
-const hong_list = document.getElementsByClassName('hong-navbar');
-const hong_navbar_list = document.getElementsByClassName('hong-navbar-list');
-const hong_nav_list = document.getElementsByClassName('hong-nav-list');
-const hong_nav_store = document.getElementsByClassName('hong-nav-store')[0];
 
-for(let i=0;i<hong_list.length;i++)
+function hong_onmouse()
 {
-    hong_list[i].onmouseover = ()=>
+    const hong_list = document.getElementsByClassName('hong-navbar');
+    const hong_navbar_list = document.getElementsByClassName('hong-navbar-list');
+    const hong_nav_list = document.getElementsByClassName('hong-nav-list');
+    const hong_nav_store = document.getElementsByClassName('hong-nav-store')[0];
+    for(let i=0;i<hong_list.length;i++)
     {
-        for(let j=0;j<hong_navbar_list.length;j++)
+        hong_list[i].onmouseover = ()=>
         {
-            hong_navbar_list[j].style.display='none';
-            hong_nav_list[j].classList.remove('hong-nav-after');
+            for(let j=0;j<hong_navbar_list.length;j++)
+            {
+                hong_navbar_list[j].style.display='none';
+                hong_nav_list[j].classList.remove('hong-nav-after');
+            }
+            hong_navbar_list[i].style.display='block';
+            hong_nav_list[i].classList.add('hong-nav-after');
         }
-        hong_navbar_list[i].style.display='block';
-        hong_nav_list[i].classList.add('hong-nav-after');
     }
-}
-document.querySelector('.hong-header-all').onmouseleave = ()=>
-{
-    for(let i=0;i<hong_navbar_list.length;i++)
+    document.querySelector('.hong-header-all').onmouseleave = ()=>
     {
-    hong_navbar_list[i].style.display='none';
-    hong_nav_list[i].classList.remove('hong-nav-after');
+        for(let i=0;i<hong_navbar_list.length;i++)
+        {
+        hong_navbar_list[i].style.display='none';
+        hong_nav_list[i].classList.remove('hong-nav-after');
+        }
     }
-}
-hong_nav_store.onmouseover =()=>
-{
-    for(let i=0;i<hong_navbar_list.length;i++)
+    hong_nav_store.onmouseover =()=>
     {
-    hong_navbar_list[i].style.display='none';
-    hong_nav_list[i].classList.remove('hong-nav-after');
+        for(let i=0;i<hong_navbar_list.length;i++)
+        {
+        hong_navbar_list[i].style.display='none';
+        hong_nav_list[i].classList.remove('hong-nav-after');
+        }
     }
 }
 
@@ -139,12 +154,13 @@ function hong_map_mouseenter(hong_attr)
 
 //search-map ticket과 client 누르면 바뀌기
 
-const hong_ticket = document.getElementsByClassName('hong-search-map-left-bottom-ticket')[0];
-const hong_client = document.getElementsByClassName('hong-search-map-left-bottom-client')[0];
-const hong_ticket_underline = document.getElementById("hong-ticket-rank");
-const hong_client_underline = document.getElementById("hong-client-rank");
+
 function hong_map_ticket()
 {
+    const hong_ticket = document.getElementsByClassName('hong-search-map-left-bottom-ticket')[0];
+    const hong_client = document.getElementsByClassName('hong-search-map-left-bottom-client')[0];
+    const hong_ticket_underline = document.getElementById("hong-ticket-rank");
+    const hong_client_underline = document.getElementById("hong-client-rank");
     hong_ticket.style.display="block";
     hong_ticket_underline.classList.add("hong-btn-underline");
     hong_client.style.display="none";
@@ -154,6 +170,10 @@ function hong_map_ticket()
 
 function hong_map_client()
 {
+    const hong_ticket = document.getElementsByClassName('hong-search-map-left-bottom-ticket')[0];
+    const hong_client = document.getElementsByClassName('hong-search-map-left-bottom-client')[0];
+    const hong_ticket_underline = document.getElementById("hong-ticket-rank");
+    const hong_client_underline = document.getElementById("hong-client-rank");
     hong_ticket.style.display="none";
     hong_ticket_underline.classList.remove("hong-btn-underline");
     hong_client.style.display="block";
@@ -205,6 +225,9 @@ hong_body.addEventListener('click',(event)=>
         hong_xbtn2.style.display="none";
     }
 }); */
+
+//login form by jy
+
 
 //login form by jy
 $(function(){

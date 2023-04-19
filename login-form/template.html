@@ -1,40 +1,12 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>header</title>
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <!-- 광고 부분 -->
-    <div class="hong-advertisement">
-        <div class="hong-adbox">
-            <a href="javascript:void(0)"><img src="images/hong-advertisement.jpg" alt="advertisement"></a>
-            <img src="images/hong-AD.png" class="hong-ad" alt="AD">
-        </div>
-        <button class="hong-btn hong-btn-delete" onclick="hong_delete()">
-            <img src="images/hong-btn-choice-dell.png" alt="choice-delete">
-        </button>
-    </div>
-    <!-- 광고 부분 -->
 
     <!-- header -->
-<div class="hong-header-all">
-    <header class="hong-header">
-        <div class="hong-header-bg">
-            <div class="hong-bg-pattern"></div>
-            <img src="images/hong-teaser.jpg" alt="teaser">
-        </div>
+    <header class="hong-header hong-form-header">
 
         <!-- header 상단  -->
         <div class="hong-content-all">
 
             <!-- header 상단 6개 -->
-            <div class="hong-content-area">
+            <div class="hong-content-area hong-form-content-area">
                 <ul class="hong-content-left">
                     <li>
                         <a href="javascript:void(0)">VIP LOUNGE</a>
@@ -63,22 +35,22 @@
 
             <!-- header 하단 메뉴들과 logo -->
             <div class="hong-content-main">
-                <ul class="hong-content-main-menu">
+                <ul class="hong-content-main-menu hong-form-content-main-menu">
                     <li class="hong-ham-search">
                         <button class="hong-btn hong-btn-hs" onclick="hong_sitemap_onout()">
-                            <img src="images/hong-hamburger.png" alt="hamburger">
+                            <img src="images/hong-form-hamburger.png" alt="hamburger">
                             <img class="hong-btn-close" src="images/hong-header-layer-close.png" alt="close">
                         </button>
                         <button class="hong-btn hong-btn-hs" onclick="hong_search_onout()">
-                            <img class="hong-search-btn-img" src="images/hong-search.png" alt="search">
+                            <img class="hong-search-btn-img" src="images/hong-form-search.png" alt="search">
                             <img class="hong-btn-close" src="images/hong-header-layer-close.png" alt="close">
                         </button>
                     </li>
                     <li class="hong-navbar hong-movie">
-                        <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">영화</a>
-                        <div class="hong-navbar-list">
+                        <a href="javascript:void(0)" class="hong-nav-list hong-form-nav-list" onmouseover="hong_onmouse()">영화</a>
+                        <div class="hong-navbar-list hong-form-navbar-list">
                             <div class="hong-navbar-box">
-                                <div class="hong-navbar-list-box hong-movie-navbar">
+                                <div class="hong-navbar-list-box hong-form-navbar-list-box hong-movie-navbar">
                                         <a href="javascript:void(0)">전체영화</a>
                                         <a href="javascript:void(0)">큐레이션</a>
                                         <a href="javascript:void(0)">무비포스트</a>
@@ -87,10 +59,10 @@
                         </div>
                     </li>
                     <li class="hong-navbar hong-ticket">
-                        <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">예매</a>
-                        <div class="hong-navbar-list">
+                        <a href="javascript:void(0)" class="hong-nav-list hong-form-nav-list" onmouseover="hong_onmouse()">예매</a>
+                        <div class="hong-navbar-list hong-form-navbar-list">
                             <div class="hong-navbar-box">
-                                <div class="hong-navbar-list-box hong-ticket-navbar">
+                                <div class="hong-navbar-list-box hong-form-navbar-list-box hong-ticket-navbar">
                                         <a href="javascript:void(0)">빠른예매</a>
                                         <a href="javascript:void(0)">상영시간표</a>
                                         <a href="javascript:void(0)">더 부티크 프라이빗 예매</a>
@@ -99,10 +71,10 @@
                         </div>
                     </li>
                     <li class="hong-navbar hong-theater">
-                        <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">극장</a>
-                        <div class="hong-navbar-list">
+                        <a href="javascript:void(0)" class="hong-nav-list hong-form-nav-list" onmouseover="hong_onmouse()">극장</a>
+                        <div class="hong-navbar-list hong-form-navbar-list">
                             <div class="hong-navbar-box">
-                                <div class="hong-navbar-list-box hong-theater-navbar">
+                                <div class="hong-navbar-list-box hong-form-navbar-list-box hong-theater-navbar">
                                         <a href="javascript:void(0)">전체극장</a>
                                         <a href="javascript:void(0)">특별관</a>
                                 </div>
@@ -110,13 +82,13 @@
                         </div>
                     </li>
                     <li class="hong-logo">
-                        <a href="javascript:void(0)"><img src="images/hong-mb-logo.png" alt="logo"></a>
+                        <a href="index.html"><img src="images/hong-form-mb-logo.png" alt="logo"></a>
                     </li>
                     <li class="hong-navbar hong-event">
-                        <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">이벤트</a>
-                        <div class="hong-navbar-list">
+                        <a href="javascript:void(0)" class="hong-nav-list hong-form-nav-list" onmouseover="hong_onmouse()">이벤트</a>
+                        <div class="hong-navbar-list hong-form-navbar-list">
                             <div class="hong-navbar-box">
-                                <div class="hong-navbar-list-box hong-event-navbar">
+                                <div class="hong-navbar-list-box hong-form-navbar-list-box hong-event-navbar">
                                         <a href="javascript:void(0)">진행중 이벤트</a>
                                         <a href="javascript:void(0)">지난 이벤트</a>
                                         <a href="javascript:void(0)">당첨자발표</a>
@@ -128,10 +100,10 @@
                         <a href="javascript:void(0)" class="hong-nav-store" onmouseover="hong_onmouse()">스토어</a>
                     </li>
                     <li class="hong-navbar hong-present">
-                        <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">혜택</a>
-                        <div class="hong-navbar-list">
+                        <a href="javascript:void(0)" class="hong-nav-list hong-form-nav-list" onmouseover="hong_onmouse()">혜택</a>
+                        <div class="hong-navbar-list hong-form-navbar-list">
                             <div class="hong-navbar-box">
-                                <div class="hong-navbar-list-box hong-present-navbar">
+                                <div class="hong-navbar-list-box hong-form-navbar-list-box hong-present-navbar">
                                         <a href="javascript:void(0)">메가박스 멤버십</a>
                                         <a href="javascript:void(0)">제휴/할인</a>
                                 </div>
@@ -139,9 +111,9 @@
                         </div>
                     </li>
                     <li class="hong-calender-member">
-                        <button class="hong-btn hong-btn-cm"><img src="images/hong-calender.png" alt="calender"></button>
+                        <button class="hong-btn hong-btn-cm"><img src="images/hong-form-calender.png" alt="calender"></button>
                         <button class="hong-btn hong-btn-cm" onclick="hong_member_onout()">
-                            <img src="images/hong-member.png" alt="member">
+                            <img src="images/hong-form-member.png" alt="member">
                             <img class="hong-btn-close" src="images/hong-header-layer-close.png" alt="close">
                         </button>
                     </li>
@@ -352,11 +324,5 @@
         </div>
     </div>
     <!-- header member -->
+<!-- header -->
 
-</div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/hong-header.js"></script>
-    <script src="js/script.js"></script>
-</body>
-</html>

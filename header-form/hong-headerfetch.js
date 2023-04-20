@@ -1,4 +1,4 @@
-fetch('login-form/template.html')
+fetch('header-form/template.html')
   .then(function(response){
     response.text().then(function(html){
       var html_dom = new DOMParser().parseFromString(html,'text/html');
@@ -11,7 +11,7 @@ fetch('login-form/template.html')
   console.error(error);
 });
 
-fetch('login-form/hong-map-list.json')
+fetch('header-form/hong-map-list.json')
 .then((res)=> res.json())
 .then((res)=>{
     let rs1 = res.map1;

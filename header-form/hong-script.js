@@ -148,8 +148,8 @@ const hong_map_link = document.getElementsByClassName('hong_map_link');
 
 function hong_map_mouseenter(hong_attr)
 {
-    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "login-form/images/hong-map-"+hong_attr+".jpg");
-    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "login-form/images/hong-map-"+hong_attr+".jpg");
+    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "header-form/images/hong-map-"+hong_attr+".jpg");
+    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "header-form/images/hong-map-"+hong_attr+".jpg");
 }
 
 //search-map ticket과 client 누르면 바뀌기
@@ -165,7 +165,7 @@ function hong_map_ticket()
     hong_ticket_underline.classList.add("hong-btn-underline");
     hong_client.style.display="none";
     hong_client_underline.classList.remove("hong-btn-underline");
-    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "login-form/images/hong-map-"+hong_map_link[0].getAttribute('value')+".jpg");
+    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "header-form/images/hong-map-"+hong_map_link[0].getAttribute('value')+".jpg");
 }
 
 function hong_map_client()
@@ -178,5 +178,5 @@ function hong_map_client()
     hong_ticket_underline.classList.remove("hong-btn-underline");
     hong_client.style.display="block";
     hong_client_underline.classList.add("hong-btn-underline");
-    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "login-form/images/hong-map-"+hong_map_link[5].getAttribute('value')+".jpg");
+    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "header-form/images/hong-map-"+hong_map_link[5].getAttribute('value')+".jpg");
 }

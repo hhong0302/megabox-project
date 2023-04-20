@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+.cinema-fixedTop{
+    width: 100%;
+    height: 42px;
+    background-color: #e6e6e6;
+    transition: all 0.5s
+}
+#cinema.drop {
+    position: fixed;
+    top: 0;
+    background-color: #444;
+    transition: all 500ms;
+    z-index: 999;
+}
+#cinema.drop a{
+    color: #fff;
+}
+.cinetop{
+    float: left;
+    height: 42px;
+}
+.cinetop span{
+    display: block;
+    float: left;
+    width: 13px;
+    height: 100%;
+    background:url(../images/bg-home.png) no-repeat center;
+}
+.cinetop a{
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+    height: 42px;
+    display: block;
+    position: relative;
+    float: left;
+    height: 42px;
+    margin: 0 0 0 25px;
+    line-height: 46px;
+    color: #666;
+    font-size: 15px;
+}
+.cinetop a:hover{
+    text-decoration: underline;
+}
+.cinetop-one::before{
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 0;
+    float: left;
+    width: 13px;
+    height: 42px;
+    background: url(../images/bg-right.png) no-repeat center;
+}
+.cinetop-two::before{
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 0;
+    float: left;
+    width: 13px;
+    height: 42px;
+    background: url(../images/bg-right.png) no-repeat center;
+}
+
+/*************************************/
+.cinemamain{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.cinemamain h1{
+    margin: 40px 0 0 0;
+    padding: 0 0 26px 0;
+    font-weight: 500;
+    letter-spacing: -4px;
+}  
+.cinema-textbox{
+    width: 100%;
+    min-height: 190px;
+    position: relative;
+}
+
+.cinema-textbox{
+    border: 3px solid #666;
+    border-radius: 10px;
+    
+}
+.cinema-tablink{
+    background: #fff;
+    color: #000000;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding:15px 17px;
+    font-size: 18px;
+    width: 13%;
+    border-bottom: 1px solid #b1b1b1;
+    border-right: 1px solid #b1b1b1;
+}
+.tablast{
+    border-right:  1px solid #fff;
+}
+.cinema-tablink:first-child{
+    border-top-left-radius: 3px;
+}
+
+.cinema-tabcontent{
+    margin-left: 20px;
+    color: #666;
+    padding: 80px 10px 50px 0px;
+    height: 100%;
+    border-radius: 10px;
+}
+.col-3{
+    border-right: 1px solid #e0e0e0;;
+    margin-bottom: 20px;
+}
+.col-3:last-child{
+    border-right: none;
+}
+
+.col-3>ul>li{
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+.col-3>ul>li>a{
+    text-decoration: none;
+    color: #444;
+
+}
+.col-3>ul>li>a:hover{
+    text-decoration: underline;
+}
+
+.cinema-bottom{
+    position: absolute;
+    padding: 0 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    line-height: 50px;
+    border-radius: 0 0 10px 10px;
+    background-color: #ecf0f4;
+}
+.cinematextin{
+    background: url(../images/flag.png) no-repeat;
+    display: inline;
+    vertical-align: middle;
+}
+.cinematextin::after{
+    content: "나의 선호영화관 정보";
+    margin-left: 15px;
+}
+.cinema-bottom button{
+    color: #503396;
+    border: 1px solid #503396;
+    background-color: #fff;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+.cinema-bottom button:hover{
+    background-color: #ecf0f4;
+}
+/*****************************/
+.theaterevent-title,
+.theaternotice-title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    align-items: center;
+}
+.theaterevent-title h1,
+.theaternotice-title h1{
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -4px;
+    color: #503396;
+}
+.theaterevent-title a,
+.theaternotice-title a{
+    text-decoration: none;
+    color: #666;
+    margin-right: 20px;
+}
+.theaterevent-title a:hover,
+.theaternotice-title a:hover{
+    text-decoration: underline;
+}
+.theaterevent-title a::after,
+.theaternotice-title a::after{
+    content: "";
+    margin-left: 5px;
+    width: 15px;
+    height: 25px;
+    position: absolute;
+    background: url(../images/bg-right.png) no-repeat center;
+}
+.theaterevent-img img{
+    width: 580px;
+    border-radius: 10px;
+}
+.theaterevent-img>a:first-child{
+    margin-right: 30px;
+}
+/*******************************/
+.theater-notice table{
+    border-collapse: collapse;
+    text-align: center;
+    width: 1200px;
+    border-top: 1px solid #000;
+    font-size: 14px;
+    margin-bottom: 120px;
+}
+.theater-notice td:nth-child(2){
+    text-align: left;
+}
+.theater-notice th{
+    padding: 0;
+}
+.theater-notice tr{
+    line-height: 45px;
+}
+.theater-notice td{
+    color: #444;
+    border-bottom: 1px solid #eaeaea;
+}
+.theater-notice td>a{
+    text-decoration: none;
+    color: #444;
+}
+.theater-notice td>a:hover{
+    text-decoration: underline;
+}
+.theater-notice th{
+    
+    background-color: #f2f4f5;
+}
+/*********login-popup*************/
+.cinemalogin-fade{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 99;
+}
+.cinemalogin-popup{
+    width: 850px;
+    height: 484px;
+    background: #fff; 
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cinemalogin-popup header{
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: #503396;
+}
+.cinemalogin-popup header h3{
+    margin: 0;
+    padding: 11px 20px 0 20px;
+}
+.cinemalogin-popup header button{
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 5px;
+    background: #503396;
+    color: #fff;
+    border: none;   
+    cursor: pointer;
+}
+.cinemalogin-main .row{
+    margin: 0;
+    padding: 20px;
+}
+.cinemalogin-input>input{
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d8d9db;
+    color: #444;
+}
+.cinemalogin-input>input:hover{
+    border: 1px solid #000;
+}
+.IdSave{
+    font-size: 14px;
+}
+.IdSave a{
+    text-decoration: none;
+}
+.IdSave label{
+    margin-right: 30%;
+}
+.IdSave span{
+    color: #3d7db7;
+}
+.IdSaveAD{
+    border: 1px solid #3d7db7;
+    margin-left: 5px;
+    padding: 0 5px 0 5px;
+}
+.cinemalogin-input>button{
+    width: 100%;
+    height: 46px;
+    color: #777;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.loginLink{
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+.loginLink a{
+    text-decoration: none;
+    color: #666;
+    border-right: 1px solid #bcbcbc;
+    margin-left: 15px;
+    padding-right: 18px;
+}
+.loginLink a:last-child{
+    border-right:none;
+}
+.snsLogin{
+    text-align: center;
+}
+.snsLogin a{
+    margin: 0 23px;
+}
+/***********************************/
+.cinema-angletop{
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: 25px;
+    z-index: 100;
+    margin: 0 0 0 600px;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #444;
+   /*  display: none; */
+    box-shadow: 1px 1px 7px 0 rgba(0,0,0,.5);
+}
+.cinema-angletop-text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    text-align: center;
+    line-height: 0;
+}
+.cinema-angletop-text p{
+    margin: 0;
+}
+/********************************/

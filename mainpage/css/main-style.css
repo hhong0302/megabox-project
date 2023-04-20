@@ -1711,11 +1711,7 @@ a.link{
     background-position: 0 0;
     background-repeat: no-repeat;
 }
-a:visited {
-    color: #666;
-    text-decoration: none;
-    outline: 1px dotted #000;
-}
+
 .search a{
     position: relative;
     right: 10px;

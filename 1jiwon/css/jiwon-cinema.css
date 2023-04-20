@@ -93,7 +93,7 @@
     outline: none;
     cursor: pointer;
     padding:15px 17px;
-    font-size: 18px;
+    font-size: 16px;
     width: 13%;
     border-bottom: 1px solid #b1b1b1;
     border-right: 1px solid #b1b1b1;
@@ -115,6 +115,7 @@
 .col-3{
     border-right: 1px solid #e0e0e0;;
     margin-bottom: 20px;
+    padding-left: 30px;
 }
 .col-3:last-child{
     border-right: none;
@@ -197,7 +198,7 @@
     background: url(../images/bg-right.png) no-repeat center;
 }
 .theaterevent-img img{
-    width: 580px;
+    width: 532px;
     border-radius: 10px;
 }
 .theaterevent-img>a:first-child{
@@ -207,7 +208,7 @@
 .theater-notice table{
     border-collapse: collapse;
     text-align: center;
-    width: 1200px;
+    width: 1100px;
     border-top: 1px solid #000;
     font-size: 14px;
     margin-bottom: 120px;
@@ -348,10 +349,9 @@
     left: 50%;
     bottom: 25px;
     z-index: 100;
-    margin: 0 0 0 600px;
+    margin: 0 0 0 550px;
     width: 50px;
     height: 50px;
-    color: #fff;
     text-decoration: none;
     border-radius: 50%;
     background: #444;
@@ -365,6 +365,7 @@
     top: 25%;
     text-align: center;
     line-height: 0;
+    color: #fff;
 }
 .cinema-angletop-text p{
     margin: 0;

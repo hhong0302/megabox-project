@@ -8,7 +8,6 @@ function openPage(pageName, e, color){
     }
     for(let i = 0; i<tablink.length; i++){
         tablink[i].style.backgroundColor = "";
-     
     }
     document.getElementById(pageName).style.display = "block";
     e.style.backgroundColor = color;
@@ -103,6 +102,8 @@ const pushValue = () => {
         $("#btn_login").css("color","#fff");
       } else {
         loginButton.disabled = true;
+        $("#btn_login").css("background","#e0e0e0");
+        $("#btn_login").css("color","#777");
       }
     });
   }

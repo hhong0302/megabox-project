@@ -1147,8 +1147,8 @@
 }
 
 
-.slider2{
-    margin-right: 50px;
+.slider2{/* 
+    margin-right: 50px; */
     width: 300px;
     overflow: hidden;
     height: 230px;

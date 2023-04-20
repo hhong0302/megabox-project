@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEET PLAY SHARE, 메가박스</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+
+    <!-- hong -->
+<!-- 광고 부분 -->
+<div class="hong-advertisement">
+    <div class="hong-adbox">
+        <a href="javascript:void(0)"><img src="images/hong-images/hong-advertisement.jpg" alt="advertisement"></a>
+        <img src="images/hong-images/hong-AD.png" class="hong-ad" alt="AD">
+    </div>
+    <button class="hong-btn hong-btn-delete" onclick="hong_delete()">
+        <img src="images/hong-images/hong-btn-choice-dell.png" alt="choice-delete">
+    </button>
+</div>
+<!-- 광고 부분 -->
+
+<!-- header -->
+<div class="hong-header-all">
+<header class="hong-header">
+    <div class="hong-header-bg">
+        <div class="hong-bg-pattern"></div>
+        <img src="images/hong-images/hong-teaser.jpg" alt="teaser">
+    </div>
+
+    <!-- header 상단  -->
+    <div class="hong-content-all">
+
+        <!-- header 상단 6개 -->
+        <div class="hong-content-area">
+            <ul class="hong-content-left">
+                <li>
+                    <a href="javascript:void(0)">VIP LOUNGE</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">멤버십</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">고객센터</a>
+                </li>
+            </ul>
+
+            <ul class="hong-content-right">
+                <li>
+                    <a href="javascript:void(0)" class="hong-login-link">로그인</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">회원가입</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">빠른예매</a>
+                </li>
+            </ul>
+        </div>
+        <!-- header 상단 6개 -->
+
+        <!-- header 하단 메뉴들과 logo -->
+        <div class="hong-content-main">
+            <ul class="hong-content-main-menu">
+                <li class="hong-ham-search">
+                    <button class="hong-btn hong-btn-hs" onclick="hong_sitemap_onout()">
+                        <img src="images/hong-images/hong-hamburger.png" alt="hamburger">
+                        <img class="hong-btn-close" src="images/hong-images/hong-header-layer-close.png" alt="close">
+                    </button>
+                    <button class="hong-btn hong-btn-hs" onclick="hong_search_onout()">
+                        <img class="hong-search-btn-img" src="images/hong-images/hong-search.png" alt="search">
+                        <img class="hong-btn-close" src="images/hong-images/hong-header-layer-close.png" alt="close">
+                    </button>
+                </li>
+                <li class="hong-navbar hong-movie">
+                    <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">영화</a>
+                    <div class="hong-navbar-list">
+                        <div class="hong-navbar-box">
+                            <div class="hong-navbar-list-box hong-movie-navbar">
+                                    <a href="javascript:void(0)">전체영화</a>
+                                    <a href="javascript:void(0)">큐레이션</a>
+                                    <a href="javascript:void(0)">무비포스트</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hong-navbar hong-ticket">
+                    <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">예매</a>
+                    <div class="hong-navbar-list">
+                        <div class="hong-navbar-box">
+                            <div class="hong-navbar-list-box hong-ticket-navbar">
+                                    <a href="javascript:void(0)">빠른예매</a>
+                                    <a href="javascript:void(0)">상영시간표</a>
+                                    <a href="javascript:void(0)">더 부티크 프라이빗 예매</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hong-navbar hong-theater">
+                    <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">극장</a>
+                    <div class="hong-navbar-list">
+                        <div class="hong-navbar-box">
+                            <div class="hong-navbar-list-box hong-theater-navbar">
+                                    <a href="javascript:void(0)">전체극장</a>
+                                    <a href="javascript:void(0)">특별관</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hong-logo">
+                    <a href="javascript:void(0)"><img src="images/hong-images/hong-mb-logo.png" alt="logo"></a>
+                </li>
+                <li class="hong-navbar hong-event">
+                    <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">이벤트</a>
+                    <div class="hong-navbar-list">
+                        <div class="hong-navbar-box">
+                            <div class="hong-navbar-list-box hong-event-navbar">
+                                    <a href="javascript:void(0)">진행중 이벤트</a>
+                                    <a href="javascript:void(0)">지난 이벤트</a>
+                                    <a href="javascript:void(0)">당첨자발표</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hong-store">
+                    <a href="javascript:void(0)" class="hong-nav-store" onmouseover="hong_onmouse()">스토어</a>
+                </li>
+                <li class="hong-navbar hong-present">
+                    <a href="javascript:void(0)" class="hong-nav-list" onmouseover="hong_onmouse()">혜택</a>
+                    <div class="hong-navbar-list">
+                        <div class="hong-navbar-box">
+                            <div class="hong-navbar-list-box hong-present-navbar">
+                                    <a href="javascript:void(0)">메가박스 멤버십</a>
+                                    <a href="javascript:void(0)">제휴/할인</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="hong-calender-member">
+                    <button class="hong-btn hong-btn-cm"><img src="images/hong-images/hong-calender.png" alt="calender"></button>
+                    <button class="hong-btn hong-btn-cm" onclick="hong_member_onout()">
+                        <img src="images/hong-images/hong-member.png" alt="member">
+                        <img class="hong-btn-close" src="images/hong-images/hong-header-layer-close.png" alt="close">
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!-- header 하단 메뉴들과 logo -->
+
+    </div>
+    <!-- header 상단 -->
+
+</header>
+<!-- header -->
+
+<!-- login 메뉴 -->
+
+
+
+<!-- login 메뉴 -->
+
+<!-- header 햄버거버튼 누르면 나오는 메뉴 -->
+<div class="hong-sitemap">
+    <div class="hong-sitemap-box">
+        <h1 class="hong-sitemap-name">
+            SITEMAP
+        </h1>
+    </div>
+    
+    <div class="hong-sitemap-menu">
+        <div class="hong-sitemap-menu-list">
+            <ul class="hong-sitemap-list-top">
+                <li>
+                    <p>영화</p>
+                </li>
+                <li><a href="javascript:void(0)">전체영화</a></li>
+                <li><a href="javascript:void(0)">큐레이션</a></li>
+                <li><a href="javascript:void(0)">영화제</a></li>
+                <li><a href="javascript:void(0)">무비포스트</a></li>
+            </ul>
+            <ul class="hong-sitemap-list-bottom">
+                <li>
+                    <p>혜택</p>
+                </li>
+                <li><a href="javascript:void(0)">멤버십 안내</a></li>
+                <li><a href="javascript:void(0)">VIP LOUNGE</a></li>
+                <li><a href="javascript:void(0)">제휴/할인</a></li>
+            </ul>
+        </div>
+
+        <div class="hong-sitemap-menu-list">
+            <ul class="hong-sitemap-list-top">
+                <li>
+                    <p>예매</p>
+                </li>
+                <li><a href="javascript:void(0)">빠른예매</a></li>
+                <li><a href="javascript:void(0)">상영시간표</a></li>
+                <li><a href="javascript:void(0)">더 부티크 프라이빗 예매</a></li>
+            </ul>
+            <ul class="hong-sitemap-list-bottom">
+                <li>
+                    <p>고객센터</p>
+                </li>
+                <li><a href="javascript:void(0)">고객센터 홈</a></li>
+                <li><a href="javascript:void(0)">자주묻는질문</a></li>
+                <li><a href="javascript:void(0)">공지사항</a></li>
+                <li><a href="javascript:void(0)">1:1문의</a></li>
+                <li><a href="javascript:void(0)">단체/대관문의</a></li>
+                <li><a href="javascript:void(0)">분실물문의</a></li>
+            </ul>
+        </div>
+
+        <div class="hong-sitemap-menu-list">
+            <ul class="hong-sitemap-list-top">
+                <li>
+                    <p>극장</p>
+                </li>
+                <li><a href="javascript:void(0)">전체극장</a></li>
+                <li><a href="javascript:void(0)">특별관</a></li>
+            </ul>
+            <ul class="hong-sitemap-list-bottom">
+                <li>
+                    <p>회사소개</p>
+                </li>
+                <li><a href="javascript:void(0)">메가박스소개</a></li>
+                <li><a href="javascript:void(0)">사회공헌</a></li>
+                <li><a href="javascript:void(0)">홍보자료</a></li>
+                <li><a href="javascript:void(0)">제휴/부대사업문의</a></li>
+                <li><a href="javascript:void(0)">온라인제보센터</a></li>
+                <li><a href="javascript:void(0)">IR자료</a></li>
+                <li><a href="javascript:void(0)">인재채용</a></li>
+                <li><a href="javascript:void(0)">윤리경영</a></li>
+            </ul>
+        </div>
+
+        <div class="hong-sitemap-menu-list">
+            <ul class="hong-sitemap-list-top">
+                <li>
+                    <p>이벤트</p>
+                </li>
+                <li><a href="javascript:void(0)">진행중 이벤트</a></li>
+                <li><a href="javascript:void(0)">지난 이벤트</a></li>
+                <li><a href="javascript:void(0)">당첨자발표</a></li>
+            </ul>
+            <ul class="hong-sitemap-list-bottom">
+                <li>
+                    <p>이용정책</p>
+                </li>
+                <li><a href="javascript:void(0)">이용약관</a></li>
+                <li><a href="javascript:void(0)">위치기반서비스 이용약관</a></li>
+                <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0)">스크린수배정에관한기준</a></li>
+            </ul>
+        </div>
+
+        <div class="hong-sitemap-menu-list">
+            <ul>
+                <li>
+                    <p>스토어</p>
+                </li>
+                <li><a href="javascript:void(0)">새로운 상품</a></li>
+                <li><a href="javascript:void(0)">메가티켓</a></li>
+                <li><a href="javascript:void(0)">팝콘/음료/굿즈</a></li>
+                <li><a href="javascript:void(0)">포인트몰</a></li>
+            </ul>
+        </div>
+
+        <div class="hong-sitemap-menu-list">
+            <ul>
+                <li>
+                    <p>나의메가박스</p>
+                </li>
+                <li><a href="javascript:void(0)">나의메가박스 홈</a></li>
+                <li><a href="javascript:void(0)">예매/구매내역</a></li>
+                <li><a href="javascript:void(0)">영화관람권</a></li>
+                <li><a href="javascript:void(0)">스토어교환권</a></li>
+                <li><a href="javascript:void(0)">할인/제휴쿠폰</a></li>
+                <li><a href="javascript:void(0)">멤버십포인트</a></li>
+                <li><a href="javascript:void(0)">나의 무비스토리</a></li>
+                <li><a href="javascript:void(0)">나의 이벤트 응모내역</a></li>
+                <li><a href="javascript:void(0)">나의 문의내역</a></li>
+                <li><a href="javascript:void(0)">자주쓰는 할인카드</a></li>
+                <li><a href="javascript:void(0)">회원정보</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- header 햄버거버튼 누르면 나오는 메뉴 -->
+
+<!-- header search -->
+<div class="hong-search-map">
+    <div class="hong-search-map-box">
+        <div class="hong-search-left">
+            <div class="hong-search-map-left-top">
+                <div id="hong-ticket-rank" class="hong-rank">
+                    <button id="hong-btn-ticket-rank" class="hong-btn hong-btn-rank" onclick="hong_map_ticket()">예매율 순</button>
+                </div>
+                <div id="hong-client-rank" class="hong-rank">
+                    <button id="hong-btn-client-rank" class="hong-btn hong-btn-rank" onclick="hong_map_client()">메가박스 관객순</button>
+                </div>
+            </div>
+            <div class="hong-search-map-left-bottom-ticket">
+                <div class="hong-search-map-left-bottom">
+                    <div class="hong-search-map-img">
+                        <img class="hong_map_image" src="images/hong-images/hong-map-johnwick.jpg" alt="mapimg">
+                    </div>
+                    <ul class="hong-search-map-list">
+                        <!-- data=>hong-header:json -->
+                        <!-- <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="johnwick">존 윅4</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="hong-search-map-left-bottom-client">
+                <div class="hong-search-map-left-bottom">
+                    <div class="hong-search-map-img">
+                        <img id="hong_map_image2" class="hong_map_image" src="images/hong-images/hong-map-johnwick.jpg" alt="mapimg">
+                    </div>
+                    <ul class="hong-search-map-list">
+                        <!-- data=>hong-header:json -->
+                        <!-- <li><span>1</span><a href="javascript:void(0)" class="hong_map_link" value="avata">아바타:물의 길</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="hong-search-right">
+            <form name="hong_search_movie">
+                <input type="text" id="hong-search-movie" title="영화 검색" placeholder="영화를 검색하세요">
+                <button class="hong-btn hong-search-btn">
+                    <img src="images/hong-images/hong-header-search.png" alt="header-search">
+                </button>
+                <div class="hong-search-movie-bottom"></div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<!-- header search -->
+
+<!-- header member -->
+<div class="hong-member-map">
+    <div class="hong-member-txt">
+        영화를 사랑하는 당신을 위한 꼭 맞는 혜택까지 확인해 보세요!
+    </div>
+    <div class="hong-member-login-txt">
+        <button class="hong-btn hong-member-map-btn">로그인</button>
+        <a href="javascript:void(0)" class="hong-member-login-txt-link">
+            혹시 아직 회원이 아니신가요?
+        </a>
+    </div>
+</div>
+<!-- header member -->
+
+</div>
+<!-- hong -->
+
+
+
+
+
+<!-- jonghyeon -->
+<div class="jmain-movie">
+    <div class="jbg">
+        <div class="jbg-pattern"></div>
+        <img src="images/jonghyeon-images/bg-pattern.jpg" alt="존윅4 포스터1">
+    </div>
+    <div class="jcont-area">
+        <div class="jtab-sorting">
+            <button class="jbox-office">박스오피스</button>
+        </div>
+        <a href="#" class="jmore-movie" title="더 많은 영화보기"><p>더 많은 영화보기<i class="iconset jcross"></i></p></a>
+        <div class="jmain-movie-list">
+            <ol class="jlist">
+                <li class="jfirst">
+                    <a href="#" class="jmovieinfo" title="영화상세 보기">
+                        <p class="jrank">1</p>
+                        <div class="jdolby">
+                            <p>
+                                <img src="images/jonghyeon-images/mov_top_tag_db.png" alt="돌비">
+                            </p>
+                            <p>
+                                <img src="images/jonghyeon-images/mov_top_tag_mx.png" alt="메박">
+                            </p>
+                        </div>
+                        <img src="images/jonghyeon-images/mainmovie1.jpg" alt="존윅4" class="jposter">
+                    </a>
+                    <div class="jtwobutton">
+                        <button type="button" class="jlike">
+                            <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                            1.3K
+                        </button>
+                        <div class="jresv">
+                            <a href="#" title="영화 예매하기">예매</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="jmovieinfo" title="영화상세 보기">
+                        <p class="jrank">2</p>
+                        <img src="images/jonghyeon-images/mainmovie2.jpg" alt="드림" class="jposter">
+                    </a>
+                    <div class="jtwobutton">
+                        <button type="button" class="jlike">
+                            <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                            606
+                        </button>
+                        <div class="jresv">
+                            <a href="#" title="영화 예매하기">예매</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="jmovieinfo" title="영화상세 보기">
+                        <p class="jrank">3</p>
+                        <div class="jdolby">
+                            <p>
+                                <img src="images/jonghyeon-images/mov_top_tag_db.png" alt="돌비">
+                            </p>
+                            <p>
+                                <img src="images/jonghyeon-images/mov_top_tag_mx.png" alt="메박">
+                            </p>
+                        </div>
+                        <img src="images/jonghyeon-images/mainmovie3.jpg" alt="스즈메" class="jposter">
+                    </a>
+                    <div class="jtwobutton">
+                        <button type="button" class="jlike">
+                            <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                            5.3k
+                        </button>
+                        <div class="jresv">
+                            <a href="#" title="영화 예매하기">예매</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="jmovieinfo" title="영화상세 보기">
+                        <p class="jrank">4</p>
+                        <img src="images/jonghyeon-images/mainmovie4.jpg" alt="마리오" class="jposter">
+                    </a>
+                    <div class="jtwobutton">
+                        <button type="button" class="jlike">
+                            <i title="보고싶어 설정 안함" class="iconset jheart"></i>
+                            1.1K
+                        </button>
+                        <div class="jresv">
+                            <a href="#" title="영화 예매하기">예매</a>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="jsearch-line">
+            <div class="jsquare">
+                <div class="jsear">
+                    <input type="text" placeholder="영화명을 입력해 주세요" title="영화 검색" class="jmname">
+                    <button type="button" class="jbtn"><i class="iconset jiser"></i>버튼</button>
+                </div>
+            </div>
+            <div class="jsquare">
+                <a href="#"><i class="iconset jical"></i>상영시간표</a>
+            </div>
+            <div class="jsquare">
+                <a href="#"><i class="iconset jiboxoff"></i>박스오피스</a>
+            </div>
+            <div class="jsquare">
+                <a href="#"><i class="iconset jitic"></i>빠른예매</a>
+            </div>
+        </div>
+        <div class="jmouse">
+            <img src="images/jonghyeon-images/ico-mouse.png" class="iconset" alt="mouse">
+        </div>
+    </div>
+</div>
+<div class="jpopup">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#"><img src="images/jonghyeon-images/popup1.jpg" alt="popup1"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="images/jonghyeon-images/popup2.jpg" alt="popup2"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="images/jonghyeon-images/popup3.png" alt="popup3"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="images/jonghyeon-images/popup4.jpg" alt="popup4"></a></div>
+          <div class="swiper-slide"><a href="#"><img src="images/jonghyeon-images/popup5.jpg" alt="popup5"></a></div>
+        </div>
+        <div class="jss">
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="jnoshow">
+        <input type="checkbox" class="jno-see">
+        <label for="jno-see">하루동안 보지 않기</label>
+    </div>
+    <button type="button" class="jpuclose"></button>
+</div>
+<!-- jonghyeon -->
+
+
+
+
+
+<!-- jiwon -->
+<div class="main-benefit">
+    <div class="container bene">
+        <div class="bene-title">
+            <h1>혜택</h1>
+            <a href="#"><i class="fa-solid fa-plus"></i></a>
+        </div>
+        
+
+        <div class="beneslider">
+            <div class="slider2"> 
+                <div class="slidein2">
+                        <img src="images/jiwon-images/slide1.png" class="mySlides" alt="slide1">
+                        <img src="images/jiwon-images/slide2.png" class="mySlides" alt="slide2">
+                        <img src="images/jiwon-images/slide3.jpg" class="mySlides" alt="slide3">
+                        <img src="images/jiwon-images/slide4.jpg" class="mySlides" alt="slide4">
+                        <img src="images/jiwon-images/slide5.jpg" class="mySlides" alt="slide5">
+                </div>
+
+            </div>
+            <div class="slider"> 
+                <div class="slidein">
+                        <img src="images/jiwon-images/slide1-1.png" alt="slide1-1">
+                        <img src="images/jiwon-images/slide2-2.png" alt="slide2-2">
+                        <img src="images/jiwon-images/slide3-3.jpg" alt="slide3-3">
+                        <img src="images/jiwon-images/slide4-4.jpg" alt="slide4-4">
+                        <img src="images/jiwon-images/slide5-5.png" alt="slide5-5">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pcontrol bene-btn">
+            <div class="benecontrol">
+                <span class="bene-dot"></span>
+                <span class="bene-dot"></span>
+                <span class="bene-dot"></span>
+                <span class="bene-dot"></span>
+                <span class="bene-dot"></span>
+            </div>
+            <div class="benebtncontrol">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+                <button class="benebtn-stop"><i class="fa-solid fa-pause"></i></button>
+            </div>
+        </div>
+
+        <div class="bene-AD">
+            <div class="bene-banner">
+                <a href="#"><img src="images/jiwon-images/samsungcard.png" class="bannercard" alt="adimg"></a>
+                <a href="#"><img src="images/jiwon-images/event.jpg" class="bannerevent" alt="eventimg"></a>
+            </div>
+            <div class="bene-adimg">
+                <a href="#"><img src="images/jiwon-images/AD.jpg" alt="AD"></a>
+            </div>
+        </div>
+
+        <div class="bene-menu">
+            <div class="link vip"><a href="#">VIP LOUNGE</a></div>
+            <div class="link membership"><a href="#">맴버십</a></div>
+            <div class="link card"><a href="#">할인카드안내</a></div>
+            <div class="link event"><a href="#">이벤트</a></div>
+            <div class="link store"><a href="#">스토어</a></div>
+        </div>
+    </div>
+
+</div>
+<!-- jiwon -->
+
+
+
+
+
+<!-- eunbee -->
+<div class="cur-container">
+    <div class="cur-main">
+        <div class="cur-top">
+            <h1>큐레이션</h1>
+            <div class="cur-topr">
+                <a href="#">큐레이션 더보기
+                <i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+        <div class="cur-area">
+            <div class="cur-img">
+                 <p class="cur-imga"><img src="images/eunbee-images/bg-bage-curation-classic.png" alt="큐레이션"></p>
+                <div class="cur-imgb">
+                    <a href="#"><img src="images/eunbee-images/신화시대의 시작.jpg" alt="큐레이션"></a>
+                </div>
+                <div class="cur-btn justify">
+                    <div class="cur-btnl">
+                        <a href="#" class="cur-lbutton">상세보기</a>
+                    </div>
+                    <div class="cur-btnr">
+                        <a href="#" class="cur-rbutton">예매</a>
+                    </div>
+                </div>
+                <div class="cur-info">
+                    <p class="cur-text">#클래식소사이어티</p>
+                    <p class="cur-text1">[시네도슨트 - 그리스 신화] 신화시대의 시작</p>
+                    <p class="cur-summary">
+                        <p class="cur-summ1">신화가 그린 그림, 예술 작품들을 통해 그리스 신화를 다시 읽어 봅니다.</p>
+                        <br>
+                        <p class="cur-summ2">안현배 미술사학자의 안내에 따라 감상하는 그리스 신화시대의 시작에서 몰락까지.</p>
+                        <br>
+                        [그리스 신화 1, 신화시대의 시작]
+                        <br>
+                        -강연장소 : 메가박스 상암월드컵경기장, 코엑스 지점
+                        <br>
+                        -강연일시 (코엑스) : 4월3일(월) 오전 11시, 4월4일 (화) 오후 7시 30분
+                        <br>
+                        -강연일시 (상암월드컵경기장):4월8일(토)오전 11시
+                    </p>
+                </div>
+            </div>
+                <div class="cur-list">
+                    <ul>
+                        <li>
+                            <a href="#">
+                            <p class="cur-listimg">
+                                <img src="images/eunbee-images/bg-bage-curation-classic-m.png" alt="소사이어티">
+                            </p>
+                            <div class="cur-listimg-a"><img src="./images/eunbee-images/그리스신화.jpg" alt="그리스신화"></div>
+                            <p class="cur-listimg-a-summ">[시네도슨트 - 그리스 신화] 일리아드와 오디세이</p>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <p class="cur-listimg1">
+                                <img src="images/eunbee-images/bg-bage-curation-film-m.png" alt="소사이어티">
+                            </p>
+                            <div class="cur-listimg-a"><img src="images/eunbee-images/패왕별희.jpg" alt="패왕별희"></div>
+                            <p class="cur-listimg-a-summ">패왕별희 디 오리지널</p>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <p class="cur-listimg2">
+                                <img src="./images/eunbee-images/bg-bage-curation-classic-m.png" alt="소사이어티">
+                            </p>
+                            <div class="cur-listimg-a"><img src="images/eunbee-images/Dbga4jgfqlBuFLZ5qzDbqJ3nNK1YX9Iy_230.jpg" alt="유럽투어"></div>
+                            <p class="cur-listimg-a-summ">[유럽 클래식 투어] 프라하 블타바 강변 콘서트</p>
+                        </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            <p class="cur-listimg3">
+                                <img src="./images/eunbee-images/bg-bage-curation-classic-m.png" alt="소사이어티">
+                            </p>
+                            <div class="cur-listimg-a"><img src="images/eunbee-images/Dc3Ob8ZUchNIFSEqVtOrmSbJl97JmG1x_230.jpg" alt="시네도슨트"></div>
+                            <p class="cur-listimg-a-summ">[시네도슨트 - 그리스 신화] 신화의 주인공, 올림푸스 12신</p>
+                           </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+<!-- eunbee -->
+
+
+
+
+
+<!-- jiwon -->
+<div class="container">
+    <div class="main_info">
+        <h2 class="info">메가박스 안내</h2>
+        <div class="imgbox">
+            <a href="#" class="link">
+                <img src="images/woodybo2-images/box1.png" alt="li nk1">
+            </a>
+            <a href="#" class="link">
+                <img src="images/woodybo2-images/box2.png" alt="link2">
+            </a>
+            <a href="#" class="link">
+                <img src="images/woodybo2-images/box3.png" alt="link3">
+            </a>
+            <a href="#" class="link">
+                <img src="images/woodybo2-images/box4.png" alt="link4">
+            </a>
+            <a href="#" class="link">
+                <img src="images/woodybo2-images/box5.png" alt="link5">
+            </a>
+            <a href="#" class="link">
+                <img src="images/woodybo2-images/box6.jpeg" alt="link6">
+            </a>
+    
+            <div class="control1">
+            <a href="#"><button type="button"><i class="fa-solid fa-chevron-right"></i></button></a>
+            </div>
+            <div class="control2">
+            <a href="#"><button type="button"><i class="fa-solid fa-chevron-left"></i></button></a>
+            </div>
+    </div>
+    <div class="info2">
+        <div class="wrap">
+            <p class="shop">지점</p>
+            <p class="soccer">
+                <a href="#">
+                    <strong class="lol">[상암월드컵경기장]</strong>
+            "[상암월드컵경기장] K리그 축구 경기로 인한 주차 안내"</p></a>
+            <p class="date">2023.04.03</p>
+            <p class="more">
+                <a href="#">더보기<button type="button"><i class="fa-solid fa-chevron-right"></i></button></a>
+        </div>
+    </div>
+    <div class="call">
+        <div class="icon1">
+            <img src="images/woodybo2-images/call.png"><br>
+            <a href="#">고객센터</a>
+        </div>
+        <div class="icon1">
+            <img src="images/woodybo2-images/2.png"><br>
+            <a href="#">자주묻는질문</a>
+        </div>
+        <div class="icon1">
+            <img src="images/woodybo2-images/3.png"><br>
+            <a href="#">1:1문의</a>
+        </div>
+        <div class="icon1">
+            <img src="images/woodybo2-images/4.png"><br>
+            <a href="#">단체/대관문의</a>
+        </div>
+        <div class="icon1">
+            <img src="images/woodybo2-images/5.png"><br>
+            <a href="#">분실물 문의/접수</a>
+        </div>
+        <div class="icon1">
+            <img src="images/woodybo2-images/6.png"><br>
+            <a href="#">더 부티크 프라이빗<br>대관예매</a>
+        </div>
+    </div>
+    <div class="banner">
+        <a href="#"><img src="images/woodybo2-images/AD.png"></a>
+        <img class="mini" src="images/woodybo2-images/footerad.jpeg">
+    </div>
+    </div>
+    <footer>
+        <div class="navi">
+            <div class="navi_top">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                    <li><a href="#">제휴/광고/부대사업문의</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">위치기반서비스 이용약관</a></li>
+                    <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="#">윤리경영</a></li>
+                    <a href="#" class="search"><i class="fa-solid fa-magnifying-glass"></i>
+                        극장찾기
+                    </a>
+            </ul>
+            <div class="innerwrap">
+               <a href="#"><img src="images/woodybo2-images/mblogo.png" alt="하단로고"></a> 
+            </div>
+            <div class="bottom">
+                <div class="footerlogo">
+                <a href="#"><img src="images/woodybo2-images/footerlogo.png" alt="푸터로고"></a>
+                </div>
+                <div class="footerinfo">
+                    <address>서울특별시 성동구 왕십리로 50, 6층 (성수동1가, 메가박스 스퀘어)&nbsp;ARS 1544-0070</address>
+                <p>대표자명 홍정인 ·개인정보보호책임자 공성진 · 사업자등록번호 211-86-59478 통신판매업신고번호 2023-서울성동-0177<br>COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+                </div>
+                <div class="footer-sns">
+                    <a href="#"><img src="images/woodybo2-images/ico-youtubeN.png" alt="유튜브"></a>
+                    <a href="#"><img src="images/woodybo2-images/ico-instagramN.png" alt="인스타"></a>
+                    <a href="#"><img src="images/woodybo2-images/ico-facebookN.png" alt="페이스북"></a>
+                    <a href="#"><img src="images/woodybo2-images/ico-twitterN.png" alt="트위터"></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer> 
+</div>
+<!-- jiwon -->
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/main-script.js"></script>
+
+</body>
+</html>

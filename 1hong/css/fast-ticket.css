@@ -50,3 +50,78 @@
 {
     text-decoration: underline;
 }
+
+.hong-ticket-h1
+{
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.hong-ticket-box
+{
+    width: 100%;
+}
+
+.hong-ticket-box-head
+{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    border: 1px solid #d8d9db;
+    border-top: 1px solid #555;
+}
+
+.hong-ticket-box-date
+{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hong-ticket-box-date-left,.hong-ticket-box-date-right
+{
+    width: 4%;
+    height: 100%;
+    background-color: #fff;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.hong-ticket-box-date-left img,.hong-ticket-box-date-right img
+{
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hong-ticket-box-date-list
+{
+    width: 92%;
+    height: 100%;
+    background: #666;
+}
+
+.hong-ticket-box-calendar
+{
+    width: 5%;
+    height: 100%;
+    position: relative;
+    border-left: 1px solid #d8d9db;
+}
+
+.hong-ticket-box-calendar img
+{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

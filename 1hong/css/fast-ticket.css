@@ -1,0 +1,52 @@
+.hong-page-util
+{
+    min-width: 1100px;
+    height: 42px;
+    background-color: #f8f8fa;
+}
+
+.hong-page-util-box
+{
+    width: 1100px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.hong-ticket-home
+{
+    width: 13px;
+    height: 13px;
+}
+
+.hong-page-util-ticketing,.hong-page-util-fastticketing
+{
+    position: relative;
+    margin-left: 25px;
+}
+
+.hong-page-util-ticketing::before,.hong-page-util-fastticketing::before
+{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 42px;
+    background: url(../images/hong-ticket-images/hong-location-arr.png) no-repeat;
+    top: -50%;
+    transform: translateY(50%);
+    left: -13px;
+}
+
+.hong-page-util-ticketing a,.hong-page-util-fastticketing a
+{
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.hong-page-util-ticketing a:hover,.hong-page-util-fastticketing a:hover
+{
+    text-decoration: underline;
+}

@@ -112,10 +112,7 @@ ul{
     padding:0;
     margin: 0;
 }
-a, a:link{
-    text-decoration: none;
-    color:#444;
-}
+
 @font-face {
     font-family: 'NanumBarunGothic';
     font-style: normal;

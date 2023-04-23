@@ -1,3 +1,4 @@
+/* 유틸박스 */
 .hong-page-util
 {
     min-width: 1100px;
@@ -59,7 +60,9 @@
 {
     text-decoration: underline;
 }
+/* 유틸박스 */
 
+/* 빠른예매 상단 */
 .hong-ticket-h1
 {
     font-size: 25px;
@@ -117,7 +120,7 @@
 
 .hong-ticket-box-list-button
 {
-    width: 88px;
+    width: 100px;
     height: 100%;
     position: relative;
 }
@@ -130,7 +133,7 @@
 
 .hong-ticket-box-list-button span
 {
-    margin: 3px;
+    margin: 4px;
     font-size: 12px;
     font-weight: 400;
 }
@@ -143,8 +146,8 @@
     background-color: #999;
     position: absolute;
     top: 50%;
-    left: 33px;
-    transform: translateY(-50%);
+    left: 49%;
+    transform: translate(-50%,-50%);
 }
 
 .hong-ticket-box-calendar
@@ -163,4 +166,33 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+/* 빠른예매 상단 */
 
+/* 빠른예매 하단 */
+.hong-little-container
+{
+    width: 100%;
+    display: flex;
+}
+
+.hong-title-movie
+{
+    width: 25%;
+    height: 200px;
+    background-color: #555;
+}
+
+.hong-title-theater
+{
+    width: 35%;
+    height: 200px;
+    background-color: #503396;
+}
+
+.hong-title-time
+{
+    width: 40%;
+    height: 200px;
+    background-color: #999;
+}
+/* 빠른예매 하단 */

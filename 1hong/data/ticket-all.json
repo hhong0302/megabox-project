@@ -108,6 +108,31 @@
             "age":"all",
             "name":"신데렐라",
             "value":"cinderella"
+        },
+        {
+            "age":"all",
+            "name":"라 트라비아타",
+            "value":"la-traviata"
+        },
+        {
+            "age":"12",
+            "name":"파벨만스",
+            "value":"pavel"
+        },
+        {
+            "age":"15",
+            "name":"사랑의 고고학",
+            "value":"love-old"
+        },
+        {
+            "age":"15",
+            "name":"이니세린의 밴시",
+            "value":"vancy"
+        },
+        {
+            "age":"15",
+            "name":"피기",
+            "value":"figi"
         }
     ]
 }

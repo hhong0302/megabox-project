@@ -22,112 +22,146 @@
         </div>
     </div>
 
-    <div class="container hong-ticket-container">
-        <!-- 빠른예매 제목 -->
-        <h1 class="hong-ticket-h1">빠른예매</h1>
-        <!-- 빠른예매 제목 -->
+    <div class="container-all">
+        <div class="container hong-ticket-container">
+            <!-- 빠른예매 제목 -->
+            <h1 class="hong-ticket-h1">빠른예매</h1>
+            <!-- 빠른예매 제목 -->
 
-        <!-- 예매박스 전체 -->
-        <div class="hong-ticket-box">
+            <!-- 예매박스 전체 -->
+            <div class="hong-ticket-box">
 
-            <!-- 예매박스 상단 날짜부분 -->
-            <div class="hong-ticket-box-head">
+                <!-- 예매박스 상단 날짜부분 -->
+                <div class="hong-ticket-box-head">
 
-                <!-- 예매박스 상단 날짜부분 버튼 -->
-                <div class="hong-ticket-box-date">
-                    <button class="hong-ticket-box-date-left hong-button" onclick="ticket_box_left()">
-                        <img src="images/hong-ticket-images/hong-cal-pre.png" alt="pre">
-                    </button>
-                    <div class="hong-ticket-box-date-list">
-                        <div class="hong-ticket-box-date-flex" style="left: 0px;">
-                            <!-- 날짜부분은 js로 작성 -->
-                            <button class="hong-ticket-box-list-button hong-button">
-                                <span>23</span>
-                                <span>오늘</span>
-                            </button>
+                    <!-- 예매박스 상단 날짜부분 버튼 -->
+                    <div class="hong-ticket-box-date">
+                        <button class="hong-ticket-box-date-left hong-button" onclick="ticket_box_left()">
+                            <img src="images/hong-ticket-images/hong-cal-pre.png" alt="pre">
+                        </button>
+                        <div class="hong-ticket-box-date-list">
+                            <div class="hong-ticket-box-date-flex" style="left: 0px;">
+                                <!-- 날짜부분은 js로 작성 -->
+                                <button class="hong-ticket-box-list-button hong-button">
+                                    <span>23</span>
+                                    <span>오늘</span>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <button class="hong-ticket-box-date-right hong-button" onclick="ticket_box_right()">
+                            <img src="images/hong-ticket-images/hong-cal-nxt.png" alt="next">
+                        </button>
+                    </div>
+                    <!-- 예매박스 상단 날짜부분 버튼 -->
+
+                    <!-- 예매박스 상단 우측 캘린더 -->
+                    <div class="hong-ticket-box-calendar">
+                        <img src="images/hong-ticket-images/hong-calendar.png" alt="calendar">
+                    </div>
+                    <!-- 예매박스 상단 우측 캘린더 -->
+
+                </div>
+                <!-- 예매박스 상단 날짜부분 -->
+
+                <!-- 예매박스 하단 예매부분 -->
+                <div class="hong-little-container">
+
+                    <!-- 영화부분 -->
+                    <div class="hong-title-movie">
+                        <h1>영화</h1>
+                        <div class="hong-title-movie-box">
+                            <div class="hong-title-movie-button-box">
+                                <button class="hong-title-movie-box-all hong-button" onclick="movieAll()">
+                                    전체
+                                </button>
+                                <button class="hong-title-movie-box-qr hong-button" onclick="qrAll()">
+                                    큐레이션
+                                </button>
+                            </div>
+                            <div class="hong-title-movie-all-box">
+                                <ul class="hong-title-movie-ul hong-title-movie-ul-all">
+                                    <li class="hong-title-movie-list">
+                                        <button class="hong-button hong-title-movie-list-button">
+                                            <img class="hong-title-movie-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="연령">
+                                            <span>all</span>
+                                            <img class="hong-title-movie-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                            <input type="hidden" value="dr">
+                                        </button>
+                                    </li>
+                                </ul>
+                                <ul class="hong-title-movie-ul hong-title-movie-ul-qr">
+                                    <li class="hong-title-movie-list">
+                                        <button class="hong-button hong-title-movie-list-button">
+                                            <img class="hong-title-movie-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="연령">
+                                            <span>qr</span>
+                                            <img class="hong-title-movie-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                            <input type="hidden" value="dr">
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hong-title-movie-underimg">
+                                <div class="hong-all-movie-list"><span>모든영화<br>목록에서 영화를 선택하세요.</span></div>
+                                <div class="hong-title-movie-imgbox">
+                                    <div class="hong-title-movie-underimg-left">
+                                        <div class="hong-title-movie-underimg-box">
+                                            <img class="hong-underimg" src="images/hong-ticket-images/hong-ticket-johnwick.jpg" alt="jw">
+                                            <input type="hidden" value="jw">
+                                            <button class="hong-button hong-underimg-xbox" onclick="closeBtn(this)">
+                                                <img src="images/hong-ticket-images/hong-img-xbox.png" alt="x">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="hong-title-movie-underimg-center">
+
+                                    </div>
+                                    <div class="hong-title-movie-underimg-right">
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- 영화부분 -->
+
+                    <!-- 극장부분 -->
+                    <div class="hong-title-theater">
+                        <h1>극장</h1>
+
+                    </div>
+                    <!-- 극장부분 -->
+
+                    <!-- 시간부분 -->
+                    <div class="hong-title-time">
+                        <h1>시간</h1>
+
+                    </div>
+                    <!-- 시간부분 -->
                     
-                    <button class="hong-ticket-box-date-right hong-button" onclick="ticket_box_right()">
-                        <img src="images/hong-ticket-images/hong-cal-nxt.png" alt="next">
-                    </button>
                 </div>
-                <!-- 예매박스 상단 날짜부분 버튼 -->
-
-                <!-- 예매박스 상단 우측 캘린더 -->
-                <div class="hong-ticket-box-calendar">
-                    <img src="images/hong-ticket-images/hong-calendar.png" alt="calendar">
-                </div>
-                <!-- 예매박스 상단 우측 캘린더 -->
+                <!-- 예매박스 하단 예매부분 -->
 
             </div>
-            <!-- 예매박스 상단 날짜부분 -->
-
-            <!-- 예매박스 하단 예매부분 -->
-            <div class="hong-little-container">
-
-                <!-- 영화부분 -->
-                <div class="hong-title-movie">
-                    <h1>영화</h1>
-                    <div class="hong-title-movie-box">
-                        <div class="hong-title-movie-button-box">
-                            <button class="hong-title-movie-box-all hong-button" onclick="movieAll()">
-                                전체
-                            </button>
-                            <button class="hong-title-movie-box-qr hong-button" onclick="qrAll()">
-                                큐레이션
-                            </button>
-                        </div>
-                        <div class="hong-title-movie-all-box">
-                            <ul class="hong-title-movie-ul hong-title-movie-ul-all">
-                                <li class="hong-title-movie-list">
-                                    <button class="hong-button hong-title-movie-list-button">
-                                        <img class="hong-title-movie-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
-                                        <span>드림</span>
-                                        <img class="hong-title-movie-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
-                                        <input type="hidden" value="">
-                                    </button>
-                                </li>
-                            </ul>
-                            <ul class="hong-title-movie-ul hong-title-movie-ul-qr">
-                                <li class="hong-title-movie-list">
-                                    <button class="hong-button hong-title-movie-list-button">
-                                        <img class="hong-title-movie-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
-                                        <span>드림</span>
-                                        <img class="hong-title-movie-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
-                                        <input type="hidden" value="">
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="hong-title-movie-underimg">
-
-                        </div>
+            <!-- 예매박스 전체 -->
+            
+        </div>
+    
+        <!-- 경고창 -->
+        <div class="hong-window">
+            <div class="window-box">
+                <div class="alert-form">
+                    <div class="alert-form-head">
+                        <span>알림</span>
+                        <button class="hong-btn" onclick="closeAlert()">
+                            <img src="images/hong-ticket-images/alertx.png" alt="alertx">
+                        </button>
                     </div>
                 </div>
-                <!-- 영화부분 -->
-
-                <!-- 극장부분 -->
-                <div class="hong-title-theater">
-                    <h1>극장</h1>
-
-                </div>
-                <!-- 극장부분 -->
-
-                <!-- 시간부분 -->
-                <div class="hong-title-time">
-                    <h1>시간</h1>
-
-                </div>
-                <!-- 시간부분 -->
-                
             </div>
-            <!-- 예매박스 하단 예매부분 -->
-
         </div>
-        <!-- 예매박스 전체 -->
+        <!-- 경고창 -->
     </div>
-    
 
     <script src="js/fast-ticket.js"></script>
 </body>

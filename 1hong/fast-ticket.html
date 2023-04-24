@@ -35,17 +35,20 @@
 
                 <!-- 예매박스 상단 날짜부분 버튼 -->
                 <div class="hong-ticket-box-date">
-                    <button class="hong-ticket-box-date-left hong-button">
+                    <button class="hong-ticket-box-date-left hong-button" onclick="ticket_box_left()">
                         <img src="images/hong-ticket-images/hong-cal-pre.png" alt="pre">
                     </button>
                     <div class="hong-ticket-box-date-list">
-                        <!-- 날짜부분은 js로 작성 -->
-                        <button class="hong-ticket-box-list-button hong-button">
-                            <span>23</span>
-                            <span>오늘</span>
-                        </button>
+                        <div class="hong-ticket-box-date-flex" style="left: 0px;">
+                            <!-- 날짜부분은 js로 작성 -->
+                            <button class="hong-ticket-box-list-button hong-button">
+                                <span>23</span>
+                                <span>오늘</span>
+                            </button>
+                        </div>
                     </div>
-                    <button class="hong-ticket-box-date-right hong-button">
+                    
+                    <button class="hong-ticket-box-date-right hong-button" onclick="ticket_box_right()">
                         <img src="images/hong-ticket-images/hong-cal-nxt.png" alt="next">
                     </button>
                 </div>
@@ -65,18 +68,55 @@
 
                 <!-- 영화부분 -->
                 <div class="hong-title-movie">
+                    <h1>영화</h1>
+                    <div class="hong-title-movie-box">
+                        <div class="hong-title-movie-button-box">
+                            <button class="hong-title-movie-box-all hong-button" onclick="movieAll()">
+                                전체
+                            </button>
+                            <button class="hong-title-movie-box-qr hong-button" onclick="qrAll()">
+                                큐레이션
+                            </button>
+                        </div>
+                        <div class="hong-title-movie-all-box">
+                            <ul class="hong-title-movie-ul hong-title-movie-ul-all">
+                                <li class="hong-title-movie-list">
+                                    <button class="hong-button hong-title-movie-list-button">
+                                        <img class="hong-title-movie-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
+                                        <span>드림</span>
+                                        <img class="hong-title-movie-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="">
+                                    </button>
+                                </li>
+                            </ul>
+                            <ul class="hong-title-movie-ul hong-title-movie-ul-qr">
+                                <li class="hong-title-movie-list">
+                                    <button class="hong-button hong-title-movie-list-button">
+                                        <img class="hong-title-movie-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
+                                        <span>드림</span>
+                                        <img class="hong-title-movie-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="">
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hong-title-movie-underimg">
 
+                        </div>
+                    </div>
                 </div>
                 <!-- 영화부분 -->
 
                 <!-- 극장부분 -->
                 <div class="hong-title-theater">
+                    <h1>극장</h1>
 
                 </div>
                 <!-- 극장부분 -->
 
                 <!-- 시간부분 -->
                 <div class="hong-title-time">
+                    <h1>시간</h1>
 
                 </div>
                 <!-- 시간부분 -->

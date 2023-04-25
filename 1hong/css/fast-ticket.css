@@ -76,7 +76,8 @@ body
     font-size: 25px;
     font-weight: 400;
     letter-spacing: -1px;
-    margin-top: 30px;
+    padding-top: 30px;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
@@ -196,31 +197,16 @@ body
 .hong-little-container
 {
     width: 100%;
-    height: 500px;
+    height: 550px;
     display: flex;
     border-bottom: 1px solid #d8d9db;
 }
-
+/* 빠른예매 영화 */
 .hong-title-movie
 {
     width: 25%;
     height: 100%;
     border-left: 1px solid #d8d9db;
-}
-
-.hong-title-theater
-{
-    width: 35%;
-    height: 100%;
-    border-left: 1px solid #d8d9db;
-    border-right: 1px solid #d8d9db;
-}
-
-.hong-title-time
-{
-    width: 40%;
-    height: 100%;
-    border-right: 1px solid #d8d9db;
 }
 
 .hong-little-container h1
@@ -234,85 +220,87 @@ body
     font-weight: 400;
 }
 
-.hong-title-movie-box
+.hong-title-mt-box
 {
     width: 85%;
     height: 90%;
     margin: 0 auto;
 }
 
-.hong-title-movie-button-box
+.hong-title-mt-button-box
 {
     width: 100%;
     height: 7%;
     display: flex;
 }
 
-.hong-title-movie-box-all,.hong-title-movie-box-qr
+.hong-title-mt-box-all,.hong-title-mt-box-qr
 {
     width: 50%;
     padding: 5px 0;
 }
 
-.hong-title-movie-box-all
+.hong-title-mt-box-all
 {
     border: 1px solid #555;
     border-bottom: 0;
 }
 
-.hong-title-movie-box-qr
+.hong-title-mt-box-qr
 {
     border:1px solid #d9d8dd;
     border-left: 0;
     border-bottom: 1px solid #555;
 }
 
-.hong-title-movie-box-all:focus,.hong-title-movie-box-qr:focus
+.hong-title-mt-box-all:focus,.hong-title-mt-box-qr:focus
 {
     outline: 1px dotted #555;
 }
 
-.hong-title-movie-all-box
+.hong-title-mt-all-box
 {
     width: 100%;
     height: 65%;
     margin-top: 20px;
 }
 
-.hong-title-movie-ul
+.hong-title-mt-ul
 {
     height: 90%;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
-.hong-title-movie-ul-qr
+.hong-title-mt-ul-qr
 {
     display: none;
 }
 
-.hong-title-movie-ul::-webkit-scrollbar
+.hong-title-mt-ul::-webkit-scrollbar
 {
     width: 5px;
     background-color: #ddd;
+    border-radius: 5px;
 }
 
-.hong-title-movie-ul::-webkit-scrollbar-thumb {
+.hong-title-mt-ul::-webkit-scrollbar-thumb {
     background-color: #666;
     border-radius: 5px;
 }
-.hong-title-movie-ulr::-webkit-scrollbar-track {
+.hong-title-mt-ulr::-webkit-scrollbar-track {
     background-color: grey;
     border-radius: 5px;
     box-shadow: inset 0px 0px 5px #ddd;
 }
 
-.hong-title-movie-list
+.hong-title-mt-list
 {
     width: 100%;
-    margin: 2px auto;
+    padding: 2px auto;
 }
 
-.hong-title-movie-list-button
+.hong-title-mt-list-button
 {
     width: 100%;
     height: 30px;
@@ -321,7 +309,7 @@ body
     align-items: center;
 }
 
-.hong-title-movie-list-button span
+.hong-title-mt-list-button span
 {
     width: 80%;
     text-align: left;
@@ -330,36 +318,35 @@ body
     letter-spacing: 0;
 }
 
-.hong-title-movie-img-age
+.hong-title-mt-img-age
 {
     height: 20px;
     margin-left: 5px;
 }
 
-.hong-title-movie-img-heart
+.hong-title-mt-img-heart
 {
     height: 12px;
     margin-right: 5px;
 }
 
-.hong-title-movie-underimg
+.hong-title-mt-underimg
 {
     width: 100%;
     height: 20%;
 }
-/* 빠른예매 하단 */
 
 /* 빠른예매 사진 */
-.hong-all-movie-list
+.hong-all-mt-list
 {
     width: 100%;
     height: 100%;
     position: relative;
     border: 1px solid #d9d8dd;
-    display: none;
+    display: block;
 }
 
-.hong-all-movie-list span
+.hong-all-mt-list span
 {
     width: 100%;
     position: absolute;
@@ -372,15 +359,16 @@ body
     line-height: 15px;
 }
 
-.hong-title-movie-imgbox
+.hong-title-mt-imgbox
 {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
+    display: none;
 }
 
-.hong-title-movie-underimg-left,.hong-title-movie-underimg-center,.hong-title-movie-underimg-right
+.hong-title-mt-underimg-left,.hong-title-mt-underimg-center,.hong-title-mt-underimg-right
 {
     width: 63px;
     height: 100%;
@@ -388,7 +376,7 @@ body
     position: relative;
 }
 
-.hong-title-movie-underimg-box
+.hong-title-mt-underimg-box
 {
     width: 100%;
     height: 100%;
@@ -409,7 +397,115 @@ body
     right: 0;
 }
 /* 빠른예매 사진 */
+/* 빠른예매 영화 */
 
+/* 빠른예매 극장 */
+.hong-title-theater
+{
+    width: 35%;
+    height: 100%;
+    border-left: 1px solid #d8d9db;
+    border-right: 1px solid #d8d9db;
+}
+
+.hong-title-theater-flex-box
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.hong-title-theater-ul,.hong-title-theater-detail
+{
+    width: 50%;
+    height: 100%;
+}
+
+.hong-title-theater-special-box
+{
+    display: none;
+}
+
+.hong-title-theater-detail
+{
+    height: 95%;
+    border-left:1px solid #ebebeb;
+}
+
+.hong-theater-list-button,.hong-theater-mt-list-button
+{
+    width: 100%;
+    padding: 5px 0;
+    /* background-color: #ebebeb; */
+}
+
+.hong-theater-list-button span,.hong-theater-mt-list-button span
+{
+    display: block;
+    margin-left: 13px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.hong-title-theater-detail-ul
+{
+    display: none;
+}
+
+.hong-title-mt-theaterbox
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.hong-theater-all
+{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: url(../images/hong-ticket-images/hong-th-empty.png) no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.hong-theater-all span
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    font-size: 13px;
+    text-align: center;
+}
+
+.theater-all-xbtn
+{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: 0;
+}
+/* 빠른예매 극장 */
+
+/* 빠른예매 시간 */
+.hong-title-time
+{
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid #d8d9db;
+}
+/* 빠른예매 시간 */
+/* 빠른예매 하단 */
 
 
 /* 경고창 */
@@ -422,6 +518,9 @@ body
     top: 0;
     background: rgba(0,0,0,0.7);
     transition: all 0.3s;
+    z-index: 77;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .window-box
@@ -434,18 +533,18 @@ body
 .alert-form
 {
     width: 400px;
-    height: 180px;
+    height: 160px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: #333;
+    background: #fff;
 }
 
 .alert-form-head
 {
     width: 100%;
-    height: 20%;
+    height: 27%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -462,5 +561,33 @@ body
 .alert-form-head button
 {
     margin-right: 15px;
+}
+
+.alert-form-body
+{
+    position: relative;
+    height: 73%;
+}
+
+.alert-form-body span
+{
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    letter-spacing: 0;
+    word-break: keep-all;
+}
+
+.alert-form-body button
+{
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
+    padding: 10px 18px;
+    border-radius: 5px;
+    background-color: #503396;
+    color: #fff;
 }
 /* 경고창 */

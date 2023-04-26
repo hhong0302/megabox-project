@@ -43,7 +43,7 @@ fetch('data/ticket-theater.json')
     let lir = '';
     for(let i=0;i<si.length;i++)
     {
-        //왼쪽 도
+        //왼쪽 도시군
         lil+=`<li class="hong-title-theater-list">
                 <button class="hong-button hong-theater-list-button" onclick="showCity(this)">
                     <span>${si[i]}(${city[i].length})</span>
@@ -52,7 +52,7 @@ fetch('data/ticket-theater.json')
             </li>`;
         for(let j=0;j<city[i].length;j++)
         {
-            //오른쪽 영화관
+            //오른쪽 영화관 장소
             lir+=`<li class="hong-title-mt-list">
                     <button class="hong-button hong-theater-mt-list-button" onclick="theaterBtn(this)">
                         <span>${city[i][j].name}</span>
@@ -64,6 +64,39 @@ fetch('data/ticket-theater.json')
         lir='';
     }
     document.getElementsByClassName('hong-title-theater-ul')[0].innerHTML=lil;
+}).catch((error)=>console.log(error));
+
+//special관
+fetch('data/ticket-special.json')
+.then((res)=> res.json())
+.then((res)=>{
+    const special = ['DOLBY CINEMA','THE BOUTIQUE','MX'];
+    const sname = [res.dolby,res.boutique,res.mx];
+    let lil = '';
+    let lir = '';
+    for(let i=0;i<special.length;i++)
+    {
+        //왼쪽 특별관
+        lil+=`<li class="hong-title-theater-list">
+                <button class="hong-button hong-theater-slist-button" onclick="showsCity(this)">
+                    <span>${special[i]}(${sname[i].length})</span>
+                </button>
+                <input type="hidden" value="${i}">
+            </li>`;
+        for(let j=0;j<sname[i].length;j++)
+        {
+            //오른쪽 장소
+            lir+=`<li class="hong-title-mt-list">
+                    <button class="hong-button hong-theater-mt-slist-button" onclick="theaterBtn(this)">
+                        <span>${sname[i][j].name}</span>
+                    </button>
+                    <input type="hidden" value="${sname[i][j].value}">
+                </li>`;
+            document.getElementsByClassName('hong-title-theater-special-detail-ul')[i].innerHTML=lir;
+        }
+        lir='';
+    }
+    document.getElementsByClassName('hong-title-theater-ul')[1].innerHTML=lil;
 }).catch((error)=>console.log(error));
 
 //onload function
@@ -98,6 +131,23 @@ document.getElementsByClassName('hong-ticket-box-date-flex')[0].innerHTML = li;
 const hd = document.getElementsByClassName("hong-day");
 hd[0].innerHTML = '오늘';
 hd[1].innerHTML = '내일';
+
+//시간에 00~24넣기
+let timeli = '';
+for(let i=0;i<=23;i++)
+{
+    if(i<10)timeli += `<li>
+                        <button class="hong-btn schedule-time-button">
+                            ${"0"+i}
+                        </button>
+                    </li>`;
+    else timeli += `<li>
+                        <button class="hong-btn schedule-time-button">
+                            ${i}
+                        </button>
+                    </li>`;
+}
+document.getElementsByClassName('schedule-time')[0].innerHTML=timeli;
 
 //날짜누르면 바꾸기
 function changeDate(e)
@@ -255,11 +305,20 @@ function closeBtn(e)
     }
 }
 
-//센터 하단 극장부분 도시 나오게하기
+//센터 하단 극장/특별관 부분 도시 나오게하기
 function showCity(e)
 {
     const city = document.getElementsByClassName('hong-title-theater-detail-ul');
     const civbtn = document.getElementsByClassName('hong-theater-list-button');
+    for(let i=0;i<civbtn.length;i++)civbtn[i].style.backgroundColor="#fff";
+    for(let i=0;i<city.length;i++)city[i].style.display='none';
+    city[e.nextElementSibling.value].style.display='block';
+    e.style.backgroundColor="#ebebeb";
+}
+function showsCity(e)
+{
+    const city = document.getElementsByClassName('hong-title-theater-special-detail-ul');
+    const civbtn = document.getElementsByClassName('hong-theater-slist-button');
     for(let i=0;i<civbtn.length;i++)civbtn[i].style.backgroundColor="#fff";
     for(let i=0;i<city.length;i++)city[i].style.display='none';
     city[e.nextElementSibling.value].style.display='block';
@@ -350,6 +409,16 @@ function theaterXBtn(e)
             tmlb[i].style.color="#000";
         }
     }
+    const tmslb = document.getElementsByClassName('hong-theater-mt-slist-button');
+    for(let i=0;i<tmslb.length;i++)
+    {
+        const tmslbval = tmslb[i].childNodes[1].innerHTML;
+        if(tmslbval==thisVal)
+        {
+            tmslb[i].style.backgroundColor="#fff";
+            tmslb[i].style.color="#000";
+        }
+    }
     const atl = document.getElementsByClassName('hong-all-theater-list')[0];
     const tmt = document.getElementsByClassName('hong-title-mt-theaterbox')[0];
     if(theaterArr.length==0)
@@ -362,6 +431,29 @@ function theaterXBtn(e)
         atl.style.display='none';
         tmt.style.display='flex';
     }
+}
+
+//timechange
+function ticket_box_left()
+{
+    const lft = document.getElementsByClassName("hong-ticket-box-date-flex")[0].getAttribute('style');
+    let lftpx = lft.slice(lft.indexOf(" "),lft.indexOf("p"));
+    if(lftpx==0) return;
+    document.getElementsByClassName("hong-ticket-box-date-flex")[0].style.left=(Number(lftpx)+80)+'px';
+}
+let timeabs = 0;
+function timeChange(num)
+{
+    timeabs += num;
+    if(timeabs>0)
+    {
+        timeabs=0;
+    }
+    if(timeabs<-420)
+    {
+        timeabs=-420;
+    }
+    document.getElementsByClassName('schedule-time')[0].style.left=timeabs+'px';
 }
 
 //alert창 닫기

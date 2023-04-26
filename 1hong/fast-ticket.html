@@ -177,11 +177,13 @@
                                         </li>
                                     </ul>
                                     <div class="hong-title-mt-ul hong-title-theater-detail">
-                                        <ul class="hong-title-mt-ul hong-title-theater-special-detail-ul">
-                                            <li class="hong-title-mt-list">
+                                        <ul class="hong-title-theater-special-detail-ul">
+                                            <!-- <li class="hong-title-mt-list">
                                                 
-                                            </li>
+                                            </li> -->
                                         </ul>
+                                        <ul class="hong-title-theater-special-detail-ul"></ul>
+                                        <ul class="hong-title-theater-special-detail-ul"></ul>
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +211,26 @@
                     <!-- 우측 시간부분 -->
                     <div class="hong-title-time">
                         <h1>시간</h1>
-
+                        <div class="schedule-box">
+                            <div class="schedule-box-container">
+                                <button class="hong-button schedule-button" onclick="timeChange(30)">
+                                    <img src="images/hong-ticket-images/hong-btn-prev-time.png" alt="prev">
+                                </button>
+                                <div class="schedule-box-time-container">
+                                    <ul class="schedule-time" style="left: 0;">
+                                        <!-- <li>
+                                            <button class="hong-btn schedule-time-button">
+                                                00
+                                            </button>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                                
+                                <button class="hong-button schedule-button"  onclick="timeChange(-30)">
+                                    <img src="images/hong-ticket-images/hong-btn-next-time.png" alt="prev">
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <!-- 우측 시간부분 -->
                     

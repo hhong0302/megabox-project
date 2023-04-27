@@ -1,3 +1,5 @@
+window.onload=function()
+{
 //좌측 영화부분 json
 fetch('data/ticket-all.json')
 .then((res)=> res.json())
@@ -29,7 +31,7 @@ fetch('data/ticket-all.json')
                 </button>
             </li>`;
     }
-    document.getElementsByClassName('hong-title-mt-ul-all')[0].innerHTML=li1;
+    //document.getElementsByClassName('hong-title-mt-ul-all')[0].innerHTML=li1;
     document.getElementsByClassName('hong-title-mt-ul-qr')[0].innerHTML=li2;
 }).catch((error)=>console.log(error));
 
@@ -143,8 +145,8 @@ for(let i=0;i<=23;i++)
                     </li>`;
 }
 document.getElementsByClassName('schedule-time')[0].innerHTML=timeli;
-
-$(function()
+}
+$(document).ready(function()
 {
     //상단 날짜 왼쪽 오른쪽 버튼 클릭 시 이동
     let date_x = 0;
@@ -198,5 +200,15 @@ $(function()
         });
         $('.hong-title-mt-ul-all').fadeOut(0);
         $('.hong-title-mt-ul-qr').fadeIn(0);
+    });
+
+    let imgarr = [];
+    $('.hong-title-mt-list-button').click(function()
+    {
+        if(imgarr.length<3)
+        {
+            imgarr.push(($(this).children('input').attr('value')));
+        }
+        
     });
 });

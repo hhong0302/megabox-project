@@ -242,6 +242,8 @@ ul{
 }
 .btn:hover{
     text-decoration: underline;
+    background:#555;
+    color: #fff;
 }
 button{
     cursor: pointer;
@@ -269,5 +271,22 @@ button{
 }
 
 
-/***********극장별*************/
-
+/***********무대인사*************/
+ h3.scr-moon{
+    margin-top: 60px;
+    color: #503396;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+ }
+ .scr-moon1{
+    
+ }
+.scr-moon1 ul{
+    border-top: 1px solid #444;
+}
+.scr-moon-sub-btn{
+    background: #666;
+    color: #fff;
+}

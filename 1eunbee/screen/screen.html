@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>megabox</title>
+    <link rel="stylesheet" href="header-form/hong-style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-min.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+<div class="hong-header-all"></div>
+<script src="header-form/hong-headerfetch.js"></script>
+<script src="header-form/hong-script.js"></script>
+<div class="screen-fixedTop" id="screen">
+    <div class="screen container">
+        <div class="screentop">
+            <span></span>
+            <a href="#" class="screen-one">예매</a>
+            <a href="#" class="screen-two">상영시간표</a>
+        </div>
+    </div>
+    <!---상영시간표 시작--->
+    <div class="screen-container" id="content">
+        <div class="screen-inner">
+            <div class="scrpage">
+                <div class="scr-choice">
+                    <div class="scr-left-tab">
+                        <ul>
+                            <li class="st on" value="1" id="st1">
+                            <a href="#" class="scr-cho _one">
+                            <i class="scr-icon _movie"></i>
+                            영화별
+                            </a>
+                         </li>
+                            <li class="st" value="2" id="st2">
+                            <a href="#" class="scr-cho _two" >
+                                <i class="scr-icon _thea"></i>
+                            극장별
+                            </a></li>
+                            <li class="st" value="3" id="st3">
+                            <a href="#" class="scr-cho _thr">
+                            <i class="scr-icon _spec"></i>   
+                              특별관  
+                            </a></li>
+                        </ul>          
+                    </div>
+                    <div class="scr-list-main">  
+                     <div class="scr-right-tab" id="scr-mov1" >
+                        <div class="scr-list-tab">
+                            <ul>
+                                <li class="scr-list-under" value="1"><a href="#">전체영화</a></li>
+                                <li class="scr-list-under" value="2"><a href="#">큐레이션</a></li>
+                            </ul>
+                        </div>    
+                        <div class="scr-list-sec" id="scr-list-sub">
+                            <!-----전체영화----->
+                            <ul class="scr-list-sec-1" >
+                                <li><button type="button" class="btn on" value="슈퍼">슈퍼 마리오 브라더스</button></li>
+                                <li><button type="button" class="btn on" value="드림">드림</button></li>
+                                <li><button type="button" class="btn on" value="슬램덩크">더 퍼스트 슬램덩크</button></li>
+                                <li><button type="button" class="btn on" value="존윅">존 윅4</button></li>
+                                <li><button type="button" class="btn on" value="스즈메">스즈메의 문단속</button></li>
+                                <li><button type="button" class="btn on" value="무명">무명</button></li>
+                                <li><button type="button" class="btn on">리바운드</button></li>
+                                <li><button type="button" class="btn on">항구의 니쿠고짱!</button></li>
+                                <li><button type="button" class="btn on">가디언즈 오브 갤럭시:Volume3</button></li>
+                                <li><button type="button" class="btn on">킬링로맨스</button></li>
+                                <li><button type="button" class="btn on">클로즈</button></li>
+                                <li><button type="button" class="btn on">토리와 로키타</button></li>
+                                <li><button type="button" class="btn on">극장판 짱구는 못말려:동물소환 닌자 배꼽수비대</button></li>
+                                <li><button type="button" class="btn on">[시네도슨트 - 그리스로마신화]그리스의 황혼과 신화시대의 마감</button></li>
+                                <li><button type="button" class="btn on">라이스보이 슬립스</button></li>
+                                <li><button type="button" class="btn on">거울 속 외딴 성</button></li>
+                                <li><button type="button" class="btn on">스즈메의 문단속</button></li>
+                                <li><button type="button" class="btn on">무명</button></li>
+                                <li><button type="button" class="btn on">리바운드</button></li>
+                                <li><button type="button" class="btn on">항구의 니쿠고짱!</button></li>
+                                <li><button type="button" class="btn on">가디언즈 오브 갤럭시:Volume3</button></li>
+                                <li><button type="button" class="btn on">킬링로맨스</button></li>
+                                <li><button type="button" class="btn on">클로즈</button></li>
+                                <li><button type="button" class="btn on">토리와 로키타</button></li>
+                                <li><button type="button" class="btn on">극장판 짱구는 못말려:동물소환 닌자 배꼽수비대</button></li>
+                                <li><button type="button" class="btn on">[시네도슨트 - 그리스로마신화]그리스의 황혼과 신화시대의 마감</button></li>
+                                <li><button type="button" class="btn on">라이스보이 슬립스</button></li>
+                                <li><button type="button" class="btn on">거울 속 외딴 성</button></li>
+                                <li><button type="button" class="btn on">스즈메의 문단속</button></li>
+                                <li><button type="button" class="btn on">무명</button></li>
+                                <li><button type="button" class="btn on">리바운드</button></li>
+                                <li><button type="button" class="btn on">항구의 니쿠고짱!</button></li>
+                                <li><button type="button" class="btn on">가디언즈 오브 갤럭시:Volume3</button></li>
+                                <li><button type="button" class="btn on">킬링로맨스</button></li>
+                                <li><button type="button" class="btn on">클로즈</button></li>
+                                <li><button type="button" class="btn on">토리와 로키타</button></li>
+                                <li><button type="button" class="btn on">극장판 짱구는 못말려:동물소환 닌자 배꼽수비대</button></li>
+                                <li><button type="button" class="btn on">[시네도슨트 - 그리스로마신화]그리스의 황혼과 신화시대의 마감</button></li>
+                                <li><button type="button" class="btn on">라이스보이 슬립스</button></li>
+                                <li><button type="button" class="btn on">거울 속 외딴 성</button></li>
+                                <li><button type="button" class="btn on">라이스보이 슬립스</button></li>
+                                <li><button type="button" class="btn on">거울 속 외딴 성</button></li>
+                                <li><button type="button" class="btn on">스즈메의 문단속</button></li>
+                                <li><button type="button" class="btn on">무명</button></li>
+                                <li><button type="button" class="btn on">리바운드</button></li>
+                                <li><button type="button" class="btn on">항구의 니쿠고짱!</button></li>
+                                <li><button type="button" class="btn on">가디언즈 오브 갤럭시:Volume3</button></li>
+                                <li><button type="button" class="btn on">킬링로맨스</button></li>
+                                <li><button type="button" class="btn on">클로즈</button></li>
+                                <li><button type="button" class="btn on">토리와 로키타</button></li>
+                                <li><button type="button" class="btn on">극장판 짱구는 못말려:동물소환 닌자 배꼽수비대</button></li>
+                                <li><button type="button" class="btn on">[시네도슨트 - 그리스로마신화]그리스의 황혼과 신화시대의 마감</button></li>
+                                <li><button type="button" class="btn on">라이스보이 슬립스</button></li>
+                                <li><button type="button" class="btn on">거울 속 외딴 성</button></li>
+                            </ul>
+                             <div class="scr-poster">
+                                <div class="scr-td">
+                                    <a href="#"><img src="/images/su.jpeg" alt="슈퍼마리오" id="img1" ></a>
+                                    <a href="#"><img src="/images/img1.jpeg" alt="드림"    id="img2"  style="display: none;"></a>
+                                    <a href="#"><img src="/images/img2.jpeg" alt="슬림덩크" id="img3" style="display: none;"></a>
+                                    <a href="#"><img src="/images/img3.jpeg" alt="슬림덩크" id="img4" style="display: none;"></a>
+                                    <a href="#"><img src="/images/img4.jpeg" alt="슬림덩크" id="img5" style="display: none;"></a>
+                                    <a href="#"><img src="/images/img5.jpeg" alt="슬림덩크" id="img6" style="display: none;"></a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="scr-list-sec" id="scr-list-sub1"  style="display: none;"> 
+                                <ul class="scr-list-sec-1" >
+                                    <li><button type="button" class="btn on">[시네도슨트 - 그리스 신화] 그리스의 황혼과 신화시대의 마감</button></li>
+                                    <li><button type="button" class="btn on">[시네 마인드 런] 돈의 심리학</button></li>
+                                    <li><button type="button" class="btn on">[유럽 클래식 투어] 프라하 블타바 강변 콘서트</button></li>
+                                    <li><button type="button" class="btn on">[사건 읽는 영화관] 살인자의 기억법</button></li>
+                                    <li><button type="button" class="btn on">[ROH 오페라] 투란도트</button></li>
+                                    <li><button type="button" class="btn on">[오페라] 디 아워즈 @The Met2023 </button></li>
+                                    <li><button type="button" class="btn on">파벨만스</button></li>
+                                    <li><button type="button" class="btn on">[시네도슨트 in 대전] 브리티쉬 뮤지엄&내셔널 갤러리 </button></li>
+                                    <li><button type="button" class="btn on">[ROH 발레] 신데렐라 </button></li>
+                                    <li><button type="button" class="btn on">[시네도슨트 - 그리스 신화] 신화의 주인공, 인간 영웅 </button></li>
+                                    <li><button type="button" class="btn on">피기</button></li>
+                                    <li><button type="button" class="btn on">자전거 도둑 </button></li>
+                                    <li><button type="button" class="btn on">더 웨일</button></li>
+                                    <li><button type="button" class="btn on">스트레이트 스토리 </button></li>
+                                    <li><button type="button" class="btn on">[오페라] 라 트라비아타 @The Met2023 </button></li>
+                                    <li><button type="button" class="btn on">이니셰린의 밴시 </button></li>
+                                    <li><button type="button" class="btn on">TAR 타르 </button></li>
+                                    <li><button type="button" class="btn on">사랑의 고고학</button></li>
+                                    <li><button type="button" class="btn on">2퍼센트</button></li>
+                                    <li><button type="button" class="btn on">항구의 니쿠고짱!</button></li>
+                                    <li><button type="button" class="btn on">[오페라] 페도라 @The Met2023 </button></li>
+                                    <li><button type="button" class="btn on">튤립모양</button></li>
+                                    </ul>
+                            <div class="scr-poster">
+                                <div class="scr-td">
+                            <a href="#"><img src="/images/list1.jpeg" alt="슈퍼마리오"></a>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    </div>     
+                         <!-----극장별----->
+                         <div class="scr-right-tab-brch" id="scr-mov2" style="display: none;" >
+                            <div class="scr-list-tab">
+                                <ul>
+                                    <li class="scr-list-under" value="서울"><a href="#">서울(20)</a></li>
+                                    <li class="scr-list-under" value="경기"><a href="#">경기(30)</a></li>
+                                    <li class="scr-list-under" value="인천"><a href="#">인천(5)</a></li>
+                                    <li class="scr-list-under" value="대전"><a href="#">대전/충청/세종(15)</a></li>
+                                    <li class="scr-list-under" value="부산"><a href="#">부산/대구/경상(25)</a></li>
+                                    <li class="scr-list-under" value="광주"><a href="#">광주/전라(10)</a></li>
+                                    <li class="scr-list-under" value="강원"><a href="#">강원(5)</a></li>
+                                </ul>
+                            </div>    
+                            <div class="scr-list-sec1" id="scr-list-two">
+                                <!-----전체영화----->
+                                <ul class="scr-list-sec-2">
+                                    <li><button type="button" class="btn on">강남</button></li>
+                                    <li><button type="button" class="btn on">강남대로(씨티)</button></li>
+                                    <li><button type="button" class="btn on">강동</button></li>
+                                    <li><button type="button" class="btn on">군자</button></li>
+                                    <li><button type="button" class="btn on">더 부티크 목동현대백화점</button></li>
+                                    <li><button type="button" class="btn on">동대문</button></li>
+                                    <li><button type="button" class="btn on">마곡</button></li>
+                                    <li><button type="button" class="btn on">목동</button></li>
+                                    <li><button type="button" class="btn on">상봉</button></li>
+                                    <li><button type="button" class="btn on">상암월드컵경기장</button></li>
+                                    <li><button type="button" class="btn on">성수</button></li>
+                                    <li><button type="button" class="btn on">센트럴</button></li>
+                                    <li><button type="button" class="btn on">송파파크하비오</button></li>
+                                    <li><button type="button" class="btn on">신촌</button></li>
+                                    <li><button type="button" class="btn on">이수</button></li>
+                                    <li><button type="button" class="btn on">창동</button></li>
+                                    <li><button type="button" class="btn on">코엑스</button></li>
+                                    <li><button type="button" class="btn on">홍대</button></li>
+                                    <li><button type="button" class="btn on">회곡</button></li>
+                                    <li><button type="button" class="btn on">ARTNINE</button></li>
+    
+     
+                                </ul>
+                            <!------영화별 극장별 등 끝나는 지점------>
+                        </div>
+                        <div class="scr-list-sec1" id="scr-list-two1" style="display:none">
+                            <ul class="scr-list-sec-2" >
+                                <li><button type="button" class="btn on">고양스타필드</button></li>
+                                <li><button type="button" class="btn on">광명AK플라자</button></li>
+                                <li><button type="button" class="btn on">광명소하</button></li>
+                                <li><button type="button" class="btn on">금정AK플라자</button></li>
+                                <li><button type="button" class="btn on">김포한강신도시</button></li>
+                                <li><button type="button" class="btn on">남양주</button></li>
+                                <li><button type="button" class="btn on">남양주현대아울렛 스페이스원</button></li>
+                                <li><button type="button" class="btn on">동탄</button></li>
+                                <li><button type="button" class="btn on">미사강변</button></li>
+                                <li><button type="button" class="btn on">백석벨라시타</button></li>
+                                <li><button type="button" class="btn on">별내</button></li>
+                                <li><button type="button" class="btn on">부천스타필드시티</button></li>
+                                <li><button type="button" class="btn on">분당</button></li>
+                                <li><button type="button" class="btn on">수원</button></li>
+                                <li><button type="button" class="btn on">수원남문</button></li>
+                                <li><button type="button" class="btn on">수원호매실</button></li>
+                                <li><button type="button" class="btn on">시흥배곧</button></li>
+                                <li><button type="button" class="btn on">안산중앙</button></li>
+                                <li><button type="button" class="btn on">안성스타필드</button></li>
+                                <li><button type="button" class="btn on">양주</button></li>
+                                <li><button type="button" class="btn on">영통</button></li>
+                                <li><button type="button" class="btn on">용인기흥</button></li>
+                                <li><button type="button" class="btn on">용인테크노빌리</button></li>
+                                <li><button type="button" class="btn on">의정부민락</button></li>
+                                <li><button type="button" class="btn on">일산</button></li>
+                                <li><button type="button" class="btn on">킨텍스</button></li>
+                                <li><button type="button" class="btn on">파주금촌</button></li>
+                                <li><button type="button" class="btn on">파주운정</button></li>
+                                <li><button type="button" class="btn on">파주출판도시</button></li>
+                                <li><button type="button" class="btn on">하남스타필드</button></li>
+                            </ul>
+                    </div> 
+                    <div class="scr-list-sec1" id="scr-list-two2" style="display:none">
+                        <ul class="scr-list-sec-2">
+                            <li><button type="button" class="btn on">검단</button></li>
+                            <li><button type="button" class="btn on">송도</button></li>
+                            <li><button type="button" class="btn on">영종</button></li>
+                            <li><button type="button" class="btn on">인천논현</button></li>
+                            <li><button type="button" class="btn on">청라지젤</button></li>
+                        </ul>
+                </div> 
+                <div class="scr-list-sec1" id="scr-list-two3" style="display:none">
+                    <ul class="scr-list-sec-2">
+                        <li><button type="button" class="btn on">공주</button></li>
+                        <li><button type="button" class="btn on">논산</button></li>
+                        <li><button type="button" class="btn on">대전</button></li>
+                        <li><button type="button" class="btn on">대전신세계 아트앤사이언스</button></li>
+                        <li><button type="button" class="btn on">대전유성</button></li>
+                        <li><button type="button" class="btn on">대전중앙로</button></li>
+                        <li><button type="button" class="btn on">대전현대아울렛</button></li>
+                        <li><button type="button" class="btn on">세종(조치원)</button></li>
+                        <li><button type="button" class="btn on">세종나성</button></li>
+                        <li><button type="button" class="btn on">세종청사</button></li>
+                        <li><button type="button" class="btn on">오창</button></li>
+                        <li><button type="button" class="btn on">진천</button></li>
+                        <li><button type="button" class="btn on">천안</button></li>
+                        <li><button type="button" class="btn on">청주사창</button></li>
+                        <li><button type="button" class="btn on">홍성내포</button></li>
+
+                    </ul>
+            </div> 
+            <div class="scr-list-sec1" id="scr-list-two4" style="display:none">
+                <ul class="scr-list-sec-2">
+                    <li><button type="button" class="btn on">경북도청</button></li>
+                    <li><button type="button" class="btn on">경남하양</button></li>
+                    <li><button type="button" class="btn on">경주</button></li>
+                    <li><button type="button" class="btn on">구미강동</button></li>
+                    <li><button type="button" class="btn on">김천</button></li>
+                    <li><button type="button" class="btn on">남포항</button></li>
+                    <li><button type="button" class="btn on">대구신세계(동대구)</button></li>
+                    <li><button type="button" class="btn on">대구이시아</button></li>
+                    <li><button type="button" class="btn on">덕천</button></li>
+                    <li><button type="button" class="btn on">마산</button></li>
+                    <li><button type="button" class="btn on">문경</button></li>
+                    <li><button type="button" class="btn on">부산극장</button></li>
+                    <li><button type="button" class="btn on">부산대</button></li>
+                    <li><button type="button" class="btn on">북대구(칠곡)</button></li>
+                    <li><button type="button" class="btn on">사상</button></li>
+                    <li><button type="button" class="btn on">삼천포</button></li>
+                    <li><button type="button" class="btn on">양산</button></li>
+                    <li><button type="button" class="btn on">양산증산</button></li>
+                    <li><button type="button" class="btn on">울산</button></li>
+                    <li><button type="button" class="btn on">정관</button></li>
+                    <li><button type="button" class="btn on">진주(중안)</button></li>
+                    <li><button type="button" class="btn on">창원</button></li>
+                    <li><button type="button" class="btn on">창원내서</button></li>
+                    <li><button type="button" class="btn on">포항</button></li>
+                    <li><button type="button" class="btn on">해운대(장산)</button></li>
+                </ul>
+        </div> 
+        <div class="scr-list-sec1" id="scr-list-two5" style="display:none">
+            <ul class="scr-list-sec-2">
+                <li><button type="button" class="btn on">고양스타필드</button></li>
+                <li><button type="button" class="btn on">광명AK플라자</button></li>
+                <li><button type="button" class="btn on">광명소하</button></li>
+                <li><button type="button" class="btn on">금정AK플라자</button></li>
+                <li><button type="button" class="btn on">김포한강신도시</button></li>
+                <li><button type="button" class="btn on">남양주</button></li>
+                <li><button type="button" class="btn on">남양주현대아울렛 스페이스원</button></li>
+                <li><button type="button" class="btn on">동탄</button></li>
+                <li><button type="button" class="btn on">미사강변</button></li>
+                <li><button type="button" class="btn on">백석벨라시타</button></li>
+                <li><button type="button" class="btn on">별내</button></li>
+                <li><button type="button" class="btn on">부천스타필드시티</button></li>
+                <li><button type="button" class="btn on">분당</button></li>
+                <li><button type="button" class="btn on">수원</button></li>
+                <li><button type="button" class="btn on">수원남문</button></li>
+                <li><button type="button" class="btn on">수원호매실</button></li>
+                <li><button type="button" class="btn on">시흥배곧</button></li>
+                <li><button type="button" class="btn on">안산중앙</button></li>
+                <li><button type="button" class="btn on">안성스타필드</button></li>
+                <li><button type="button" class="btn on">양주</button></li>
+                <li><button type="button" class="btn on">영통</button></li>
+                <li><button type="button" class="btn on">용인기흥</button></li>
+                <li><button type="button" class="btn on">용인테크노빌리</button></li>
+                <li><button type="button" class="btn on">의정부민락</button></li>
+                <li><button type="button" class="btn on">일산</button></li>
+                <li><button type="button" class="btn on">킨텍스</button></li>
+                <li><button type="button" class="btn on">파주금촌</button></li>
+                <li><button type="button" class="btn on">파주운정</button></li>
+                <li><button type="button" class="btn on">파주출판도시</button></li>
+                <li><button type="button" class="btn on">하남스타필드</button></li>
+            </ul>
+    </div> 
+    <div class="scr-list-sec1" id="scr-list-two6" style="display:none">
+        <ul class="scr-list-sec-2">
+            <li><button type="button" class="btn on">남춘천</button></li>
+            <li><button type="button" class="btn on">속초</button></li>
+            <li><button type="button" class="btn on">원주</button></li>
+            <li><button type="button" class="btn on">원주센트럴</button></li>
+            <li><button type="button" class="btn on">춘천석사</button></li>
+        </ul>
+</div> 
+                        </div>   
+                        <div class="scr-right-tab" id="scr-mov3" style="display: none;" >
+                            <div class="scr-list-tab">
+                                <ul>
+                                    <li class="scr-list-under" value="1"><a href="#">DOLBY CINEMA(5)</a></li>
+                                    <li class="scr-list-under" value="2"><a href="#">THE BOUTIQUE(8)</a></li>
+                                    <li class="scr-list-under" value="3"><a href="#">MX(9)</a></li>
+                                    <li class="scr-list-under" value="4"><a href="#">COMFORT(50)</a></li>
+                                    <li class="scr-list-under" value="5"><a href="#">PUPPY CINEMA(1)</a></li>
+                                    <li class="scr-list-under" value="6"><a href="#">MEGABOXKIDS</a></li>
+                                </ul>
+                            </div>    
+                            <div class="scr-list-sec">
+                                <!-----전체영화----->
+                                <ul class="scr-list-sec-1">
+                                    <li><button type="button" class="btn on">남양주현대아울렛 스페이스원</button></li>
+                                    <li><button type="button" class="btn on">대구신세계(동대구)</button></li>
+                                    <li><button type="button" class="btn on">대전신세계 아트앤사이언스</button></li>
+                                    <li><button type="button" class="btn on">안성스타필드</button></li>
+                                    <li><button type="button" class="btn on">코엑스</button></li>
+                                </ul>
+                            <div class="scr-poster">
+                                    <div class="scr-td">
+                                <a href="#"><img src="/images/img-theater-dolby.png" alt="슈퍼마리오"></a>
+                                    </div>
+                             </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

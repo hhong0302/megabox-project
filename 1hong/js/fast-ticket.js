@@ -338,8 +338,15 @@ function theaterBtn(e)
             return;
         }
         theaterArr.push(thisVal);
+        e.style.backgroundColor="#666";
+        e.style.color="#fff";
     }
-    else theaterArr.splice(theaterArr.indexOf(thisVal),1);
+    else
+    {
+        theaterArr.splice(theaterArr.indexOf(thisVal),1);
+        e.style.backgroundColor="#fff";
+        e.style.color="#000";
+    }
 
     const utheaall = document.getElementsByClassName("hong-theater-all");
     for(let j=0;j<utheaall.length;j++)
@@ -353,16 +360,7 @@ function theaterBtn(e)
                                     <img src="images/hong-ticket-images/theaterx.png" alt="theaterx">
                                 </button>`;
     }
-    if(e.style.backgroundColor!="rgb(102, 102, 102)")
-    {
-        e.style.backgroundColor="#666";
-        e.style.color="#fff";
-    }
-    else
-    {
-        e.style.backgroundColor="#fff";
-        e.style.color="#000";
-    }
+    
     const atl = document.getElementsByClassName('hong-all-theater-list')[0];
     const tmt = document.getElementsByClassName('hong-title-mt-theaterbox')[0];
     if(theaterArr.length==0)

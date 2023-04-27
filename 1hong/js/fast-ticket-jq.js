@@ -202,13 +202,55 @@ $(document).ready(function()
         $('.hong-title-mt-ul-qr').fadeIn(0);
     });
 
+    //좌측하단 이미지 list
     let imgarr = [];
     $('.hong-title-mt-list-button').click(function()
     {
-        if(imgarr.length<3)
+        if(imgarr.indexOf($(this).children('input').attr('value'))==-1)
         {
+            if(imgarr.length>=3) return;
+
             imgarr.push(($(this).children('input').attr('value')));
+            $(this).css({'background-color':'#666','color':'#fff'});
+        }
+        else 
+        {
+            imgarr.splice(imgarr.indexOf($(this).children('input').attr('value')),1);
+            $(this).css({'background-color':'#fff','color':'#000'});
+        }
+
+        for(let i=0;i<$('.hong-underimg-all').length;i++)
+        {
+            $('.hong-underimg-all').html('');
+        }
+        for(let i=0;i<imgarr.length;i++)
+        {
+            $('.hong-underimg-all:eq('+i+')').html(
+                `<div class="hong-title-mt-underimg-box">
+                    <img class="hong-underimg" src="images/hong-ticket-images/hong-ticket-${imgarr[i]}.jpg" alt="${imgarr[i]}">
+                    <input type="hidden" value="${imgarr[i]}">
+                    <button class="hong-button hong-underimg-xbox">
+                        <img src="images/hong-ticket-images/hong-img-xbox.png" alt="x">
+                    </button>
+                </div>`);
         }
         
+        if(imgarr.length==0)
+        {
+            $('.movie-img-list').fadeIn(0);
+            $('.hong-title-mt-imgbox').fadeOut(0);
+        }
+        else
+        {
+            
+            $('.movie-img-list').fadeOut(0);
+            $('.hong-title-mt-imgbox').css('display','flex');
+        }
+    });
+
+    //좌측 하단 x 버튼
+    $('.hong-underimg-xbox').click(function()
+    {
+        console.log($(this).siblings('input'));
     });
 });

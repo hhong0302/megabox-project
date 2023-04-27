@@ -218,8 +218,15 @@ function showImg(e)
             return;
         }
         imgvalArr.push(thisVal);
+        e.style.backgroundColor="#666";
+        e.style.color="#fff";
     }
-    else imgvalArr.splice(imgvalArr.indexOf(thisVal),1);
+    else
+    {
+        imgvalArr.splice(imgvalArr.indexOf(thisVal),1);
+        e.style.backgroundColor="#fff";
+        e.style.color="#000";
+    }
 
     const uimgall = document.getElementsByClassName("hong-underimg-all");
     for(let j=0;j<uimgall.length;j++)
@@ -235,16 +242,6 @@ function showImg(e)
                                         <img src="images/hong-ticket-images/hong-img-xbox.png" alt="x">
                                     </button>
                                 </div>`;
-    }
-    if(e.style.backgroundColor!="rgb(102, 102, 102)")
-    {
-        e.style.backgroundColor="#666";
-        e.style.color="#fff";
-    }
-    else
-    {
-        e.style.backgroundColor="#fff";
-        e.style.color="#000";
     }
     const aml = document.getElementsByClassName('hong-all-mt-list')[0];
     const tmi = document.getElementsByClassName('hong-title-mt-imgbox')[0];

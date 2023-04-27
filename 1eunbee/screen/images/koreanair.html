@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://127.0.0.1:5501/login.html# -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>koreanair</title>
+    
+<link rel="stylesheet" href="./koreanair_files/login.css"></head>
+<body>
+    <div class="login-container">
+        <!--로그인 입력창-->
+      <div class="login-form">
+        <div class="login-group">
+            <h1>로그인</h1>
+            <!------체크박스있는곳------>
+            <div class="login-check">
+            <div class="login-checkid">
+                 <input type="radio" class="login-rad" style="width:24px;height:18px;border-radius:50px;" id="login-id" name="ck" value="id" checked="">
+                 <label for="id">아이디</label>
+            </div>
+            <div class="login-checknum">
+                <input type="radio" class="login-rad" style="width:24px;height:18px;border:0.6px;" id="login-num" name="ck" value="num">
+                <label for="css">스카이패스 번호</label>
+            </div>
+            </div>
+            <!-----아이디 입력창 (스카이패스랑 왔다갔다)----->
+           <div class="login-set">
+                <label class="login-label" id="login-id">아이디
+                    <span class="login-ess"></span>
+                </label>
+                <div class="login-labelform">
+                    <input type="text">
+                </div>
+            <div class="login-set-1">
+                <label class="login-label-1" id="login-id">스카이패스
+                   <span class="login-ess-1"></span>
+                </label>
+                <div class="login-labelform-1">
+                    <input type="text">
+            </div>
+            <div class="login-set1">
+                <label class="login-label1">비밀번호
+                    <span class="login-ess1"></span>
+                </label>
+                <div class="login-labelform1">
+                    <input type="password">
+                </div>
+               <div class="loginid-save">
+                    <input type="checkbox" style="width:24px;height:20px;border:0.6px;"> 
+                    <p> 아이디 저장</p>
+               </div>
+               <div class="loginsubmit">
+                <button class="loginbutton" type="submit">
+                    <a href="http://127.0.0.1:5501/login.html#"><p>로그인</p></a>
+                </button>
+               </div>
+               <ul class="login_find">
+                    <li class="loginlist1"><a href="http://127.0.0.1:5501/login.html#">아이디 찾기</a></li>
+                    <li class="loginlist2"><a href="http://127.0.0.1:5501/login.html#">비밀번호 찾기</a></li>
+               </ul>
+               <div class="loginsns">
+                <h2 class="loginsns-title"><span>다른 계정으로 로그인</span></h2>
+                <ul class="loginsns-item">
+                    <li class="loginsnslist"><a class="loginsns-img naver" href="http://127.0.0.1:5501/login.html#">네이버</a></li>
+                    <li class="loginsnslist"><a class="loginsns-img kakao" href="http://127.0.0.1:5501/login.html#">카카오</a></li>
+                    <li class="loginsnslist"><a class="loginsns-img google" href="http://127.0.0.1:5501/login.html#">구글</a></li>
+                    <li class="loginsnslist"><a class="loginsns-img facebook" href="http://127.0.0.1:5501/login.html#">페이스북</a></li>            
+                </ul>
+               </div>
+               <div class="loginpoint">
+                <a href="http://127.0.0.1:5501/login.html#">회원가입</a>
+               </div>
+           </div>     
+        </div>
+      </div>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</div></div></body></html>

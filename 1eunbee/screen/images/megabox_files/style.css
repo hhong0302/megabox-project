@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url(layout.css);
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.screen-fixedTop{
+    width: 100%;
+    height: 42px;
+    background-color: #f8f8fa;
+    transition: all 0.5s
+}
+#screen.drop {
+    position: fixed;
+    top: 0;
+    background-color: #444;
+    transition: all 500ms;
+    z-index: 999;
+}
+#screen.drop a{
+    color: #fff;
+}
+.screentop{
+    float: left;
+    height: 42px;
+}
+.screentop span{
+    display: block;
+    float: left;
+    width: 13px;
+    height: 100%;
+    background:url(../images/home.png) no-repeat center;
+}
+.screentop a{
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+    height: 42px;
+    display: block;
+    position: relative;
+    float: left;
+    height: 42px;
+    margin: 0 0 0 25px;
+    line-height: 46px;
+    color: #666;
+    font-size: 15px;
+}
+.screen a:hover{
+    text-decoration: underline;
+}
+.screen-one::before{
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 0;
+    float: left;
+    width: 13px;
+    height: 42px;
+    background: url(../images/arr.png) no-repeat center;
+}
+.screen-two::before{
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 0;
+    float: left;
+    width: 13px;
+    height: 42px;
+    background: url(../images/arr.png) no-repeat center;
+}
+/***********상영시간표 시작*******************/
+.screen-container{
+    width: 100%;
+    margin: 0;
+    padding-top:40px;
+}
+.screen-inner{
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 40px;
+    border-radius: 10px;
+}
+.scr-choice{
+    width: 100%;
+    position: relative;
+    height: 300px;
+    border: 3px solid #686571;
+    border-radius: 10px;
+}
+.scr-left-tab{
+    float: left;
+    width: 145px;
+    height: 100%;
+}
+.scr-left-tab .st{
+    border-right: none;
+    background: #f2f4f5;
+}
+.scr-left-tab a{
+    color: #666;
+}
+
+.scr-left-tab li{
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    width: 100%;
+    height: 98px;
+    background: #f2f4f5;
+    border: 1px solid #d8d9db;
+    border-width: 0 1px 1px 0;
+    font-size: 18px;
+}
+.scr-left-tab li a{
+    display: block;
+
+}
+.scr-left-tab li:first-child{
+    border-top-left-radius: 10px;
+}
+.scr-left-tab li:last-child{
+    border-bottom-left-radius: 10px;
+}
+.scr-left-tab.st.scr-icon{
+    background: url(/images/ico-tab-movie-on.png)no-repeat;
+
+}
+.scr-icon{
+    width: 39px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.scr-icon._movie{
+    background: url(/images/ico-tab-movie.png)no-repeat;
+}
+.scr-icon._thea{
+    background: url(/images/ico-tab-theater.png)no-repeat;
+}
+.scr-icon._spec{
+    background: url(/images/ico-tab-special.png)no-repeat;
+}
+.scr-icon._movie:checked{
+    background: url(/images/ico-tab-movie-on.png)no-repeat;
+}
+a:checked{
+    color: #351f66;
+}
+.scr-right-tab{
+    height: 295px;
+    width: 724px;
+    position: absolute;
+    left: 170px;
+    padding: 0 35px;
+}
+.scr-right-tab-brch{
+    height: 100%;
+    position: absolute;
+    left: 170px;
+    padding: 0 35px;
+}
+.scr-list-tab ul{
+    display: flex;
+    padding-top: 23px;
+    border-bottom: 1px solid #d8d9db;
+}
+.scr-list-tab ul li{
+    padding-left: 8px;
+    padding-bottom: 9px;
+    font-size: 14px;
+}
+.scr-list-sec{
+    height: 220px;
+    padding: 20px 0;
+    display: block;
+    overflow: auto;
+}
+.scr-list-sec1{
+    height: 240px;
+    padding: 20px 0;
+    display: block;
+}
+/* .scr-list-main{
+    width: 850px;
+    height: 200px;
+} */
+.scr-list-under a:after {
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: -11px;
+    width: 0;
+    height: 2px;
+    background-color: #444;
+    transition: all .5s;
+}
+.scr-list-under a:before {
+    content:"";
+    position: absolute;
+    right: 50%;
+    bottom: -11px;
+    width: 0;
+    height: 2px;
+    background-color: #444;
+    transition: all .5s;
+}
+.scr-list-under a:hover:after {
+    width: 50%
+}
+.scr-list-under a:hover:before {
+    width: 50%
+}
+.scr-list-under a {
+    display: inline-block;
+    position: relative;
+}
+/*************전체 영화 부분****************/
+
+.scr-list-sec-1 li{
+    float: left;
+    width: 33.3333%;
+    padding: 0;
+}
+.scr-list-sec-2 li{
+    float: left;
+    width: 25%;
+    padding: 0;
+}
+.btn{
+    width: 212px;
+    display: block;
+    height: 27px;
+    background: transparent;
+    border: 0;
+    color: #444;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 0 28px 0 10px;
+    margin-right: -90px;
+}
+.btn:hover{
+    text-decoration: underline;
+}
+button{
+    cursor: pointer;
+    letter-spacing: -1px;
+    font-size: 15px;
+    font-weight: 500;
+}
+/* .btn.on{
+    background: #555;
+    color: #fff;
+} */
+.scr-poster{
+    display: block;
+    position: absolute;
+    width: 206px;
+    height: 280px;
+    left: 718px;
+    top: 0;
+}
+.scr-td img{
+    width: 206px;
+    height: 295px;
+    border-top-right-radius:5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/***********극장별*************/
+

@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url(/css/layout.css);
+
+/*font-family: 'Gothic A1', sans-serif;*/
+.login-container{
+    font-family: 'Gothic A1', sans-serif;
+    height: 990px;
+    background: linear-gradient(to bottom, #8bbdf8, #e9f3fb);
+    position: relative;
+} 
+/*******로그인창************/
+.login-form,
+.login-form-1{
+    position: absolute;
+    width: 530px;
+    height: 830px;
+    background: #fff;
+    margin-left: 450px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    padding: 40px 60px;
+    box-shadow: 4px 10px 20px 0 rgba(0,25,72,.1);
+}
+
+.login-group h1{
+    font-weight: 400;
+}
+.login-check{
+    display: flex;
+    font-size: 17px;
+    margin: 22px 0;
+}
+/* .login-check[type=radio] {
+    opacity: 0;
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+} */
+#login-id input[type=radio]:hover{
+    border: 1px solid blue;
+    color: #000;
+}
+.login-checkid{
+    padding-right: 120px;
+}
+.login-set{
+    padding-top: 23px;
+    color: #767676;
+}
+.login-ess:after,
+.login-ess-1:after{
+    content: "";
+    position: absolute;
+    top: 185px;
+    left: 50;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #de001b;
+}
+.login-label{
+    display: inline-block;
+}
+.login-rad{
+    position: relative;
+}
+.login-labelform{
+    position: relative;
+}
+.login-labelform input[type=text],
+.login-labelform-1 input[type=text]{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #00256c;
+    color: #000;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 200;
+}
+.login-labelform1 input[type=password]{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #00256c;
+    color: #000;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 200;
+}
+/* .login-labelform:hover{
+    outline: 3px solid #00256c;
+    outline-offset: 2px;
+} */
+.login-set1{
+    padding-top: 10px;
+    margin-top: 30px;
+}
+.login-ess1:after{
+    content: "";
+    position: absolute;
+    top: 295px;
+    left: 50;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #de001b;
+}
+.loginid-save{
+    display: flex;
+    font-size: 16.5px;
+    color: #000;
+    padding-top: 33px;   
+    z-index: 1;
+}
+.login-rad::before
+{
+    content:"";
+    position: absolute;
+    left: 4.5px;
+    top: 1px;
+    width: 12px;
+    height: 12px;
+    border-radius: 15px;
+    background: transparent;
+}
+.login-rad:hover::before{
+    outline: 0;
+    box-shadow: 0 0 0 0.3rem #fff, 0 0 0 0.4rem #0064de;
+  }
+  /* .login-rad:focus
+  {
+    outline: 0;
+  } */
+input[type=checkbox],input[type=radio]{
+    accent-color:#00256c;
+    border-radius: 100%;
+}
+
+input[type=checkbox]:hover{
+    outline: 1px solid #00256c;
+    outline-offset: 2px;
+}
+.loginid-save p{
+    margin: 5px 7px;
+}
+/**********로그인 버튼창************/
+.loginsubmit{
+    padding-top: 20px;
+}
+.loginbutton{
+    display: block;
+    width: 100%;
+    background-color: #00256c;
+    height: 62px;
+    border: 1px solid #00256c;
+    border-radius: 10px;
+}
+.loginbutton:hover{
+    outline: 1px solid #00256c;
+    outline-offset: 2px;
+}
+.loginbutton p{
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+}
+.loginbutton a{
+    text-decoration: none;
+}
+.login_find{
+    margin: 20px 0;
+    padding-left: 48px;
+    display: flex;
+    list-style-type: none;
+}
+.login_find li a:hover{
+    border: 1px solid #0064de;
+    border-radius: 5px;
+}
+.login_find li a{ 
+    text-decoration: none;
+    color: #0064de;
+    text-align: center;
+    font-size: 17px;
+}
+.login_find li a::after{ 
+    content: "";
+    display: inline-block;
+    background: url(/images/ico-link-inner.svg)no-repeat center;
+    width: 20px;
+    height: 20px;
+    vertical-align: -3px;
+}
+
+.loginlist2{
+    padding-left: 100px;
+}
+
+/********로그인sns창*************/
+
+.loginsns-title{
+    margin-top: 30px;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    color: #555;
+    background: #fff;
+    position: relative;
+}
+.loginsns-title::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background: #d9dbe1;
+    height: 1px;
+    right: 0;
+    left: 0;
+    top: 50%;
+}
+.loginsns-title span{
+    position: relative;
+    background: #fff;
+    padding: 0 25px;
+}
+/**********다른계정 로그인**************/
+.loginsns-item{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left:0;
+}
+.loginsnslist{
+    width: calc(50% - 3px);
+    margin-top: 16px;    
+}
+.loginsns-img:hover{
+    outline: 1px solid #00256c;
+    outline-offset: 2px;
+}
+.loginsns-img{
+    width: 100%;
+    height: 40px;
+    min-height: 35px;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid #767676;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #555;
+    padding: 10px 30px 0 40px;
+    font-size: 15px;
+}
+.loginsns-img.naver{
+   background: url(/images/ico-naver.svg)no-repeat;
+   background-size: 20px 23px;
+   background-position: 12px 7px;
+}
+.loginsns-img.kakao{
+    background: url(/images/ico-kakao.svg)no-repeat;
+    background-size: 20px 23px;
+    background-position: 12px 7px;
+ }
+ .loginsns-img.google{
+    background: url(/images/ico-google.svg)no-repeat;
+    background-size: 20px 23px;
+    background-position: 12px 7px;
+ }
+ .loginsns-img.facebook{
+    background: url(/images/ico-facebook.svg)no-repeat;
+    background-size: 20px 23px;
+    background-position: 12px 7px;
+ }
+ .loginpoint{
+    width: 530px;
+    height: 70px;
+    background-color: #e6f9ff;
+    margin: 50px -60px -60px -60px;
+    bottom: -15px;
+ }
+ .loginpoint:hover{
+    border: 1px solid #00256c;
+ }
+ .loginpoint a{
+    display: flex;
+    color: #00256c;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    padding-top: 25px;
+ }

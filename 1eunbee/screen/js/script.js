@@ -44,7 +44,7 @@ $(document).on("click" , ".st", function(){
           $('.scr-cho._one').css('background-color','#fff');
           $('.scr-cho._one').css('color','#351f66');
           $('.scr-cho._one').css('border-right','none');
-          $('.st').css({"background":"url(../images/ico-tab-movie-on.png)"}); 
+          $('.st').css({"background":"url(../images/ico-tab-movie-on.png)no-repeat 27px 35px"}); 
           $('.st').css('border-right','none');
           $('.scr-cho._two').css('color','#444');
           $('.scr-cho._two').css('background-color','#f2f4f5');

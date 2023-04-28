@@ -93,10 +93,14 @@
     outline: none;
     cursor: pointer;
     padding:15px 17px;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 700;
     width: 13%;
     border-bottom: 1px solid #b1b1b1;
     border-right: 1px solid #b1b1b1;
+}
+.cinema-textbox button:first-child{
+    border-top-left-radius: 7px;
 }
 .tablast{
     border-right:  1px solid #fff;

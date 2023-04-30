@@ -148,8 +148,8 @@ const hong_map_link = document.getElementsByClassName('hong_map_link');
 
 function hong_map_mouseenter(hong_attr)
 {
-    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "login-form/images/hong-map-"+hong_attr+".jpg");
-    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "login-form/images/hong-map-"+hong_attr+".jpg");
+    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "header-form/images/hong-map-"+hong_attr+".jpg");
+    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "header-form/images/hong-map-"+hong_attr+".jpg");
 }
 
 //search-map ticket과 client 누르면 바뀌기
@@ -165,7 +165,7 @@ function hong_map_ticket()
     hong_ticket_underline.classList.add("hong-btn-underline");
     hong_client.style.display="none";
     hong_client_underline.classList.remove("hong-btn-underline");
-    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "login-form/images/hong-map-"+hong_map_link[0].getAttribute('value')+".jpg");
+    document.getElementsByClassName('hong_map_image')[0].setAttribute("src" , "header-form/images/hong-map-"+hong_map_link[0].getAttribute('value')+".jpg");
 }
 
 function hong_map_client()
@@ -178,50 +178,5 @@ function hong_map_client()
     hong_ticket_underline.classList.remove("hong-btn-underline");
     hong_client.style.display="block";
     hong_client_underline.classList.add("hong-btn-underline");
-    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "login-form/images/hong-map-"+hong_map_link[5].getAttribute('value')+".jpg");
+    document.getElementsByClassName('hong_map_image')[1].setAttribute("src" , "header-form/images/hong-map-"+hong_map_link[5].getAttribute('value')+".jpg");
 }
-
-//search-map 다른 공간 클릭하면 창 닫기 개씹노가다
-/* const hong_body = document.querySelector("body");
-hong_body.addEventListener('click',(event)=>
-{
-    let hong_target = event.target;
-    
-
-    if(hong_target != event.currentTarget.querySelector(".hong-search-map-box")
-       && hong_target != event.currentTarget.querySelector('.hong-search-map-box> *')
-       && hong_target != event.currentTarget.querySelector('.hong-btn-rank')
-       && hong_target != event.currentTarget.querySelector('.hong-btn-hs')
-       && hong_target != event.currentTarget.querySelector('.hong-search-btn-img')
-       && hong_target != event.currentTarget.querySelector('#hong-btn-client-rank')
-       && hong_target != event.currentTarget.querySelector('#hong-search-movie')
-       && hong_target != event.currentTarget.querySelector('.hong-btn-hs')
-       && hong_target != event.currentTarget.querySelector('.hong_map_image')
-       && hong_target != event.currentTarget.querySelector('#hong_map_image2')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link0')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link1')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link2')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link3')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link4')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link5')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link6')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link7')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link8')
-       && hong_target != event.currentTarget.querySelector('#hong_map_link9')
-       && hong_target != event.currentTarget.querySelector('.hong-search-map-left-top')
-       && hong_target != event.currentTarget.querySelector('.hong-search-map-list')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists0')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists1')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists2')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists3')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists4')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists5')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists6')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists7')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists8')
-       && hong_target != event.currentTarget.querySelector('#hong-map-lists9'))
-    {
-        hong_search.style.display="none";
-        hong_xbtn2.style.display="none";
-    }
-}); */

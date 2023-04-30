@@ -1,0 +1,16 @@
+
+밑에 태그를 header의 위치에 넣으세요
+경로를 한번씩 확인하세요
+
+
+*css 링크쪽에 밑의 태그 추가*
+
+<link rel="stylesheet" href="header-form/hong-style.css">
+
+
+
+*header 넣을 위치에 밑의 태그 3개 추가(모르면 body태그 밑에 넣어주세요)*
+
+<div class="hong-header-all"></div>
+<script src="header-form/hong-headerfetch.js"></script>
+<script src="header-form/hong-script.js"></script>

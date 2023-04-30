@@ -8,10 +8,11 @@ function openPage(pageName, e, color){
     }
     for(let i = 0; i<tablink.length; i++){
         tablink[i].style.backgroundColor = "";
-     
+        tablink[i].style.color='#444';
     }
     document.getElementById(pageName).style.display = "block";
     e.style.backgroundColor = color;
+    e.style.color='#fff';
 
 }
 
@@ -46,11 +47,12 @@ $(function(){
     $('.cineLogin-popup').click(function(e){
         e.preventDefault();
         $('.cinemalogin-fade').show();
-     
+        $('body').css('overflow', 'hidden');
     
     });
     $('.cinemalogin-close').click(function(){
         $('.cinemalogin-fade').hide();
+        $('body').css('overflow', 'auto');
     });
 
 
@@ -103,6 +105,8 @@ const pushValue = () => {
         $("#btn_login").css("color","#fff");
       } else {
         loginButton.disabled = true;
+        $("#btn_login").css("background","#e0e0e0");
+        $("#btn_login").css("color","#777");
       }
     });
   }

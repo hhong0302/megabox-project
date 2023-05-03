@@ -1,0 +1,648 @@
+body
+{
+    height: 1500px;
+}
+
+.hong-button
+{
+    background-color: #fff;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hong-page-util
+{
+    min-width: 1100px;
+    height: 42px;
+    background-color: #f8f8fa;
+}
+
+.hong-page-util-box
+{
+    width: 1100px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.hong-ticket-home
+{
+    width: 13px;
+    height: 13px;
+}
+
+.hong-page-util-ticketing,.hong-page-util-fastticketing
+{
+    position: relative;
+    margin-left: 25px;
+}
+
+.hong-page-util-ticketing::before,.hong-page-util-fastticketing::before
+{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 42px;
+    background: url(../images/hong-ticket-images/hong-location-arr.png) no-repeat;
+    top: -50%;
+    transform: translateY(50%);
+    left: -13px;
+}
+
+.hong-page-util-ticketing a,.hong-page-util-fastticketing a
+{
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.hong-page-util-ticketing a:hover,.hong-page-util-fastticketing a:hover
+{
+    text-decoration: underline;
+}
+
+.container-all
+{
+    position: relative;
+}
+
+/* 빠른예매 상단 */
+.hong-ticket-h1
+{
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    padding-top: 30px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.hong-ticket-box
+{
+    width: 100%;
+}
+
+.hong-ticket-box-head
+{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    border: 1px solid #d8d9db;
+    border-top: 1px solid #555;
+}
+
+.hong-ticket-box-date
+{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hong-ticket-box-date-left,.hong-ticket-box-date-right
+{
+    width: 4%;
+    height: 100%;
+    position: relative;
+}
+
+.hong-ticket-box-date-left img,.hong-ticket-box-date-right img
+{
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hong-ticket-box-date-list
+{
+    width: 92%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.hong-ticket-box-date-flex
+{
+    width: 3600px;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.hong-ticket-box-list-button
+{
+    width: 80px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hong-ticket-box-list-button:hover
+{
+    border-top: 0;
+    border-bottom: 2px solid #503396 !important;
+}
+
+.hong-ticket-box-list-button span
+{
+    display: block;
+    width: 13px;
+    white-space: nowrap;
+    margin: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.hong-ticket-box-list-button span:first-child:after
+{
+    content: '';
+    width: 3px;
+    height: 3px;
+    background-color: #999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+}
+
+.hong-ticket-box-calendar
+{
+    width: 5%;
+    height: 100%;
+    position: relative;
+    border-left: 1px solid #d8d9db;
+}
+
+.hong-ticket-box-calendar img
+{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* 빠른예매 상단 */
+
+/* 빠른예매 하단 */
+.hong-little-container
+{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    border-bottom: 1px solid #d8d9db;
+}
+/* 빠른예매 영화 */
+.hong-title-movie
+{
+    width: 25%;
+    height: 100%;
+    border-left: 1px solid #d8d9db;
+}
+
+.hong-little-container h1
+{
+    display: flex;
+    align-items: center;
+    height: 8%;
+    margin: 0;
+    margin-left: 20px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.hong-title-mt-box
+{
+    width: 85%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+.hong-title-mt-button-box
+{
+    width: 100%;
+    height: 7%;
+    display: flex;
+}
+
+.hong-title-mt-box-all,.hong-title-mt-box-qr
+{
+    width: 50%;
+    padding: 5px 0;
+}
+
+.hong-title-mt-box-all
+{
+    border: 1px solid #555;
+    border-bottom: 0;
+}
+
+.hong-title-mt-box-qr
+{
+    border:1px solid #d9d8dd;
+    border-left: 0;
+    border-bottom: 1px solid #555;
+}
+
+.hong-title-mt-box-all:focus,.hong-title-mt-box-qr:focus
+{
+    outline: 1px dotted #555;
+}
+
+.hong-title-mt-all-box
+{
+    width: 100%;
+    height: 68%;
+    margin-top: 20px;
+}
+
+.hong-title-mt-ul
+{
+    height: 95%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.hong-title-mt-ul-qr
+{
+    display: none;
+}
+
+.hong-title-mt-ul::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.hong-title-mt-ul::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 5px;
+}
+.hong-title-mt-ulr::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 5px #ddd;
+}
+
+.hong-title-mt-list
+{
+    width: 100%;
+    padding: 2px auto;
+}
+
+.hong-title-mt-list-button
+{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hong-title-mt-list-button span
+{
+    width: 80%;
+    text-align: left;
+    margin-left: 5px;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.hong-title-mt-img-age
+{
+    height: 20px;
+    margin-left: 5px;
+}
+
+.hong-title-mt-img-heart
+{
+    height: 12px;
+    margin-right: 5px;
+}
+
+.hong-title-mt-underimg
+{
+    width: 100%;
+    height: 90px;
+}
+
+/* 빠른예매 사진 */
+.hong-all-mt-list
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #d9d8dd;
+    display: block;
+}
+
+.hong-all-mt-list span
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+}
+
+.hong-title-mt-imgbox
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.hong-title-mt-underimg-left,.hong-title-mt-underimg-center,.hong-title-mt-underimg-right
+{
+    width: 63px;
+    height: 100%;
+    background: url(../images/hong-ticket-images/hong-empty-img.png) no-repeat;
+    position: relative;
+}
+
+.hong-title-mt-underimg-box
+{
+    width: 100%;
+    height: 100%;
+}
+
+.hong-underimg
+{
+    width: 100%;
+    height: 90px;
+}
+
+.hong-underimg-xbox
+{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* 빠른예매 사진 */
+/* 빠른예매 영화 */
+
+/* 빠른예매 극장 */
+.hong-title-theater
+{
+    width: 35%;
+    height: 100%;
+    border-left: 1px solid #d8d9db;
+    border-right: 1px solid #d8d9db;
+}
+
+.hong-title-theater-flex-box
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.hong-title-theater-ul,.hong-title-theater-detail
+{
+    width: 50%;
+    height: 100%;
+}
+
+.hong-title-theater-special-box
+{
+    display: none;
+}
+
+.hong-title-theater-detail
+{
+    height: 95%;
+    border-left:1px solid #ebebeb;
+}
+
+.hong-theater-list-button,.hong-theater-mt-list-button,
+.hong-theater-slist-button,.hong-theater-mt-slist-button
+{
+    width: 100%;
+    padding: 5px 0;
+    /* background-color: #ebebeb; */
+}
+
+.hong-theater-list-button span,.hong-theater-mt-list-button span,
+.hong-theater-slist-button span,.hong-theater-mt-slist-button span
+{
+    display: block;
+    margin-left: 13px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.hong-title-theater-detail-ul,.hong-title-theater-special-detail-ul
+{
+    display: none;
+}
+
+.hong-title-mt-theaterbox
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.hong-theater-all
+{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: url(../images/hong-ticket-images/hong-th-empty.png) no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.hong-theater-all span
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    font-size: 13px;
+    text-align: center;
+}
+
+.theater-all-xbtn
+{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: 0;
+}
+/* 빠른예매 극장 */
+
+/* 빠른예매 시간 */
+.hong-title-time
+{
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid #d8d9db;
+}
+
+.schedule-box
+{
+    width: 100%;
+    height: 36px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
+
+.schedule-box-container
+{
+    width: 380px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule-button
+{
+    width: 40px;
+    height: 100%;
+}
+
+.schedule-box-time-container
+{
+    width: 300px;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.schedule-time,.schedule-time li
+{
+    height: 100%;
+}
+
+.schedule-time
+{
+    display: flex;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s;
+}
+
+.schedule-time-button
+{
+    width: 30px;
+    height: 100%;
+    font-size: 15px;
+    color: #999;
+}
+/* 빠른예매 시간 */
+/* 빠른예매 하단 */
+
+
+/* 경고창 */
+.hong-window
+{
+    width: 100%;
+    min-width: 1100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    transition: all 0.3s;
+    z-index: 77;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.window-box
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.alert-form
+{
+    width: 400px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+}
+
+.alert-form-head
+{
+    width: 100%;
+    height: 27%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #503396;
+}
+
+.alert-form-head span
+{
+    margin-left: 20px;
+    color: #fff;
+    font-size: 17px;
+}
+
+.alert-form-head button
+{
+    margin-right: 15px;
+}
+
+.alert-form-body
+{
+    position: relative;
+    height: 73%;
+}
+
+.alert-form-body span
+{
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    letter-spacing: 0;
+    word-break: keep-all;
+}
+
+.alert-form-body button
+{
+    position: absolute;
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
+    padding: 10px 18px;
+    border-radius: 5px;
+    background-color: #503396;
+    color: #fff;
+}
+/* 경고창 */

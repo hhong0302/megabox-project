@@ -36,7 +36,7 @@
 
                     <!-- 예매박스 상단 날짜부분 버튼 -->
                     <div class="hong-ticket-box-date">
-                        <button class="hong-ticket-box-date-left hong-button" onclick="ticket_box_left()">
+                        <button class="hong-ticket-box-date-left hong-button">
                             <img src="images/hong-ticket-images/hong-cal-pre.png" alt="pre">
                         </button>
                         <div class="hong-ticket-box-date-list">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         
-                        <button class="hong-ticket-box-date-right hong-button" onclick="ticket_box_right()">
+                        <button class="hong-ticket-box-date-right hong-button">
                             <img src="images/hong-ticket-images/hong-cal-nxt.png" alt="next">
                         </button>
                     </div>
@@ -71,10 +71,10 @@
                         <h1>영화</h1>
                         <div class="hong-title-mt-box">
                             <div class="hong-title-mt-button-box">
-                                <button class="hong-title-mt-box-all hong-button" onclick="fastLeft(this,'hong-title-mt-ul-all','hong-title-mt-ul-qr')">
+                                <button class="hong-title-mt-box-all mov-button-all hong-button">
                                     전체
                                 </button>
-                                <button class="hong-title-mt-box-qr hong-button" onclick="fastRight(this,'hong-title-mt-ul-all','hong-title-mt-ul-qr')">
+                                <button class="hong-title-mt-box-qr mov-button-qr hong-button">
                                     큐레이션
                                 </button>
                             </div>
@@ -82,10 +82,50 @@
                                 <ul class="hong-title-mt-ul hong-title-mt-ul-all">
                                     <li class="hong-title-mt-list">
                                         <button class="hong-button hong-title-mt-list-button">
-                                            <img class="hong-title-mt-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="연령">
-                                            <span>all</span>
-                                            <img class="hong-title-mt-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
-                                            <input type="hidden" value="dr">
+                                        <img class="hong-title-mt-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
+                                        <span>드림</span>
+                                        <img class="hong-title-mt-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="dream">
+                                        </button>
+                                    </li>
+                                    <li class="hong-title-mt-list">
+                                        <button class="hong-button hong-title-mt-list-button">
+                                        <img class="hong-title-mt-img-age" src="images/hong-ticket-images/hong-ticket-all.png" alt="all">
+                                        <span>슈퍼 마리오 브라더스</span>
+                                        <img class="hong-title-mt-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="mario">
+                                        </button>
+                                    </li>
+                                    <li class="hong-title-mt-list">
+                                        <button class="hong-button hong-title-mt-list-button">
+                                        <img class="hong-title-mt-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
+                                        <span>더 퍼스트 슬램덩크</span>
+                                        <img class="hong-title-mt-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="slamdunk">
+                                        </button>
+                                    </li>
+                                    <li class="hong-title-mt-list">
+                                        <button class="hong-button hong-title-mt-list-button">
+                                        <img class="hong-title-mt-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
+                                        <span>가오갤</span>
+                                        <img class="hong-title-mt-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="galaxy">
+                                        </button>
+                                    </li>
+                                    <li class="hong-title-mt-list">
+                                        <button class="hong-button hong-title-mt-list-button">
+                                        <img class="hong-title-mt-img-age" src="images/hong-ticket-images/hong-ticket-18.png" alt="12">
+                                        <span>존윅</span>
+                                        <img class="hong-title-mt-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="johnwick">
+                                        </button>
+                                    </li>
+                                    <li class="hong-title-mt-list">
+                                        <button class="hong-button hong-title-mt-list-button">
+                                        <img class="hong-title-mt-img-age" src="images/hong-ticket-images/hong-ticket-12.png" alt="12">
+                                        <span>스즈메</span>
+                                        <img class="hong-title-mt-img-heart" src="images/hong-ticket-images/hong-ticket-heart.png" alt="hrt">
+                                        <input type="hidden" value="suzume">
                                         </button>
                                     </li>
                                 </ul>
@@ -101,16 +141,16 @@
                                 </ul>
                             </div>
                             <div class="hong-title-mt-underimg">
-                                <div class="hong-all-mt-list"><span>모든영화<br>목록에서 영화를 선택하세요.</span></div>
+                                <div class="hong-all-mt-list movie-img-list"><span>모든영화<br>목록에서 영화를 선택하세요.</span></div>
                                 <div class="hong-title-mt-imgbox">
                                     <div class="hong-title-mt-underimg-left hong-underimg-all">
-                                        <!-- <div class="hong-title-mt-underimg-box">
+                                        <div class="hong-title-mt-underimg-box">
                                             <img class="hong-underimg" src="images/hong-ticket-images/hong-ticket-johnwick.jpg" alt="jw">
                                             <input type="hidden" value="jw">
-                                            <button class="hong-button hong-underimg-xbox" onclick="closeBtn(this)">
+                                            <button class="hong-button hong-underimg-xbox">
                                                 <img src="images/hong-ticket-images/hong-img-xbox.png" alt="x">
                                             </button>
-                                        </div> -->
+                                        </div>
                                     </div>
                                     <div class="hong-title-mt-underimg-center hong-underimg-all">
 
@@ -129,10 +169,10 @@
                         <h1>극장</h1>
                         <div class="hong-title-mt-box">
                             <div class="hong-title-mt-button-box">
-                                <button class="hong-title-mt-box-all hong-button" onclick="fastLeft(this,'hong-title-theater-all-box','hong-title-theater-special-box')">
+                                <button class="hong-title-mt-box-all ticket-button-all hong-button">
                                     전체
                                 </button>
-                                <button class="hong-title-mt-box-qr hong-button" onclick="fastRight(this,'hong-title-theater-all-box','hong-title-theater-special-box')">
+                                <button class="hong-title-mt-box-qr ticket-button-qr hong-button">
                                     특별관
                                 </button>
                             </div>
@@ -213,7 +253,7 @@
                         <h1>시간</h1>
                         <div class="schedule-box">
                             <div class="schedule-box-container">
-                                <button class="hong-button schedule-button" onclick="timeChange(30)">
+                                <button class="hong-button schedule-button">
                                     <img src="images/hong-ticket-images/hong-btn-prev-time.png" alt="prev">
                                 </button>
                                 <div class="schedule-box-time-container">
@@ -226,7 +266,7 @@
                                     </ul>
                                 </div>
                                 
-                                <button class="hong-button schedule-button"  onclick="timeChange(-30)">
+                                <button class="hong-button schedule-button">
                                     <img src="images/hong-ticket-images/hong-btn-next-time.png" alt="prev">
                                 </button>
                             </div>
@@ -248,13 +288,13 @@
                 <div class="alert-form">
                     <div class="alert-form-head">
                         <span>알림</span>
-                        <button class="hong-btn" onclick="closeAlert()">
+                        <button class="hong-btn"">
                             <img src="images/hong-ticket-images/alertx.png" alt="alertx">
                         </button>
                     </div>
                     <div class="alert-form-body">
                         <span class="alert-span">영화는 최대 3개까지 선택이 가능합니다.</span>
-                        <button class="hong-button" onclick="closeAlert()">확인</button>
+                        <button class="hong-button">확인</button>
                     </div>
                 </div>
             </div>
@@ -262,6 +302,7 @@
         <!-- 경고창 -->
     </div>
 
-    <script src="js/fast-ticket.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/fast-ticket-jq.js"></script>
 </body>
 </html>

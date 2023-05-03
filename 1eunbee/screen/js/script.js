@@ -3,7 +3,7 @@ $(function(){
     $(window).scroll(function(){
       const navHeight = $(window).height();
       console.log(navHeight);
-      if($(window).scrollTop() > 60){
+      if($(window).scrollTop() > 100){
         $('#sto').addClass('drop');
       }else{
         $('#sto').removeClass('drop');
@@ -75,6 +75,7 @@ $(document).on("click" , ".st", function(){
           $('.scr-cho._thr').css('border-right', 'none');
   }
 });
+
 
 /**********오른쪽 클릭부분*****************/
 $(document).on("click" , ".scr-list-under", function(){
@@ -202,3 +203,24 @@ $(document).on("click" , ".btn", function(){
                 $('#img6').css('display','block');
         }
       });
+
+      /***********스즈메 무대인사 *************/
+
+        $(document).on("click" , ".on", function(){
+        let scr3 = $(this).attr("value");
+        console.log(scr3);
+        
+        if(scr3 == '스즈메'){
+                $('.scr-moon1').css('display','block');
+        }else if(scr3 != '스즈메'){
+                $('.scr-moon1').css('display','none');
+        }   
+      });
+
+      /***********클릭시 배경색 변경*****************/
+        $('button[type=button]').click(function() {
+        $('button[type=button]').addClass('#btn-chan');
+        return false;
+         });
+      
+

@@ -14,14 +14,23 @@
 <div class="hong-header-all"></div>
 <script src="header-form/hong-headerfetch.js"></script>
 <script src="header-form/hong-script.js"></script>
-<div class="screen-fixedTop" id="screen">
-    <div class="screen container">
+<div class="scr-container">
+    <div class="sto-fixedTop" id="sto">
+        <div class="container">
+            <div class="stotop">
+                <span></span>
+                <a href="#" class="stotop-one">스토어</a>
+                <a href="#" class="stotop-two">상영시간표</a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="screen container">
         <div class="screentop">
             <span></span>
             <a href="#" class="screen-one">예매</a>
             <a href="#" class="screen-two">상영시간표</a>
         </div>
-    </div>
+    </div> -->
     <!---상영시간표 시작--->
     <div class="screen-container" id="content">
         <div class="screen-inner">
@@ -58,7 +67,7 @@
                         <div class="scr-list-sec" id="scr-list-sub">
                             <!-----전체영화----->
                             <ul class="scr-list-sec-1" >
-                                <li><button type="button" class="btn on" value="슈퍼">슈퍼 마리오 브라더스</button></li>
+                                <li><button type="button" class="btn on chan" value="슈퍼">슈퍼 마리오 브라더스</button></li>
                                 <li><button type="button" class="btn on" value="드림">드림</button></li>
                                 <li><button type="button" class="btn on" value="슬램덩크">더 퍼스트 슬램덩크</button></li>
                                 <li><button type="button" class="btn on" value="존윅">존 윅4</button></li>
@@ -115,12 +124,12 @@
                             </ul>
                              <div class="scr-poster">
                                 <div class="scr-td">
-                                    <a href="#"><img src="/images/su.jpeg" alt="슈퍼마리오" id="img1" ></a>
-                                    <a href="#"><img src="/images/img1.jpeg" alt="드림"    id="img2"  style="display: none;"></a>
-                                    <a href="#"><img src="/images/img2.jpeg" alt="슬림덩크" id="img3" style="display: none;"></a>
-                                    <a href="#"><img src="/images/img3.jpeg" alt="슬림덩크" id="img4" style="display: none;"></a>
-                                    <a href="#"><img src="/images/img4.jpeg" alt="슬림덩크" id="img5" style="display: none;"></a>
-                                    <a href="#"><img src="/images/img5.jpeg" alt="슬림덩크" id="img6" style="display: none;"></a>
+                                    <a href="#"><img src="images/su.jpeg" alt="슈퍼마리오" id="img1" ></a>
+                                    <a href="#"><img src="images/img1.jpeg" alt="드림"    id="img2"  style="display: none;"></a>
+                                    <a href="#"><img src="images/img2.jpeg" alt="슬림덩크" id="img3" style="display: none;"></a>
+                                    <a href="#"><img src="images/img3.jpeg" alt="슬림덩크" id="img4" style="display: none;"></a>
+                                    <a href="#"><img src="images/img4.jpeg" alt="슬림덩크" id="img5" style="display: none;"></a>
+                                    <a href="#"><img src="images/img5.jpeg" alt="슬림덩크" id="img6" style="display: none;"></a>
                                 </div>
                               </div>
                             </div>
@@ -151,7 +160,7 @@
                                     </ul>
                             <div class="scr-poster">
                                 <div class="scr-td">
-                            <a href="#"><img src="/images/list1.jpeg" alt="슈퍼마리오"></a>
+                            <a href="#"><img src="images/list1.jpeg" alt="슈퍼마리오"></a>
                                 </div>
                             </div>
                         </div>    
@@ -356,38 +365,152 @@
                                 </ul>
                             <div class="scr-poster">
                                     <div class="scr-td">
-                                <a href="#"><img src="/images/img-theater-dolby.png" alt="슈퍼마리오"></a>
+                                <a href="#"><img src="images/img-theater-dolby.png" alt="슈퍼마리오"></a>
                                     </div>
                              </div>
                             </div>  
                         </div>
                       
                  </div>
-                 <h3 class="scr-moon">
-                    <span style="color:#037b94">스즈메의 문단속</span>
-                    무대인사
-                </h3>
-                <div class="scr-moon1">
+                
+                <div class="scr-moon1"  style="display: none;">
+                    <h3 class="scr-moon">
+                        <span style="color:#037b94">스즈메의 문단속</span>
+                        무대인사
+                    </h3>
                     <ul>
                         <li>
-                            <p>2023.04.28</p>
+                            <p class="moon-date">2023.04.28</p>
                             <div class="scr-moon-sub">
-                                <p>부산대 7관</p>
-                                <p>17:45~19:57</p>
-                                <p>상영후</p>
-                                <p>신카이마코토 감독</p>
+                                <p class="moon-1">부산대 7관</p>
+                                <p class="moon-2">17:45~19:57</p>
+                                <p class="moon-3">상영후</p>
+                                <p class="moon-4">신카이마코토 감독</p>
                                 <p class="scr-moon-sub-btn">매진</p>
                             </div>
-                            <div class="scr-moon-sub1">
-                                <p>부산대 </p>
-                                <p>18:25~20:37</p>
-                                <p>상영후</p>
-                                <p>신카이마코토 감독</p>
+                            <div class="scr-moon-sub scr-moon10">
+                                <p class="moon-1">부산대 5관</p>
+                                <p class="moon-2">18:25~20:37</p>
+                                <p class="moon-3">상영후</p>
+                                <p class="moon-4">신카이마코토 감독</p>
                                 <p class="scr-moon-sub-btn">매진</p>
                             </div>
                         </li>
                     </ul>
-                    <ul></ul>
+                </div>
+                <div class="scr-time">
+                    <h3 class="scr-moon">
+                        <span style="color:#037b94">슈퍼 마리오 브라더스</span>
+                        상영시간표
+                    </h3>
+                    <div class="scr-time-list">
+                        <div class="scr-time-sub">
+                            <button type="button" class="scr-time-btn">
+                                <i class="ico-cld-pre"></i>
+                            </button>
+                            <div class="scr-date-time">
+                                <div class="scr-time-today">
+                                    <div class="scr-time-year" style="z-index:100; left: 30px; opacity: 1;">
+                                        2023.05
+                                    </div>
+                                    <div class="scr-date-area">
+                                        <div class="scr-date-wrap">
+                                            <button type="button" date-date="2023.5.01" id="btn-chan">
+                                                <em class="scr-date-wrap">1</em>
+                                                <span>오늘</span>
+                                            </button>
+                                            <button type="button" date-date="2023.5.02">
+                                                <em class="scr-date-wrap">2</em>
+                                                <span>내일</span>
+                                            </button>
+                                            <button type="button" date-date="2023.5.03">
+                                                <em class="scr-date-wrap">3</em>
+                                                <span>수</span>
+                                            </button>
+                                            <button type="button" date-date="2023.5.04">
+                                                <em class="scr-date-wrap">4</em>
+                                                <span>목</span>
+                                            </button>
+                                            <button type="button" date-date="2023.5.05">
+                                                <em class="scr-date-wrap">5</em>
+                                                <span>금</span>
+                                            </button>
+                                            <button class="scr-sat" type="button" date-date="2023.5.06">
+                                                <em class="scr-date-wrap">6</em>
+                                                <span>토</span>
+                                            </button>
+                                            <button class="scr-holi" type="button" date-date="2023.5.07">
+                                                <em class="scr-date-wrap">7</em>
+                                                <span>일</span>
+                                            </button>
+                                            <button  type="button" date-date="2023.5.08">
+                                                <em class="scr-date-wrap">8</em>
+                                                <span>월</span>        
+                                            </button>
+                                            <button type="button" date-date="2023.5.09">
+                                                <em class="scr-date-wrap">9</em>
+                                                <span>화</span>
+                                            </button>
+                                            <button type="button" date-date="2023.5.10">
+                                                <em class="scr-date-wrap">10</em>
+                                                <span>수</span>
+                                            </button>
+                                            <button type="button" date-date="2023.5.11">
+                                                <em class="scr-date-wrap">11</em>
+                                                <span>목</span>
+                                            </button>
+                                            <button type="button" date-date="2023.5.12">
+                                                <em class="scr-date-wrap">12</em>
+                                                <span>금</span>
+                                            </button>
+                                            <button class="scr-sat" type="button" date-date="2023.5.13">
+                                                <em class="scr-date-wrap">13</em>
+                                                <span>토</span>
+                                            </button>
+                                            <button class="scr-holi" type="button" date-date="2023.5.14">
+                                                <em class="scr-date-wrap">14</em>
+                                                <span>일</span>
+                                            </button>
+                                        </div>
+                                    </div>       
+                                </div>
+                            </div>
+                            <button type="button" class="scr-time-btn1">
+                                <i class="ico-cld-next"></i>
+                            </button>
+                            <div class="scr-cale">
+                                <button type="button" class="scr-btn-cale">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scr-movie-option">
+                        <ul>
+                            <li><i class="scr-option icon1"></i>무대인사</li>
+                            <li><i class="scr-option icon2"></i>회원시사</li>
+                            <li><i class="scr-option icon3"></i>오픈시사</li>
+                            <li><i class="scr-option icon4"></i>굿즈패키지</li>
+                            <li><i class="scr-option icon5"></i>싱어롱</li>
+                            <li><i class="scr-option icon6"></i>GV</li>
+                            <li><i class="scr-option icon7"></i>조조</li>
+                            <li><i class="scr-option icon8"></i>브런치</li>
+                            <li><i class="scr-option icon9"></i>심야</li>
+                        </ul>
+                    </div>
+                    <div class="scr-lavel">
+                        <a href="#">관람등급안내</a>
+                    </div>
+                </div>
+                <div class="scr-list-box">
+                    <ul>
+                        <li class="box"><a href class="scr-list-box-btn">서울</a></li>
+                        <li><a href class="scr-list-box-btn">경기</a></li>
+                        <li><a href class="scr-list-box-btn">인천</a></li>
+                        <li><a href class="scr-list-box-btn">대전/충성/세종</a></li>
+                        <li><a href class="scr-list-box-btn">부산/대구/경상</a></li>
+                        <li><a href class="scr-list-box-btn">광주/전라</a></li>
+                        <li><a href class="scr-list-box-btn">강원</a></li>
+                    </ul>
                 </div>
         </div>
 </div>

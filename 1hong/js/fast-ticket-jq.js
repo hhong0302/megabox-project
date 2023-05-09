@@ -229,7 +229,7 @@ $(document).ready(function()
                 `<div class="hong-title-mt-underimg-box">
                     <img class="hong-underimg" src="images/hong-ticket-images/hong-ticket-${imgarr[i]}.jpg" alt="${imgarr[i]}">
                     <input type="hidden" value="${imgarr[i]}">
-                    <button class="hong-button hong-underimg-xbox">
+                    <button class="hong-button hong-underimg-xbox" onclick="xboxclick()">
                         <img src="images/hong-ticket-images/hong-img-xbox.png" alt="x">
                     </button>
                 </div>`);
@@ -248,9 +248,14 @@ $(document).ready(function()
         }
     });
 
-    //좌측 하단 x 버튼
-    $('.hong-underimg-xbox').click(function()
-    {
-        console.log($(this).siblings('input'));
-    });
+    
 });
+
+//좌측 하단 x 버튼
+function xboxclick()
+{
+    $('.hong-underimg-xbox').click(function()
+{
+    console.log($(this).siblings('input').attr('value'));
+});
+}

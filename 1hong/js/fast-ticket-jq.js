@@ -47,7 +47,7 @@ fetch('data/ticket-theater.json')
     {
         //왼쪽 도시군
         lil+=`<li class="hong-title-theater-list">
-                <button class="hong-button hong-theater-list-button">
+                <button class="hong-button hong-theater-list-button" onclick="fadeTheat(${i})">
                     <span>${si[i]}(${city[i].length})</span>
                     <input type="hidden" value="${i}">
                 </button>
@@ -56,13 +56,13 @@ fetch('data/ticket-theater.json')
         {
             //오른쪽 영화관 장소
             lir+=`<li class="hong-title-mt-list">
-                    <button class="hong-button hong-theater-mt-list-button">
+                    <button class="hong-button hong-theater-mt-list-button" onclick="theatlist('${city[i][j].value}')">
                         <span>${city[i][j].name}</span>
                         <input type="hidden" value="${city[i][j].value}">
                     </button>
                 </li>`;
-            document.getElementsByClassName('hong-title-theater-detail-ul')[i].innerHTML=lir;
         }
+        document.getElementsByClassName('hong-title-theater-detail-ul')[i].innerHTML=lir;
         lir='';
     }
     document.getElementsByClassName('hong-title-theater-ul')[0].innerHTML=lil;
@@ -80,7 +80,7 @@ fetch('data/ticket-special.json')
     {
         //왼쪽 특별관
         lil+=`<li class="hong-title-theater-list">
-                <button class="hong-button hong-theater-slist-button">
+                <button class="hong-button hong-theater-slist-button" onclick="fadesTheat(${i})">
                     <span>${special[i]}(${sname[i].length})</span>
                 </button>
                 <input type="hidden" value="${i}">
@@ -147,6 +147,7 @@ for(let i=0;i<=23;i++)
 document.getElementsByClassName('schedule-time')[0].innerHTML=timeli;
 }
 
+//이미지 리스트와 극장 리스트 배열
 let imgarr = [];
 let thearr = [];
 
@@ -230,11 +231,9 @@ $(document).ready(function()
             imgarr.splice(imgarr.indexOf($(this).children('input').attr('value')),1);
             $(this).css({'background-color':'#fff','color':'#000'});
         }
+        
+        $('.hong-underimg-all').html('');
 
-        for(let i=0;i<$('.hong-underimg-all').length;i++)
-        {
-            $('.hong-underimg-all').html('');
-        }
         for(let i=0;i<imgarr.length;i++)
         {
             $('.hong-underimg-all:eq('+i+')').html(
@@ -261,7 +260,7 @@ $(document).ready(function()
     });
 
     //극장 전체/특별관 바꾸기
-    $('.hong-title-mt-box-all').click(function() //전체
+    $('.theaallbtn').click(function() //전체
     {
         $(this).css({
             'border':'1px solid #555',
@@ -275,7 +274,7 @@ $(document).ready(function()
         $('.hong-title-theater-all-box').fadeIn(0);
         $('.hong-title-theater-special-box').fadeOut(0);
     });
-    $('.hong-title-mt-box-qr').click(function() //큐레이션
+    $('.theaspebtn').click(function() //특별관
     {
         $(this).css({
             'border':'1px solid #555',
@@ -289,34 +288,8 @@ $(document).ready(function()
         $('.hong-title-theater-all-box').fadeOut(0);
         $('.hong-title-theater-special-box').fadeIn(0);
     });
-
-    //우측 하단 극장 list
-    $(".hong-theater-list-button").click(function()
-    {
-        if(thearr.indexOf($(this).children('input').attr('value'))==-1)
-        {
-            if(thearr.length>=3)
-            {
-                $('.alert-span').html("극장은 최대 3개까지 선택이 가능합니다.");
-                $('.hong-window').css({
-                    'visibility':'visible',
-                    'opacity':'1'
-                });
-                console.log(thearr);
-                return;
-            }
-
-            thearr.push(($(this).children('input').attr('value')));
-            $(this).css({'background-color':'#666','color':'#fff'});
-        }
-        else
-        {
-            thearr.splice(thearr.indexOf($(this).children('input').attr('value')),1);
-            $(this).css({'background-color':'#fff','color':'#000'});
-        }
-    });
     
-});
+});//jquery onload
 
 //좌측 하단 이미지 x 버튼
 function xboxclick(imgval)
@@ -344,4 +317,134 @@ function xboxclick(imgval)
                 </button>
             </div>`);
     }
+    if(imgarr.length==0)
+        {
+            $('.movie-img-list').fadeIn(0);
+            $('.hong-title-mt-imgbox').fadeOut(0);
+        }
+        else
+        {
+            
+            $('.movie-img-list').fadeOut(0);
+            $('.hong-title-mt-imgbox').css('display','flex');
+        }
 }
+
+//중앙 하단 극장 나오게 하기
+function fadeTheat(num)
+{
+    $('.hong-theater-list-button').css('background-color','#fff');
+    $('.hong-title-theater-detail-ul').fadeOut(0);
+    $('.hong-theater-list-button:eq('+num+')').css('background-color','#ebebeb');
+    $('.hong-title-theater-detail-ul:eq('+num+')').fadeIn(0);
+}
+function fadesTheat(num)
+{
+    $('.hong-theater-slist-button').css('background-color','#fff');
+    $('.hong-title-theater-special-detail-ul').fadeOut(0);
+    $('.hong-theater-slist-button:eq('+num+')').css('background-color','#ebebeb');
+    $('.hong-title-theater-special-detail-ul:eq('+num+')').fadeIn(0);
+}
+
+//극장 리스트 선택하기
+let theanamearr = [];
+function theatlist(val)
+{
+    let theaname = $(".hong-theater-mt-list-button").find('input[value='+val+']').siblings('span').html();
+    
+    if(thearr.indexOf(val)==-1)
+    {
+        if(thearr.length>=3)
+        {
+            $('.alert-span').html("극장은 최대 3개까지 선택이 가능합니다.");
+            $('.hong-window').css({
+                'visibility':'visible',
+                'opacity':'1'
+            });
+            console.log(thearr);
+            return;
+        }
+        thearr.push(val);
+        theanamearr.push(theaname);
+        $(".hong-theater-mt-list-button").find('input[value='+val+']').parent().css({'background-color':'#666','color':'#fff'});
+    }
+    else
+    {
+        thearr.splice(thearr.indexOf(val),1);
+        theanamearr.splice(theanamearr.indexOf(theaname),1);
+        $(".hong-theater-mt-list-button").find('input[value='+val+']').parent().css({'background-color':'#fff','color':'#000'});
+    }
+    //console.log(theaname);
+    //console.log(thearr);
+
+    $('.hong-theater-all').html('');
+
+    for(let i=0;i<theanamearr.length;i++)
+    {
+        $('.hong-theater-all:eq('+i+')').html(
+            `<span>${theanamearr[i]}</span>
+                <button class="hong-button theater-all-xbtn" onclick="theaxbtn('${thearr[i]}')">
+                    <img src="images/hong-ticket-images/theaterx.png" alt="theaterx">
+                </button>`);
+    }
+    
+    if(thearr.length==0)
+    {
+        $('.hong-all-theater-list').fadeIn(0);
+        $('.hong-title-mt-theaterbox').fadeOut(0);
+    }
+    else
+    {
+        $('.hong-all-theater-list').fadeOut(0);
+        $('.hong-title-mt-theaterbox').css('display','flex');
+    }
+}
+//중앙 하단 x버튼
+function theaxbtn(val)
+{
+    let theaname = $(".hong-theater-mt-list-button").find('input[value='+val+']').siblings('span').html();
+    thearr.splice(thearr.indexOf(val),1);
+    theanamearr.splice(theanamearr.indexOf(theaname),1);
+    $(".hong-theater-mt-list-button").find('input[value='+val+']').parent().css({'background-color':'#fff','color':'#000'});
+    $('.hong-theater-all').html('');
+
+    for(let i=0;i<theanamearr.length;i++)
+    {
+        $('.hong-theater-all:eq('+i+')').html(
+            `<span>${theanamearr[i]}</span>
+                <button class="hong-button theater-all-xbtn" onclick="theaxbtn('${thearr[i]}')">
+                    <img src="images/hong-ticket-images/theaterx.png" alt="theaterx">
+                </button>`);
+    }
+
+    if(thearr.length==0)
+    {
+        $('.hong-all-theater-list').fadeIn(0);
+        $('.hong-title-mt-theaterbox').fadeOut(0);
+    }
+    else
+    {
+        $('.hong-all-theater-list').fadeOut(0);
+        $('.hong-title-mt-theaterbox').css('display','flex');
+    }
+}
+
+//우측 시간바꾸기
+let timeabs = 0;
+function timeChange(num)
+{
+    timeabs+=num;
+    if(timeabs>0) timeabs=0;
+    
+    if(timeabs<-420) timeabs=-420;
+    $('.schedule-time').css('left',timeabs+'px');
+}
+
+//alert창 닫기
+$('.alrt-btn').click(function()
+{
+    $('.hong-window').css({
+        'visibility':'hidden',
+        'opacity':'0'
+    });
+});

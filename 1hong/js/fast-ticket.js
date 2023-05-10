@@ -59,8 +59,8 @@ fetch('data/ticket-theater.json')
                     </button>
                     <input type="hidden" value="${city[i][j].value}">
                 </li>`;
-            document.getElementsByClassName('hong-title-theater-detail-ul')[i].innerHTML=lir;
         }
+        document.getElementsByClassName('hong-title-theater-detail-ul')[i].innerHTML=lir;
         lir='';
     }
     document.getElementsByClassName('hong-title-theater-ul')[0].innerHTML=lil;
@@ -157,7 +157,7 @@ function changeDate(e)
     e.style.borderBottom='2px solid #503396';
 }
 
-//누르면 날짜 움직이기
+//상단 누르면 날짜 움직이기
 function ticket_box_left()
 {
     const lft = document.getElementsByClassName("hong-ticket-box-date-flex")[0].getAttribute('style');
@@ -428,26 +428,23 @@ function theaterXBtn(e)
     }
 }
 
-//timechange
+/* //timechange
 function ticket_box_left()
 {
     const lft = document.getElementsByClassName("hong-ticket-box-date-flex")[0].getAttribute('style');
     let lftpx = lft.slice(lft.indexOf(" "),lft.indexOf("p"));
     if(lftpx==0) return;
     document.getElementsByClassName("hong-ticket-box-date-flex")[0].style.left=(Number(lftpx)+80)+'px';
-}
+} */
+
 let timeabs = 0;
 function timeChange(num)
 {
     timeabs += num;
-    if(timeabs>0)
-    {
-        timeabs=0;
-    }
-    if(timeabs<-420)
-    {
-        timeabs=-420;
-    }
+    if(timeabs>0) timeabs=0;
+    
+    if(timeabs<-420) timeabs=-420;
+    
     document.getElementsByClassName('schedule-time')[0].style.left=timeabs+'px';
 }
 

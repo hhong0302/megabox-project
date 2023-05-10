@@ -169,10 +169,10 @@
                         <h1>극장</h1>
                         <div class="hong-title-mt-box">
                             <div class="hong-title-mt-button-box">
-                                <button class="hong-title-mt-box-all ticket-button-all hong-button">
+                                <button class="hong-title-mt-box-all ticket-button-all hong-button theaallbtn">
                                     전체
                                 </button>
-                                <button class="hong-title-mt-box-qr ticket-button-qr hong-button">
+                                <button class="hong-title-mt-box-qr ticket-button-qr hong-button theaspebtn">
                                     특별관
                                 </button>
                             </div>
@@ -253,7 +253,7 @@
                         <h1>시간</h1>
                         <div class="schedule-box">
                             <div class="schedule-box-container">
-                                <button class="hong-button schedule-button">
+                                <button class="hong-button schedule-button" onclick="timeChange(30)">
                                     <img src="images/hong-ticket-images/hong-btn-prev-time.png" alt="prev">
                                 </button>
                                 <div class="schedule-box-time-container">
@@ -266,7 +266,7 @@
                                     </ul>
                                 </div>
                                 
-                                <button class="hong-button schedule-button">
+                                <button class="hong-button schedule-button" onclick="timeChange(-30)">
                                     <img src="images/hong-ticket-images/hong-btn-next-time.png" alt="prev">
                                 </button>
                             </div>
@@ -288,13 +288,13 @@
                 <div class="alert-form">
                     <div class="alert-form-head">
                         <span>알림</span>
-                        <button class="hong-btn">
+                        <button class="hong-btn alrt-btn">
                             <img src="images/hong-ticket-images/alertx.png" alt="alertx">
                         </button>
                     </div>
                     <div class="alert-form-body">
                         <span class="alert-span">영화는 최대 3개까지 선택이 가능합니다.</span>
-                        <button class="hong-button">확인</button>
+                        <button class="hong-button alrt-btn">확인</button>
                     </div>
                 </div>
             </div>

@@ -83,7 +83,6 @@ ul{
     transition: all 500ms;
     z-index: 999;
     float: left;
-    width: 1425px;
     right: 0;
 }
 #sto.drop a{
@@ -236,7 +235,7 @@ ul{
     border-bottom: 1px solid #d8d9db;
 }
 .scr-list-tab ul li{
-    padding-left: 8px;
+    padding-left: 0px;
     padding-bottom: 9px;
     font-size: 13.6px;
 }
@@ -276,12 +275,6 @@ ul{
     background-color: #444;
     transition: all .5s;
 }
-.scr-list-under a:hover:after {
-    width: 50%
-}
-.scr-list-under a:hover:before {
-    width: 50%
-}
 .scr-list-under a {
     display: inline-block;
     position: relative;
@@ -289,6 +282,10 @@ ul{
 }
 /*************전체 영화 부분****************/
 
+#ck-btn{
+    background: #555;
+    color: #fff;
+}
 .scr-list-sec-1 li{
     float: left;
     width: 33.3333%;
@@ -300,6 +297,8 @@ ul{
     padding: 0;
 }
 .btn{
+    font-weight: 500;
+    font-size: 15px;
     width: 212px;
     display: block;
     height: 27px;
@@ -313,10 +312,10 @@ ul{
     padding: 0 28px 0 10px;
     margin-right: -90px;
 }
-.btn:hover{
+/* .btn:hover{
     text-decoration: underline;
     background:#555;
-    color: #fff;
+    color: #fff; */
 }
 button{
     cursor: pointer;
@@ -353,7 +352,37 @@ button{
     margin-bottom: 0;
     padding-bottom: 16px;
  }
-
+ h3.scr-moon-0{
+    margin-top: 60px;
+    color: #503396;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+ }
+ h3.scr-moon-1{
+    margin-top: 60px;
+    color: #503396;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+ }
+ h3.scr-moon-2{
+    margin-top: 60px;
+    color: #503396;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+ } h3.scr-moon-3{
+    margin-top: 60px;
+    color: #503396;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding-bottom: 16px;
+ }
 .scr-moon1 ul{
     border-top: 1px solid #444;
 }
@@ -455,7 +484,7 @@ button{
 }
 .scr-date-area{
     height: 73px;
-    float: left;
+ 
 }
 .scr-date-wrap{
     position: relative;
@@ -572,24 +601,33 @@ button{
     width: 12px;
     height: 12px;
 }
-#btn-chan{
+/* #btn-chan{
     background: #f7f8f9;
+    border-bottom: 3px solid #503396;
+} */
+.bee-btn:hover{
     border-bottom: 3px solid #503396;
 }
 .scr-lavel{
     float: right;
 }
 /*************서울 경기 탭****************/
+.clicked{
+    background-color:#444;
+    color: #fff;
+}
 .scr-list-box{
     display: block;
     width: 100%;
     border-top: 0;
     float: left;
     position: relative;
-}
-.scr-list-box{
+    margin-bottom: 30px;
     border-bottom: 1px solid #ebebeb;
+    margin-bottom: 30px;
+    z-index: 30;
 }
+
 .scr-list-box ul li{
     float: left;
     color: #444;
@@ -603,9 +641,235 @@ button{
     color: #444;
     line-height: 36px;
 }
-.scr-list-box li.box,
-.scr-list-box li.box a{
+.scr-list-box li#box,
+.scr-list-box li#box button{
     background-color: #555;
     border: 1px solid #555;
     color: #fff;
+}
+.scr-list-box ul li button{
+    width: 137px;
+    height: 35px;
+    border: 1px solid #d8d9db;
+    background: #fff;
+    border-top: 1px;
+    border-left:1px;
+}
+.scr-mo-list{
+    position: relative;
+}
+.scr-mo-list-sub{
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #eaeaea;
+    font-weight: 700;
+    font-size: 18px;
+}
+.scr-mo-list-sub a{
+    color: #666;
+    text-decoration: none;
+}
+.scr-mo-list-time{
+    position: relative;
+    width: 100%;
+    height: 111px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+.scr-mo-list-time1{
+    position: relative;
+    width: 100%;
+    height: 222px;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 30px;
+}
+.mo-list{
+    width: 170px;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+.mo-time{
+    float:left;
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    margin-left:190px;
+}
+.scr-na{
+    display: block;
+    width: 100px;
+    height: 70px;
+    background-color: #f2f4f5;
+    text-align: center;
+    color: #444;
+    font-weight: 700;
+    border-bottom: 0;
+    margin-right: 10px;
+}
+.scr-na p{
+    margin-top: 25px;
+}
+.scr-time-box{
+    float:left;
+    width: 99px;
+    height: 70px;
+    text-align: center;
+    border: 1px solid #eaeaea;
+}
+
+.scr-time-box1{
+    float:left;
+    width: 99px;
+    height: 70px;
+    text-align: center;
+    border: 1px solid #eaeaea;
+    background: #503396;
+    color: #fff;
+}
+
+/* .scr-time-box:hover{
+    display: none;
+}
+.scr-time-box1:hover{
+    display: block;
+} */
+/*.scr-time-box1{
+  display: none;  
+}*/
+/*
+.scr-time-box:hover.scr-time-box{
+    background-color: chocolate;
+    
+}
+*/
+.scr-time-box:hover{
+    display: none;
+}
+.scr-time-box1:hover{
+    display: block;
+}
+/************관람등급안내**************/
+.scr-lavel a{
+    position: relative;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #666;
+    bottom: 30px;
+}
+.scr-lavel a::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    bottom: 40px;
+    position: absolute;
+    background: url(/images/ico-exclamation.png)no-repeat;
+    top: 2px;
+    left: 0;
+}
+.beeeee li{
+    float: left;
+    width: 99px;
+    height: 70px;
+    text-align: center;
+    border: 1px solid #ededed;
+}
+.beeeee li p{
+    margin-top: 0;
+}
+.no{
+    z-index: 10;
+    width: 99px;
+    height: 70px;
+    background: #503396;
+    color: #fff;
+    margin-top: -39px;
+}
+.block:hover .no{
+    display: block;
+}
+block:hover{
+    color:#503396;
+}
+.no{
+   display: none;
+}
+.block>p:first-child{
+    font-size: 16px;
+    padding-top: 15px;
+    margin-bottom: 0;
+}
+.block>p:nth-child(2){
+    margin-top: 0;
+    font-size: 13px;
+    color: #037b94;
+}
+.no>p:first-child{
+    font-size: 16px;
+    padding-top: 18px;
+    margin-bottom: 0;
+}
+.no>p:nth-child(2){
+    margin-top: 0;
+    font-size: 13px;
+}
+.block:hover .top {
+    display: none 
+ }
+/**********************극장별***********************/
+.scr-cinema-sub{
+    position: relative;
+    height: 0;
+}
+.scr-cinema-list{
+    width: 1100px;
+    margin-left: 170px;
+    /* margin-right: auto; */
+    height: 50px;
+    overflow: hidden;
+    display: block;
+    padding: 15px 20px;
+    background-color: #f7f8f9;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+.scr-cinema-list p {
+    float:left;
+    padding-right: 5px;
+    font-size: 15px;
+    margin: 0;
+    vertical-align: middle;
+    line-height: -20px;
+}
+.scr-cinema-list p a{
+    text-decoration: none;
+    color: #333;
+}
+.scr-cinema-list img{
+    width: 22px;
+}
+.scr-cinema-list-right{
+    /* padding-left: 680px; */
+    float: right;
+    padding-right: 0;
+}
+.mo-time1{
+    margin-left: 170px;
+    width: 1100px;
+    float: left;
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.cinema-type p{
+    display: block;
+    padding-right: 100px;
+}
+.cinema-type {
+    padding-top: 15px;
+}
+.scr-cunema-sub2{
+    margin-top: 10px;
+    position: relative;
 }
